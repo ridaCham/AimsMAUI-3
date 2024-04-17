@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.AddNewParaclinicalMRIView"
+             VerticalOptions="FillAndExpand"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="OldLace">
+        <Grid Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+
+            <Grid  Grid.Row="0" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,*,2*,2*">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Text="Scan Results"  VerticalOptions="Center" FontAttributes="Bold"/>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Text="Exam Date"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                    <DatePicker x:Name="ParatestmriExamDate_textBox" Style="{StaticResource MaxTodayDate}"/>
+                </Border>
+            </Grid>
+            <Grid  Grid.Row="1" Style="{StaticResource MiddleSpacing}" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="0.5*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="1" Text="CNS Region"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border  Grid.Column="1" Grid.Row="1"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}" x:Name="CNSRegion_comboBox" >
+                        <Picker.Items>
+                            <x:String>Brain</x:String>
+                            <x:String>Whole Spinal Cord</x:String>
+                            <x:String>Cervical Cord</x:String>
+                            <x:String>Thoracic Cord</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                <HorizontalStackLayout  Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" VerticalOptions="Center">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="T1"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <CheckBox x:Name="T1_checkBox" />
+                </HorizontalStackLayout>
+                <Border  Grid.Column="1" Grid.Row="2"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="T1_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Abnormal Ms-typical</x:String>
+                            <x:String>Abnormal MS-atypical</x:String>
+                            <x:String>Normal</x:String>
+                            <x:String>MS</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                <HorizontalStackLayout Grid.Column="0" Grid.Row="3"  HorizontalOptions="End" VerticalOptions="Center">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="T1 + Gadolinium"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <CheckBox x:Name="T1Gadolinium_checkBox" />
+                </HorizontalStackLayout>
+                <Border  Grid.Column="1" Grid.Row="3"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="T1Gadolinium_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Normal</x:String>
+                            <x:String>Abnormal Ms-typical</x:String>
+                            <x:String>Abnormal MS-atypical</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                <HorizontalStackLayout Grid.Column="0" Grid.Row="4" HorizontalOptions="End" VerticalOptions="Center">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="T2"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <CheckBox x:Name="T2_checkBox" />
+                </HorizontalStackLayout>
+                <Border  Grid.Column="1" Grid.Row="4"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="T2_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Normal</x:String>
+                            <x:String>Abnormal Ms-typical</x:String>
+                            <x:String>Abnormal MS-atypical</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="1" Text="Nb of T1 lesions"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="2" Text="Nb of Gd Enhancing Lesions"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="3" Text="Nb of T2 lesions"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="4" Text="Nb of New or Enlarging Lesions"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border  Grid.Column="3" Grid.Row="1" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="NbOfT1_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="3" Grid.Row="2" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="NbOfGd_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="3" Grid.Row="3" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="NbOfT2_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="3" Grid.Row="4" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="NbOfNew_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                
+
+                <Grid  Grid.Column="3" Grid.Row="5" Style="{StaticResource LargeSpacing}"  ColumnDefinitions="*,7*,*" RowDefinitions="*,1.5*">
+                    <Button Style="{StaticResource MicroButton}" Grid.Column="1" Grid.Row="0" BackgroundColor="Black" Text="Add Photo" FontAttributes="Bold" 
+                            x:Name="AddPhotoParaclinicalMRI" Clicked="AddPhotoParaclinicalMRI_Clicked"/>
+                </Grid>
+            </Grid>
+
+
+            <Grid Grid.Row="3" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="7*,*" RowDefinitions="*,2*,*,2*" >
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="Remarks"  VerticalOptions="Center" FontAttributes="Bold"/>
+                <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="3"  BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" VerticalOptions="Fill" >
+                    <Editor  x:Name="Remarks_textBox" Style="{StaticResource MicroEditor}"/>
+                </Border>
+
+
+                <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource MiddleSpacing}" RowDefinitions="*,*" >
+                    <Button Style="{StaticResource MicroButton}" Grid.Row="1" MinimumHeightRequest="0" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold"
+                        x:Name="Button_SaveParaclinicalMRI" Clicked="Button_SaveParaclinicalMRI_Clicked"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</ContentView>
+

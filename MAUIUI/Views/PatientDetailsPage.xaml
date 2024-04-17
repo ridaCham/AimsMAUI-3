@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.PatientDetailsPage"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+
+    <Grid Style="{StaticResource LargeSpacing}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border   Grid.Row="0" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+            <Grid Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"   Text="Name:" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2"   Text="Gender:" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"   Text="MS Classification:" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="6"   Text="Edss:" HorizontalOptions="End" VerticalOptions="Center"/>
+
+            </Grid>
+        </Border>
+
+        <Border   Grid.Row="1" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+            <Grid Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"   Text="Surname:" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2"   Text="Patient Age:" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"   Text="Diagnosis Date:" HorizontalOptions="End" VerticalOptions="Center"/>
+
+                <Grid Grid.Column="7"  Style="{StaticResource LargeSpacing}" ColumnDefinitions="*,4*,*" >
+
+                    <Button Grid.Column="1" BackgroundColor="ForestGreen" Text="Print"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}"/>
+                </Grid>
+
+            </Grid>
+        </Border>
+        
+        <Grid Grid.Row="3" Style="{StaticResource LargeSpacing}" ColumnDefinitions="11*,*" >
+            <Label Grid.Column="1"  Style="{StaticResource MicroTextLabel}" Text="Leqend1 - Empty" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
+        
+    </Grid>
+    
+</ContentPage>

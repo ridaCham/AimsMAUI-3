@@ -1,0 +1,569 @@
+is_global = true
+build_property.TargetFramework = net7.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MAUIUI
+build_property.ProjectDir = /Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewCovidPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewCovidPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewCovidPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewCovidPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewFamilyDiseaseHistoryView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewFamilyDiseaseHistoryView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewFamilyDiseaseHistoryView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewFamilyDiseaseHistoryView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewHerpesZosterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewHerpesZosterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewHerpesZosterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewHerpesZosterPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewImmunosuppressionAssociatedPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewImmunosuppressionAssociatedPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewImmunosuppressionAssociatedPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewImmunosuppressionAssociatedPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewMalignancyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewMalignancyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewMalignancyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewMalignancyPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewMsSpecificView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewMsSpecificView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewMsSpecificView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewMsSpecificView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewNeuropsychView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewNeuropsychView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewNeuropsychView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewNeuropsychView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewOtherMedicalConditionPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewOtherMedicalConditionPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewOtherMedicalConditionPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewOtherMedicalConditionPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewOutcomeView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewOutcomeView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewOutcomeView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewOutcomeView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewParaclinicalAutoAntibodyView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewParaclinicalAutoAntibodyView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewParaclinicalAutoAntibodyView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewParaclinicalAutoAntibodyView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewParaclinicalBloodChemistryView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewParaclinicalBloodChemistryView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewParaclinicalBloodChemistryView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewParaclinicalBloodChemistryView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewParaclinicalCSFView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewParaclinicalCSFView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewParaclinicalCSFView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewParaclinicalCSFView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewParaclinicalEvokedPotentialsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewParaclinicalEvokedPotentialsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewParaclinicalEvokedPotentialsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewParaclinicalEvokedPotentialsView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewParaclinicalHaematologyView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewParaclinicalHaematologyView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewParaclinicalHaematologyView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewParaclinicalHaematologyView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewParaclinicalMRIView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewParaclinicalMRIView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewParaclinicalMRIView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewParaclinicalMRIView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewParaclinicalThyroidFunctionsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewParaclinicalThyroidFunctionsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewParaclinicalThyroidFunctionsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewParaclinicalThyroidFunctionsView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewPatientPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewPatientPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewPatientPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewPatientPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewPhysiotherapyView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewPhysiotherapyView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewPhysiotherapyView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewPhysiotherapyView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewPilatesView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewPilatesView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewPilatesView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewPilatesView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewPregnancyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewPregnancyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewPregnancyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewPregnancyPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewPsychotherapyView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewPsychotherapyView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewPsychotherapyView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewPsychotherapyView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewRelapsesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewRelapsesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewRelapsesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewRelapsesPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewSymptomaticView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewSymptomaticView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewSymptomaticView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewSymptomaticView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewVaccineCovidView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewVaccineCovidView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewVaccineCovidView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewVaccineCovidView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewVaccineFluView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewVaccineFluView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewVaccineFluView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewVaccineFluView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewVaccineHepatitisAView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewVaccineHepatitisAView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewVaccineHepatitisAView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewVaccineHepatitisAView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewVaccineHepatitisBView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewVaccineHepatitisBView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewVaccineHepatitisBView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewVaccineHepatitisBView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewVaccineOtherView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewVaccineOtherView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewVaccineOtherView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewVaccineOtherView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewVisitPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewVisitPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewVisitPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewVisitPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AddNewYogeView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AddNewYogeView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddNewYogeView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddNewYogeView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/AnalysisView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.AnalysisView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AnalysisView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AnalysisView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ChangePasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ChangePasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ChangePasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ChangePasswordPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/CovidPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.CovidPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/CovidPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/CovidPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/DeletedPatientsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.DeletedPatientsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/DeletedPatientsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/DeletedPatientsPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/DiagnosisPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.DiagnosisPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/DiagnosisPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/DiagnosisPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/EDSSAmbulationInfoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.EDSSAmbulationInfoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EDSSAmbulationInfoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EDSSAmbulationInfoView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/EDSSBowelInfoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.EDSSBowelInfoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EDSSBowelInfoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EDSSBowelInfoView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/EDSSBrainstemInfoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.EDSSBrainstemInfoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EDSSBrainstemInfoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EDSSBrainstemInfoView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/EDSSCerebellarInfoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.EDSSCerebellarInfoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EDSSCerebellarInfoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EDSSCerebellarInfoView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/EDSSMentalInfoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.EDSSMentalInfoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EDSSMentalInfoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EDSSMentalInfoView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/EDSSPyramidalInfoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.EDSSPyramidalInfoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EDSSPyramidalInfoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EDSSPyramidalInfoView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/EDSSSensoryInfoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.EDSSSensoryInfoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EDSSSensoryInfoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EDSSSensoryInfoView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/EDSSView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.EDSSView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EDSSView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EDSSView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/EDSSVisualInfoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.EDSSVisualInfoView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EDSSVisualInfoView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EDSSVisualInfoView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/FamilyDiseaseHistoryView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.FamilyDiseaseHistoryView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/FamilyDiseaseHistoryView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/FamilyDiseaseHistoryView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/HerpesZosterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.HerpesZosterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/HerpesZosterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/HerpesZosterPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/HomePage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/HomeView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.HomeView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/HomeView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/HomeView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/IdentificationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.IdentificationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/IdentificationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/IdentificationPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ImmunosuppressionAssociatedPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ImmunosuppressionAssociatedPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ImmunosuppressionAssociatedPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ImmunosuppressionAssociatedPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/LoginPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/MalignancyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.MalignancyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/MalignancyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/MalignancyPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/MedicalHistoryPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.MedicalHistoryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/MedicalHistoryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/MedicalHistoryPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/MsSpecificView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.MsSpecificView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/MsSpecificView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/MsSpecificView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/NeuropsychView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.NeuropsychView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/NeuropsychView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/NeuropsychView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/NotesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.NotesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/NotesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/NotesPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/OtherMedicalConditionPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.OtherMedicalConditionPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/OtherMedicalConditionPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/OtherMedicalConditionPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/OutcomeView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.OutcomeView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/OutcomeView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/OutcomeView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ParaclinicalAutoAntibodyView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ParaclinicalAutoAntibodyView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ParaclinicalAutoAntibodyView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ParaclinicalAutoAntibodyView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ParaclinicalBloodChemistryViewA.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ParaclinicalBloodChemistryViewA.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ParaclinicalBloodChemistryViewA.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ParaclinicalBloodChemistryViewA.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ParaclinicalCSFView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ParaclinicalCSFView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ParaclinicalCSFView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ParaclinicalCSFView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ParaclinicalEvokedPotentialsViewA.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ParaclinicalEvokedPotentialsViewA.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ParaclinicalEvokedPotentialsViewA.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ParaclinicalEvokedPotentialsViewA.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ParaclinicalHaematologyViewA.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ParaclinicalHaematologyViewA.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ParaclinicalHaematologyViewA.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ParaclinicalHaematologyViewA.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ParaclinicalMRIViewA.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ParaclinicalMRIViewA.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ParaclinicalMRIViewA.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ParaclinicalMRIViewA.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ParaclinicalNotesView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ParaclinicalNotesView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ParaclinicalNotesView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ParaclinicalNotesView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ParaclinicalSerologicalView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ParaclinicalSerologicalView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ParaclinicalSerologicalView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ParaclinicalSerologicalView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ParaclinicalTestsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ParaclinicalTestsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ParaclinicalTestsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ParaclinicalTestsPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/ParaclinicalThyroidFunctionsViewA.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.ParaclinicalThyroidFunctionsViewA.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ParaclinicalThyroidFunctionsViewA.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ParaclinicalThyroidFunctionsViewA.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/PatientDetailsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.PatientDetailsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/PatientDetailsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/PatientDetailsPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/PatientsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.PatientsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/PatientsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/PatientsView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/PhysiotherapyView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.PhysiotherapyView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/PhysiotherapyView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/PhysiotherapyView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/PilatesView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.PilatesView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/PilatesView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/PilatesView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/PregnancyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.PregnancyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/PregnancyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/PregnancyPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/PsychotherapyView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.PsychotherapyView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/PsychotherapyView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/PsychotherapyView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/RelapsesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.RelapsesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/RelapsesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/RelapsesPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/SignupPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.SignupPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/SignupPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/SignupPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/StatisticsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.StatisticsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/StatisticsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/StatisticsView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/SymptomaticView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.SymptomaticView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/SymptomaticView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/SymptomaticView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/SymptomsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.SymptomsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/SymptomsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/SymptomsView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/TestsView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.TestsView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/TestsView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/TestsView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/TreatmentsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.TreatmentsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/TreatmentsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/TreatmentsPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/VaccineCovidView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.VaccineCovidView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/VaccineCovidView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/VaccineCovidView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/VaccineFluView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.VaccineFluView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/VaccineFluView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/VaccineFluView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/VaccineHepatitisAView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.VaccineHepatitisAView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/VaccineHepatitisAView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/VaccineHepatitisAView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/VaccineHepatitisBView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.VaccineHepatitisBView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/VaccineHepatitisBView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/VaccineHepatitisBView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/VaccineOtherView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.VaccineOtherView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/VaccineOtherView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/VaccineOtherView.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/VaccinePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.VaccinePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/VaccinePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/VaccinePage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/VisitsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.VisitsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/VisitsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/VisitsPage.xaml
+
+[/Users/ADAPHA/Desktop/AimsMAUI/MAUIUI/Views/YogeView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MAUIUI.Views.YogeView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/YogeView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/YogeView.xaml

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.AddNewCovidPage"
+             BackgroundColor="#eaeff4"
+             Style="{StaticResource LargePaddingPage}"
+             >
+    <Grid Style="{StaticResource SmallSpacing}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="0" RowDefinitions="*,*"  >
+
+            <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="0" RowDefinitions="*,8*" ColumnDefinitions="*,*,*,*,*,*">
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Text="Date of Onset" VerticalOptions="Center" HorizontalOptions="End"/>
+                <Border Grid.Row="0" Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                    <DatePicker x:Name=" CovidDateofOnsetDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                </Border>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="2" Text="Confirmed Diagnosis" 
+                       VerticalOptions="Center" HorizontalOptions="End"/>
+                <Border Grid.Row="0" Grid.Column="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                    <DatePicker x:Name=" CovidConfirmedDiagnosisDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                </Border>
+ 
+
+
+                <Grid Style="{StaticResource LargeSpacing}" Grid.Row="1" Grid.ColumnSpan="6" ColumnDefinitions="*,*">
+
+                    <Border Style="{StaticResource LargePaddingBorder}" Grid.Column="0" StrokeShape="RoundRectangle 10" BackgroundColor="#c8d1db">
+                        <Grid Style="{StaticResource MiddleSpacing}" RowDefinitions="*,*,*,*,*,*" ColumnDefinitions="*,*,*" >
+
+                            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Text="Confirmed by" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="1" Text="PCR" VerticalOptions="Center" HorizontalOptions="Start" />
+                            <Border Grid.Row="0" Grid.Column="2" VerticalOptions="Center" StrokeShape="RoundRectangle 10" StrokeThickness="0" >
+                                <Picker x:Name=" ConfirmedPCR_comboBox" Style="{StaticResource MicroPicker}">
+                                    <Picker.Items>
+                                        <x:String>Unknown</x:String>
+                                        <x:String>Not done</x:String>
+                                        <x:String>Positive</x:String>
+                                        <x:String>Negative</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </Border>
+                            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="1" Text="Serology" VerticalOptions="Center" HorizontalOptions="Start" />
+                            <Border Grid.Row="1" Grid.Column="2" VerticalOptions="Center" StrokeShape="RoundRectangle 10" StrokeThickness="0" >
+                                <Picker x:Name=" Serology_comboBox" Style="{StaticResource MicroPicker}">
+                                    <Picker.Items>
+                                        <x:String>Unknown</x:String>
+                                        <x:String>Not done</x:String>
+                                        <x:String>Positive</x:String>
+                                        <x:String>Negative</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </Border>
+                            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="1" Text="Typical Chest Imaging" VerticalOptions="Center" HorizontalOptions="Start" />
+                            <Border Grid.Row="2" Grid.Column="2" VerticalOptions="Center" StrokeShape="RoundRectangle 10" StrokeThickness="0" >
+                                <Picker x:Name=" Typical_comboBox" Style="{StaticResource MicroPicker}">
+                                    <Picker.Items>
+                                        <x:String>Unknown</x:String>
+                                        <x:String>Not done</x:String>
+                                        <x:String>Positive</x:String>
+                                        <x:String>Negative</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </Border>
+                            <HorizontalStackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Start">
+                                <CheckBox />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="DMT Ceased / Delayed During The Infection" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <Label x:Name=" DMTceased_checkBox" Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="Center" 
+                               Text="(Please remember to update the treatments section as well)" />
+                            <Border Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                                <Editor Style="{StaticResource MicroEditor}" BackgroundColor="White" />
+                            </Border>
+                        </Grid>
+
+                    </Border>
+
+
+
+                    <Border Style="{StaticResource LargePaddingBorder}" Grid.Column="1" StrokeShape="RoundRectangle 10"  BackgroundColor="#c8d1db">
+                        <Grid Style="{StaticResource LargeSpacing}"  RowDefinitions="*,*,*,*,*,*"  ColumnDefinitions="*,4*,4*,2*,4*,*">
+
+
+                            <HorizontalStackLayout  Grid.Row="0" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" >
+                                <CheckBox  x:Name="CovidSymptomatic_checkBox" />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Symptomatic" FontAttributes="Bold" VerticalOptions="Center" />
+                             </HorizontalStackLayout>
+                            
+
+                            <HorizontalStackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Start">
+                                <CheckBox  x:Name="CovidFever_checkBox" />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Fever" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Start">
+                                <CheckBox x:Name=" CovidFatigue_checkBox" />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Fatigue" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="Start">
+                                <CheckBox x:Name=" CovidDryCough_checkBox"  />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Dry cough" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Row="4" Grid.Column="1" HorizontalOptions="Start">
+                                <CheckBox x:Name=" CovidPneumonia_checkBox" />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Pneumonia" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="5" Grid.Column="1" Text="Other" FontAttributes="Bold"  
+                                   VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Border Grid.Row="5" Grid.Column="2" StrokeShape="RoundRectangle 10" >
+                                <Editor x:Name=" OtherrSymptomatic_textBox" Style="{StaticResource MicroEditor}" BackgroundColor="White" />
+                            </Border>
+
+
+                            <HorizontalStackLayout Grid.Row="1" Grid.Column="2" HorizontalOptions="Start">
+                                <CheckBox x:Name=" CovidSore_checkBox"/>
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Sore throat" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Row="2" Grid.Column="2" HorizontalOptions="Start">
+                                <CheckBox x:Name=" CovidAnosmia_checkBox" />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Anosmia" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Row="3" Grid.Column="2" HorizontalOptions="Start">
+                                <CheckBox x:Name=" CovidPain_checkBox" />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Pain" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Row="4" Grid.Column="2" HorizontalOptions="Start">
+                                <CheckBox x:Name=" CovidDiarrhea_checkBox" />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Diarrhea" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+
+
+                            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="4" Text="Severity" FontAttributes="Bold"  
+                                   VerticalOptions="Center" />
+                            <HorizontalStackLayout Grid.Row="1" Grid.Column="4" HorizontalOptions="Start">
+                                <CheckBox x:Name=" CovidSevUnknown_checkBox" />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Unknown" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Row="2" Grid.Column="4" HorizontalOptions="Start">
+                                <CheckBox x:Name=" CovidSevMild_checkBox"  />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Mild" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Row="3" Grid.Column="4" HorizontalOptions="Start">
+                                <CheckBox x:Name=" CovidSevModarate_checkBox" />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Modarate" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Row="4" Grid.Column="4" HorizontalOptions="Start">
+                                <CheckBox x:Name=" CovidSevSevere_checkBox" />
+                                <Label Style="{StaticResource MicroTextLabel}" Text="Severe" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+
+                        </Grid>
+
+                    </Border>
+
+                </Grid>
+            </Grid>
+
+            <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="1" ColumnDefinitions="3*,3*,2*" RowDefinitions="*,9*">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" FontAttributes="Bold" Text="Other Medical Condition" VerticalOptions="End"/>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1" Grid.Row="0" FontAttributes="Bold" Text="Hospital Related Incidents" VerticalOptions="End"/>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="0" FontAttributes="Bold" Text="Laboratory Tests" VerticalOptions="End"/>
+
+                <Border Style="{StaticResource LargePaddingBorder}" Grid.Column="0" Grid.Row="1" StrokeShape="RoundRectangle 10" Stroke="DarkSlateGray" BackgroundColor="#c8d1db">
+                    <Grid Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*,*">
+
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="Pregnancy" HorizontalOptions="End" VerticalOptions="Center"/>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="1" Text="Current smoker" HorizontalOptions="End" VerticalOptions="Center"/>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="2" Text="Obesity" HorizontalOptions="End" VerticalOptions="Center"/>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="3" Text="Other comorbidities" HorizontalOptions="End" VerticalOptions="Center"/>
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <RadioButton x:Name=" PregnancyUnknown_radioButton" Style="{StaticResource MicroRadioButton}" Content="Unknown" />
+                            <RadioButton x:Name=" PregnancyYes_radioButton" Style="{StaticResource MicroRadioButton}" Content="Yes" />
+                            <RadioButton x:Name=" PregnancyNo_radioButton" Style="{StaticResource MicroRadioButton}" Content="No" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="1" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <RadioButton x:Name=" CurrentUnknown_radioButton" Style="{StaticResource MicroRadioButton}" Content="Unknown" />
+                            <RadioButton x:Name=" CurrentYes_radioButton" Style="{StaticResource MicroRadioButton}" Content="Yes" />
+                            <RadioButton x:Name=" CurrentNo_radioButton" Style="{StaticResource MicroRadioButton}" Content="No" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="2" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <RadioButton x:Name=" ObesityUnknown_radioButton" Style="{StaticResource MicroRadioButton}" Content="Unknown" />
+                            <RadioButton x:Name=" ObesityYes_radioButton" Style="{StaticResource MicroRadioButton}" Content="Yes" />
+                            <RadioButton x:Name=" ObesityNo_radioButton" Style="{StaticResource MicroRadioButton}" Content="No" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="3" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <RadioButton x:Name=" OtherComorUnknown_radioButton" Style="{StaticResource MicroRadioButton}" Content="Unknown" />
+                            <RadioButton x:Name=" OtherComorYes_radioButton" Style="{StaticResource MicroRadioButton}" Content="Yes" />
+                            <RadioButton x:Name=" OtherComorNo_radioButton" Style="{StaticResource MicroRadioButton}" Content="No" />
+                        </HorizontalStackLayout>
+
+
+                        <HorizontalStackLayout Grid.Column="0" Grid.Row="4" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <CheckBox x:Name=" OtherMedicalCVS_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="CVS / Hypertension" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="0" Grid.Row="5" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <CheckBox x:Name=" OtherMedicalDiabetes_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Diabetes" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="0" Grid.Row="6" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <CheckBox x:Name=" OtherMedicalMalignancy_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Malignancy" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="4" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <CheckBox x:Name=" OtherMedicalChronic_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Chronic lung disease" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="5" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <CheckBox x:Name=" OtherMedicalRenal_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Renal disease" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="6" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <CheckBox x:Name=" OtherMedicalLiver_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Liver disease" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </Grid>
+                </Border>
+
+                <Border Style="{StaticResource LargePaddingBorder}" Grid.Column="1" Grid.Row="1" StrokeShape="RoundRectangle 10" Stroke="DarkSlateGray" BackgroundColor="#c8d1db">
+                    <Grid Style="{StaticResource MiddleSpacing}" ColumnDefinitions="0.5*,*,*,*,0.5*" RowDefinitions="*,*,*,*,*,*">
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <CheckBox x:Name=" HospitalAdmission_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Hospital admission" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="0" Text="From" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <Border Grid.Column="3" Grid.Row="0" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <DatePicker x:Name=" CovidHospitalFromDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                        </Border>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="1" Text="To" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <Border Grid.Column="3" Grid.Row="1" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <DatePicker x:Name=" CovidHospitalToDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                        </Border>
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="2" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <CheckBox x:Name=" ICUAdmission_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="ICU admission" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="2" Text="From" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <Border Grid.Column="3" Grid.Row="2" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <DatePicker x:Name=" CovidIcuFromDate_textBox" Style="{StaticResource MicroEntry}"/>
+                        </Border>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="3" Text="To" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <Border Grid.Column="3" Grid.Row="3" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <DatePicker x:Name=" CovidIcuToDate_textBox" Style="{StaticResource MicroEntry}" />
+                        </Border>
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="4" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <CheckBox x:Name=" Ventilation_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Ventilation required" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <Border Grid.Column="3" Grid.Row="4" VerticalOptions="Center" StrokeShape="RoundRectangle 10" StrokeThickness="0" >
+                            <Picker x:Name=" Ventilation_comboBox" Style="{StaticResource MicroPicker}">
+                                <Picker.Items>
+                                    <x:String>Invasive</x:String>
+                                    <x:String>Non invasive</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </Border>
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="5" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <CheckBox x:Name=" EcmoRequired_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="ECMO required" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </Grid>
+                </Border>
+
+                <Border Style="{StaticResource LargePaddingBorder}"  Grid.Column="2" Grid.Row="1" StrokeShape="RoundRectangle 10" Stroke="DarkSlateGray" BackgroundColor="#c8d1db">
+                    <Grid Style="{StaticResource SmallSpacing}" ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*,*">
+                        <HorizontalStackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Center" >
+                            <CheckBox x:Name=" LabHospitalAdmission_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Hospital admission" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="1" Text="Lymphocyte count" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <Border Grid.Column="1" Grid.Row="1" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <Entry  x:Name=" LabLymphocyte_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White"/>
+                        </Border>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="2" Text="Exam date" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <Border Grid.Column="1" Grid.Row="2" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <DatePicker x:Name=" CovidLaboratoryLymphocyteDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                        </Border>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="3" Text="While cell count" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <Border Grid.Column="1" Grid.Row="3" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <Entry x:Name=" LabWhile_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White"/>
+                        </Border>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="4" Text="Exam date" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <Border Grid.Column="1" Grid.Row="4" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <DatePicker x:Name=" CovidLaboratoryWhileDate_textBox" Style="{StaticResource MaxTodayDate}"/>
+                        </Border>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="5" Text="CD19 B cell count" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <Border Grid.Column="1" Grid.Row="5" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <Entry x:Name=" LabCD19_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White"/>
+                        </Border>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="6" Text="Exam date" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <Border Grid.Column="1" Grid.Row="6" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <DatePicker x:Name=" CovidLaboratoryCdDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                        </Border>
+                    </Grid>
+                </Border>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="1" ColumnDefinitions="*,2*"  >
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" FontAttributes="Bold" Text="Outcome" VerticalOptions="End" />
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1" FontAttributes="Bold" Text="Remarks" VerticalOptions="End" />
+        </Grid>
+
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="2" ColumnDefinitions="*,2*"  >
+            <Grid Style="{StaticResource MiddleSpacing}" Grid.Column="0"  >
+                <Border Style="{StaticResource SmallPaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="DarkSlateGray" BackgroundColor="#c8d1db">
+                    <Grid Style="{StaticResource SmallSpacing}" ColumnDefinitions="*,*,*" RowDefinitions="*,*">
+                        <RadioButton x:Name=" CovidOutUnknown_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0" Grid.Row="0" Content="Unknown" />
+                        <RadioButton x:Name=" CovidOutOngoing_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0" Grid.Row="1" Content="Ongoing" />
+                        <RadioButton x:Name=" CovidOutRemission_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="0" Content="Remission" />
+                        <RadioButton x:Name=" CovidOutDeath_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="1" Content="Death" 
+                                  CheckedChanged="RadioButton_Death_CheckedChanged" />
+                        <Grid Grid.Column="2" Grid.Row="1" ColumnDefinitions="*,4*"  >
+                            <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Date" VerticalOptions="Center"  />
+                            <Border Grid.Column="1" VerticalOptions="Center" StrokeShape="RoundRectangle 10" >
+                                <DatePicker x:Name=" CovidOutcomeDate_textBox" Style="{StaticResource MaxTodayDate}"/>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <Grid Style="{StaticResource MiddleSpacing}" Grid.Column="1" ColumnDefinitions="4*, *" RowDefinitions="*, *">
+                <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" StrokeShape="RoundRectangle 10">
+                    <Editor  x:Name=" CovidRemarks_textBox" Style="{StaticResource MicroEditor}" BackgroundColor="White" />
+                </Border>
+                <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Save" Grid.Row="1" Grid.Column="1" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold" Clicked="Button_Save_Clicked" />
+             </Grid>
+
+        </Grid>
+
+    </Grid>
+</ContentPage>

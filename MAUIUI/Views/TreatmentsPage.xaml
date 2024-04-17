@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.TreatmentsPage"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+    <!--Ana Grid-->
+    
+    <Grid Style="{StaticResource LargeSpacing}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!--Sol Grid-->
+        <Grid Grid.Column="0" Grid.Row="0" Style="{StaticResource LargeSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <!--Sol 1. kisim-->
+            <Grid Grid.Row="0" Style="{StaticResource LargeSpacing}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+
+
+
+                <!--......Baslik........-->
+                <Grid Grid.Row="0" Style="{StaticResource LargeSpacing}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label  Grid.Column="0" Text="MS Specific" FontAttributes="Bold" Style="{StaticResource MicroTextLabel}" HorizontalOptions="Start" VerticalOptions="Center" />
+
+                    <Label  Grid.Column="1"   Text="More" HorizontalOptions="End" VerticalOptions="Center"  x:Name=" OtherMsSpecific_comboBox"
+                      Style="{StaticResource MicroTextLabel }"/>
+                    <Border  Grid.Column="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                        <Picker BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                            <Picker.Items>
+
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+                    
+                </Grid>
+                <!--....................-->
+                
+                <StackLayout x:Name="layout_MsSpecific" Grid.Row="1">
+
+            </StackLayout>
+                
+                
+                
+        </Grid>
+
+
+            <!--Sol 2. kisim-->
+            <Grid Grid.Row="1"  Style="{StaticResource LargeSpacing}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                
+                
+                <!--......Baslik........-->
+                <Grid Grid.Row="0" Style="{StaticResource LargeSpacing}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label  Grid.Column="0" Text="Symptomatic" FontAttributes="Bold" Style="{StaticResource MicroTextLabel}" HorizontalOptions="Start" VerticalOptions="Center" />
+
+                    <Label  Grid.Column="1"   Text="More" HorizontalOptions="End" VerticalOptions="Center" x:Name=" OtherSymptomatic_comboBox"
+                      Style="{StaticResource MicroTextLabel }"/>
+                    <Border  Grid.Column="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                        <Picker BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                            <Picker.Items>
+
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+                </Grid>
+                <!--....................-->
+
+
+
+                <StackLayout x:Name="layout_Symptomatic" Grid.Row="1">
+
+                </StackLayout>
+
+
+
+            </Grid>
+
+            
+            
+        </Grid>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--Sag Grid-->
+        <Grid Grid.Column="1" Grid.Row="0" Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <!--......Baslik........-->
+            <Grid Grid.Row="0" Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label  Grid.Column="0" Text="Non Pharmacological" FontAttributes="Bold" Style="{StaticResource MicroTextLabel}" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                <Label  Grid.Column="1"   Text="More" HorizontalOptions="End" VerticalOptions="Center" x:Name=" Other_Neuropsych_combox"
+         Style="{StaticResource MicroTextLabel }"/>
+                <Border  Grid.Column="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+            <!--....................-->
+
+            <StackLayout x:Name="layout_Neuropsych" Grid.Row="1">
+
+            </StackLayout>
+            
+            <!--....................-->
+            
+
+
+
+
+
+
+            <Grid Grid.Row="2" Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label  Grid.Column="1"   Text="More" HorizontalOptions="End" VerticalOptions="Center"  x:Name=" Other_Physiotherapy_comboBox" Style="{StaticResource MicroTextLabel }"/>
+                <Border  Grid.Column="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+            <!--....................-->
+
+            <StackLayout x:Name="layout_Physiotherapy" Grid.Row="3">
+
+            </StackLayout>
+
+            <!--....................-->
+
+
+
+
+
+            <Grid Grid.Row="4" Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label  Grid.Column="1"   Text="More" HorizontalOptions="End" VerticalOptions="Center" x:Name=" Other_Pilates_comboBox" Style="{StaticResource MicroTextLabel }"/>
+                <Border  Grid.Column="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+            <!--....................-->
+
+            <StackLayout x:Name="layout_Pilates" Grid.Row="5">
+
+            </StackLayout>
+
+            <!--....................-->
+
+
+
+            <Grid Grid.Row="6" Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label  Grid.Column="1"   Text="More" HorizontalOptions="End" VerticalOptions="Center" x:Name=" Other_Psychotherapy_comboBox" Style="{StaticResource MicroTextLabel }"/>
+                <Border  Grid.Column="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+            <!--....................-->
+
+            <StackLayout x:Name="layout_Psychotherapy" Grid.Row="7">
+
+            </StackLayout>
+
+            <!--....................-->
+
+
+
+            <Grid Grid.Row="8" Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label  Grid.Column="1"   Text="More" HorizontalOptions="End" VerticalOptions="Center" x:Name=" Other_Yoga_comboBox" Style="{StaticResource MicroTextLabel }"/>
+                <Border  Grid.Column="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+            <!--....................-->
+
+            <StackLayout x:Name="layout_Yoga" Grid.Row="9">
+
+            </StackLayout>
+
+            <!--....................-->
+
+
+
+
+        </Grid>
+
+
+
+
+
+        
+        
+
+
+        
+        
+        <!--Remarks-->
+        <Border  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource SmallPaddingBorder}" StrokeThickness="0">
+
+            <Grid Style="{StaticResource SmallSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Text="Remarks"  HorizontalOptions="Start" VerticalOptions="Center"
+                       FontAttributes="Bold" x:Name=" TreatmentRemarks_textBox" Style="{StaticResource MicroTextLabel}"/>
+                
+                <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" BackgroundColor="White"  Stroke="Gray" 
+                        StrokeShape="RoundRectangle 10,10,10,10" HorizontalOptions="Fill" VerticalOptions="Fill" >
+                    <Editor />
+                </Border>
+
+                 
+
+                <Button Grid.Column="1" Grid.Row="1"  BackgroundColor="#5a81ab" Text="Save"  HorizontalOptions="Fill" 
+                        VerticalOptions="End" Style="{StaticResource MicroButton}"   x:Name="Button_SaveTreatments" Clicked="Button_SaveTreatments_Clicked" />
+
+
+
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>
+    

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.VaccineOtherView"             
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand">
+
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" BackgroundColor="#c8d1db">
+        <Grid Style="{StaticResource MiddleSpacing}" ColumnDefinitions="0.5*,*,*,*,0.5*"  RowDefinitions="*,*"  >
+            <Label Style="{StaticResource MicroTextLabel}" Text="Other Vaccine" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Border Grid.Column="2" Grid.Row="0" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center">
+                <Entry x:Name="VaccineOther_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White"/>
+            </Border>
+            <Border Grid.Column="2" Grid.Row="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                <DatePicker x:Name="VaccineOtherDate_textBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+            <Grid Grid.Column="3" Grid.Row="1" ColumnDefinitions="*,*,8*" RowDefinitions="2*,3*,2*" Style="{StaticResource SmallSpacing}">
+                <Button MinimumHeightRequest="0" Padding="0" Grid.Column="3" Grid.Row="1" BackgroundColor="#5a81ab" Text="Add New"
+                        HorizontalOptions="Fill" Style="{StaticResource MicroButton}" x:Name="Button_SaveVaccineOther" Clicked="Button_AddNewVaccineOther_Clicked" />
+            </Grid>
+        </Grid>
+    </Border>
+
+</ContentView>

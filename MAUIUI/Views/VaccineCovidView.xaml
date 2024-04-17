@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.VaccineCovidView"             
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand">
+    
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" BackgroundColor="#c8d1db">
+
+        <Grid Style="{StaticResource MiddleSpacing}" ColumnDefinitions="0.5*,*,*,0.5*" RowDefinitions="*,*,*,*,*,*">
+            
+            <Label Style="{StaticResource MicroTextLabel}" Text="Covid-19" Grid.Column="1" Grid.Row="1" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label Style="{StaticResource MicroTextLabel}" Text="Dose" Grid.Column="1" Grid.Row="2" HorizontalOptions="Start" VerticalOptions="Center" />
+           
+            <Border  Grid.Column="2" Grid.Row="1"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                <Picker x:Name="Vaccinecovid_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                    <Picker.Items>
+                        <x:String>Biontech Vaccine</x:String>
+                        <x:String>Moderna Vaccine</x:String>
+                        <x:String>Astrazeneca Vaccine</x:String>
+                        <x:String>Sputnik V Vaccine</x:String>
+                        <x:String>Sinovac (CoronaVac) Vaccine</x:String>
+                        <x:String>Sinopharm Vaccine</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+            <Border  Grid.Column="2" Grid.Row="2"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                <Picker x:Name="CovidDose_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                    <Picker.Items>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+            <Border Grid.Column="2" Grid.Row="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                <DatePicker x:Name="VaccineCovidDate_textBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+            <Grid Grid.Column="2" Grid.Row="4" ColumnDefinitions="*,8*,8*" RowDefinitions="*,8*" Style="{StaticResource SmallSpacing}">
+
+                <Button MinimumHeightRequest="0" Padding="0" Grid.Column="3" Grid.Row="1" BackgroundColor="#5a81ab" Text="Add New"
+                        HorizontalOptions="Fill" Style="{StaticResource MicroButton}" x:Name="Button_AddNewVaccineCovid" Clicked="Button_AddNewVaccineCovid_Clicked"/>
+
+            </Grid>
+ 
+        </Grid>
+
+    </Border>
+
+</ContentView>

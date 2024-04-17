@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.ParaclinicalNotesView"
+             VerticalOptions="FillAndExpand"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+        <Grid Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1" Style="{StaticResource SmallSpacing}" ColumnDefinitions="0.5*,35*,0.5*"  RowDefinitions="*,20*,*" >
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1" Grid.Row="0" Text="Notes"  VerticalOptions="Center" FontAttributes="Bold"/>
+                <Border Grid.Column="1" Grid.Row="1"  BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10"   >
+                    <Editor Style="{StaticResource MicroEditor}" />
+                </Border>
+            </Grid>
+
+
+            <Grid Grid.Row="2" Style="{StaticResource SmallSpacing}" ColumnDefinitions="7*,*" RowDefinitions="*,10*" >
+                <Button Style="{StaticResource MicroButton}" Grid.Column="1" Grid.Row="1" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold" x:Name="Button_SaveParaclinicalNotes"  />
+            </Grid>
+            
+        </Grid>
+    </Border>
+
+</ContentView>

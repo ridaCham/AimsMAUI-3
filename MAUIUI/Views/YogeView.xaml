@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.YogeView"
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand">
+
+    <Border Style="{StaticResource MiddlePaddingBorder}" StrokeShape="RoundRectangle 10" 
+            Stroke="LightGray" BackgroundColor="#c8d1db">
+
+        <Grid Style="{StaticResource MiddleSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Label Grid.Column="0" Grid.Row="0"   Text="Yoga" HorizontalOptions="Start" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+
+
+            <Label Grid.Column="2" Grid.Row="0"   Text="Starting on" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+
+
+            <Border  Grid.Column="3"  Grid.Row="0" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                <DatePicker x:Name=" YogaStartDate_maskedTextBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+
+            <Label Grid.Column="2" Grid.Row="1"   Text="Ending on" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+
+
+            <Border  Grid.Column="3"  Grid.Row="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                <DatePicker x:Name=" YogaEndDate_maskedTextBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+
+
+
+
+            <Grid Grid.Column="0" Grid.Row="1"  ColumnDefinitions="*,8*,*" RowDefinitions="*,8*,*" Style="{StaticResource SmallSpacing}">
+                
+                <Button MinimumHeightRequest="0" Padding="0" Grid.Column="1" Grid.Row="1" BackgroundColor="#5a81ab" Text="Add New"
+                        HorizontalOptions="Fill" Style="{StaticResource MicroButton}"  x:Name="Button_AddNewYoge"  Clicked="Button_AddNewYoge_Clicked"   />
+            </Grid>
+
+
+        </Grid>
+    </Border>
+</ContentView>

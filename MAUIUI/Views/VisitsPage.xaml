@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.VisitsPage"
+             BackgroundColor="#eaeff4"
+             Style="{StaticResource LargePaddingPage}">
+    <Grid Style="{StaticResource MiddleSpacing}" ColumnDefinitions="2*, 3*">
+
+        <Border Grid.Column="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="#c8d1db">
+            <Grid Style="{StaticResource SmallSpacing}" RowDefinitions="*, 8*, 7*, 9*, 5*, 2*">
+                <Label Grid.Row="0" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold" Text="Scripps" HorizontalOptions="Start" />
+                <Label Grid.Row="0" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold"  Text="DEGREE OF IMPAIRMENT" HorizontalOptions="Center" TextDecorations="Underline" />
+
+                <Grid Grid.Row="1" RowDefinitions="*, *, *, *, *, *, *, *" ColumnDefinitions="2*, *, *, *, *">
+                    <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="2*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Mentation and Mood" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" MentationNormal_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="MentationGroup" HorizontalOptions="Center" Content="Normal" />
+                        <RadioButton x:Name=" MentationMild_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="MentationGroup" HorizontalOptions="Center" Content="Mild" />
+                        <RadioButton x:Name=" MentationModerate_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="MentationGroup" HorizontalOptions="Center" Content="Moderate" />
+                        <RadioButton x:Name=" MentationSevere_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="MentationGroup" HorizontalOptions="Center" Content="Severe" />
+                    </Grid>
+
+                    <Label Grid.Row="1" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold" Text="Craniel Nerves" HorizontalOptions="Start" VerticalOptions="End" />
+                    <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="2*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Visual Acuity" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" CranialVisualAcuitiyNormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="VisualAcuityGroup" HorizontalOptions="Center" Content="Normal" />
+                        <RadioButton x:Name=" CranialVisualAcuitiyMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="VisualAcuityGroup" HorizontalOptions="Center" Content="Mild" />
+                        <RadioButton x:Name=" CranialVisualAcuitiyModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="VisualAcuityGroup" HorizontalOptions="Center" Content="Moderate" />
+                        <RadioButton x:Name=" CranialVisualAcuitiySevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="VisualAcuityGroup" HorizontalOptions="Center" Content="Severe" />
+                    </Grid>
+
+                    <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="2*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Fields, Disc, Pupils" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" CranialFieldsNormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="FieldsGroup" HorizontalOptions="Center" Content="Normal" />
+                        <RadioButton x:Name=" CranialFieldsMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="FieldsGroup" HorizontalOptions="Center" Content="Mild" />
+                        <RadioButton x:Name=" CranialFieldsModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="FieldsGroup" HorizontalOptions="Center" Content="Moderate" />
+                        <RadioButton x:Name=" CranialFieldsSevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="FieldsGroup" HorizontalOptions="Center" Content="Severe" />
+                    </Grid>
+
+                    <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="2*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Eye Movements" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" CranialEyeMoveNormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="EyeMovementsGroup" HorizontalOptions="Center" Content="Normal" />
+                        <RadioButton x:Name=" CranialEyeMoveMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="EyeMovementsGroup" HorizontalOptions="Center" Content="Mild" />
+                        <RadioButton x:Name=" CranialEyeMoveModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="EyeMovementsGroup" HorizontalOptions="Center" Content="Moderate" />
+                        <RadioButton x:Name=" CranialEyeMoveSevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="EyeMovementsGroup" HorizontalOptions="Center" Content="Severe" />
+                    </Grid>
+
+                    <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="2*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Nystagmus" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" CranialNystagmusNormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="NystagmusGroup" HorizontalOptions="Center" Content="Normal" />
+                        <RadioButton x:Name=" CranialNystagmusMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="NystagmusGroup" HorizontalOptions="Center" Content="Mild" />
+                        <RadioButton x:Name=" CranialNystagmusModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="NystagmusGroup" HorizontalOptions="Center" Content="Moderate" />
+                        <RadioButton x:Name=" CranialNystagmusSevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="NystagmusGroup" HorizontalOptions="Center" Content="Severe" />
+                    </Grid>
+
+                    <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="2*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Pitoz" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" CranialPitozNormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="PitozGroup" HorizontalOptions="Center" Content="Normal" />
+                        <RadioButton x:Name=" CranialPitozMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="PitozGroup" HorizontalOptions="Center" Content="Mild" />
+                        <RadioButton x:Name=" CranialPitozModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="PitozGroup" HorizontalOptions="Center" Content="Moderate" />
+                        <RadioButton x:Name=" CranialPitozSevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="PitozGroup" HorizontalOptions="Center" Content="Severe" />
+                    </Grid>
+
+                    <Grid Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="2*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Lower Cranial Nerves" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" CranialLowerNervesNormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="LowerCranialGroup" HorizontalOptions="Center" Content="Normal" />
+                        <RadioButton x:Name=" CranialLowerNervesMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="LowerCranialGroup" HorizontalOptions="Center" Content="Mild" />
+                        <RadioButton x:Name=" CranialLowerNervesModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="LowerCranialGroup" HorizontalOptions="Center" Content="Moderate" />
+                        <RadioButton x:Name=" CranialLowerNervesSevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="LowerCranialGroup" HorizontalOptions="Center" Content="Severe" />
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="2" RowDefinitions="*, *, *, *, *, *, *" ColumnDefinitions="2*, *, *, *, *, *, *">
+                    <Label Grid.Row="0" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold" Text="Motor" HorizontalOptions="Start" VerticalOptions="End" />
+
+                    <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7" ColumnDefinitions="2*, *, *, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="RU" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" MotorRU0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="MotorRUGroup" HorizontalOptions="Center" Content="0" />
+                        <RadioButton x:Name=" MotorRU1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="MotorRUGroup" HorizontalOptions="Center" Content="1" />
+                        <RadioButton x:Name=" MotorRU2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="MotorRUGroup" HorizontalOptions="Center" Content="2" />
+                        <RadioButton x:Name=" MotorRU3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="MotorRUGroup" HorizontalOptions="Center" Content="3" />
+                        <RadioButton x:Name=" MotorRU4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="MotorRUGroup" HorizontalOptions="Center" Content="4" />
+                        <RadioButton x:Name=" MotorRU5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="MotorRUGroup" HorizontalOptions="Center" Content="5" />
+                    </Grid>
+
+                    <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="7" ColumnDefinitions="2*, *, *, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="LU" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" MotorLU0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="MotorLUGroup" HorizontalOptions="Center" Content="0" />
+                        <RadioButton x:Name=" MotorLU1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="MotorLUGroup" HorizontalOptions="Center" Content="1" />
+                        <RadioButton x:Name=" MotorLU2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="MotorLUGroup" HorizontalOptions="Center" Content="2" />
+                        <RadioButton x:Name=" MotorLU3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="MotorLUGroup" HorizontalOptions="Center" Content="3" />
+                        <RadioButton x:Name=" MotorLU4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="MotorLUGroup" HorizontalOptions="Center" Content="4" />
+                        <RadioButton x:Name=" MotorLU5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="MotorLUGroup" HorizontalOptions="Center" Content="5" />
+                    </Grid>
+
+                    <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="7" ColumnDefinitions="2*, *, *, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="RL" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" MotorRL0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="MotorRLGroup" HorizontalOptions="Center" Content="0" />
+                        <RadioButton x:Name=" MotorRL1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="MotorRLGroup" HorizontalOptions="Center" Content="1" />
+                        <RadioButton x:Name=" MotorRL2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="MotorRLGroup" HorizontalOptions="Center" Content="2" />
+                        <RadioButton x:Name=" MotorRL3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="MotorRLGroup" HorizontalOptions="Center" Content="3" />
+                        <RadioButton x:Name=" MotorRL4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="MotorRLGroup" HorizontalOptions="Center" Content="4" />
+                        <RadioButton x:Name=" MotorRL5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="MotorRLGroup" HorizontalOptions="Center" Content="5" />
+                    </Grid>
+
+                    <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7" ColumnDefinitions="2*, *, *, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="LL" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" MotorLL0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="MotorLLGroup" HorizontalOptions="Center" Content="0" />
+                        <RadioButton x:Name=" MotorLL1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="MotorLLGroup" HorizontalOptions="Center" Content="1" />
+                        <RadioButton x:Name=" MotorLL2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="MotorLLGroup" HorizontalOptions="Center" Content="2" />
+                        <RadioButton x:Name=" MotorLL3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="MotorLLGroup" HorizontalOptions="Center" Content="3" />
+                        <RadioButton x:Name=" MotorLL4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="MotorLLGroup" HorizontalOptions="Center" Content="4" />
+                        <RadioButton x:Name=" MotorLL5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="MotorLLGroup" HorizontalOptions="Center" Content="5" />
+                    </Grid>
+
+                    <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="7" ColumnDefinitions="2*, *, *, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Neck Flexion" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" MotorNeckFlexion0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="NeckFlexionGroup" HorizontalOptions="Center" Content="0" />
+                        <RadioButton x:Name=" MotorNeckFlexion1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="NeckFlexionGroup" HorizontalOptions="Center" Content="1" />
+                        <RadioButton x:Name=" MotorNeckFlexion2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="NeckFlexionGroup" HorizontalOptions="Center" Content="2" />
+                        <RadioButton x:Name=" MotorNeckFlexion3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="NeckFlexionGroup" HorizontalOptions="Center" Content="3" />
+                        <RadioButton x:Name=" MotorNeckFlexion4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="NeckFlexionGroup" HorizontalOptions="Center" Content="4" />
+                        <RadioButton x:Name=" MotorNeckFlexion5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="NeckFlexionGroup" HorizontalOptions="Center" Content="5" />
+                    </Grid>
+
+                    <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="7" ColumnDefinitions="2*, *, *, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Neck Installation" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" MotorNeckExtation0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="NeckInstallationGroup" HorizontalOptions="Center" Content="0" />
+                        <RadioButton x:Name=" MotorNeckExtation1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="NeckInstallationGroup" HorizontalOptions="Center" Content="1" />
+                        <RadioButton x:Name=" MotorNeckExtation2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="NeckInstallationGroup" HorizontalOptions="Center" Content="2" />
+                        <RadioButton x:Name=" MotorNeckExtation3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="NeckInstallationGroup" HorizontalOptions="Center" Content="3" />
+                        <RadioButton x:Name=" MotorNeckExtation4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="NeckInstallationGroup" HorizontalOptions="Center" Content="4" />
+                        <RadioButton x:Name=" MotorNeckExtation5s_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="NeckInstallationGroup" HorizontalOptions="Center" Content="5" />
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="3" RowDefinitions="*, *, *, *, *, *, *, *, *" ColumnDefinitions="*, *, *, *, *, *, *, *, *, *">
+                    <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold" Text="Normal" TextDecorations="Underline" HorizontalOptions="Center" VerticalOptions="Center" />
+                    <Label Grid.Row="0" Grid.Column="2" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold" Text="Mild" TextDecorations="Underline" HorizontalOptions="Center" VerticalOptions="Center" />
+                    <Label Grid.Row="0" Grid.Column="3" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold" Text="Moderate" TextDecorations="Underline" HorizontalOptions="Center" VerticalOptions="Center" />
+                    <Label Grid.Row="0" Grid.Column="4" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold" Text="Severe" TextDecorations="Underline" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                    <Label Grid.Row="0" Grid.Column="6" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold" Text="Normal" TextDecorations="Underline" HorizontalOptions="Center" VerticalOptions="Center" />
+                    <Label Grid.Row="0" Grid.Column="7" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold" Text="Mild" TextDecorations="Underline" HorizontalOptions="Center" VerticalOptions="Center" />
+                    <Label Grid.Row="0" Grid.Column="8" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold" Text="Moderate" TextDecorations="Underline" HorizontalOptions="Center" VerticalOptions="Center" />
+                    <Label Grid.Row="0" Grid.Column="9" Style="{StaticResource MicroTextLabel}" FontAttributes="Bold" Text="Severe" TextDecorations="Underline" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Style="{StaticResource MicroTextLabel}" Text="DTRS" HorizontalOptions="Start" VerticalOptions="End" FontAttributes="Bold" />
+ 
+                    <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="UE" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" DTRSUENormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="DTRSUEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" DTRSUEMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="DTRSUEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" DTRSUEModerate_radiobutton " Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="DTRSUEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" DTRSUESevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="DTRSUEGroup" HorizontalOptions="Center" />
+                    </Grid>
+
+                    <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="LE" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" DTRSLENormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="DTRSLEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" DTRSLEMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="DTRSLEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" DTRSLEModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="DTRSLEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" DTRSLESevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="DTRSLEGroup" HorizontalOptions="Center" />
+                    </Grid>
+
+
+                    <Label Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="5" Style="{StaticResource MicroTextLabel}" Text="Cereballar" HorizontalOptions="Start" VerticalOptions="End" FontAttributes="Bold" />
+                    <Grid Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="5" ColumnDefinitions="*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="UE" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" CereballarUENormal_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="CereballarUEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" CereballarUEMild_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="CereballarUEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" CereballarUEModerate_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="CereballarUEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" CereballarUESevere_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="CereballarUEGroup" HorizontalOptions="Center" />
+                    </Grid>
+
+                    <Grid Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="5" ColumnDefinitions="*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="LE" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" CereballarLENormal_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="CereballarLEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" CereballarLEMild_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="CereballarLEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" CereballarLEModerate_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="CereballarLEGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" CereballarLESevere_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="CereballarLEGroup" HorizontalOptions="Center" />
+                    </Grid>
+ 
+                    
+                    <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5" Style="{StaticResource MicroTextLabel}" Text="Sensory" HorizontalOptions="Start" VerticalOptions="End" FontAttributes="Bold" />
+
+
+
+                    <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="RU" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" SensoryRUNormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="SensoryRUGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryRUMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="SensoryRUGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryRUModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="SensoryRUGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryRUSevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="SensoryRUGroup" HorizontalOptions="Center" />
+                    </Grid>
+
+
+                    <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="LU" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" SensoryLUNormal_radiobutton " Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="SensoryLUGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryLUMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="SensoryLUGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryLUModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="SensoryLUGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryLUSevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="SensoryLUGroup" HorizontalOptions="Center" />
+                    </Grid>
+
+                    <Grid Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="RL" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" SensoryRLNormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="SensoryRLGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryRLMild_radiobutton " Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="SensoryRLGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryRLModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="SensoryRLGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryRLSevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="SensoryRLGroup" HorizontalOptions="Center" />
+                    </Grid>
+
+
+                    <Grid Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="*, *, *, *, *">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="LL" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" SensoryLLNormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="SensoryLLGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryLLMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="SensoryLLGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryLLModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="SensoryLLGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" SensoryLLSevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="SensoryLLGroup" HorizontalOptions="Center" />
+                    </Grid>
+
+                    <Label Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="5" Style="{StaticResource MicroTextLabel}" Text="Gait, Trunc, Balance" HorizontalOptions="Start" VerticalOptions="End" FontAttributes="Bold" />
+                    <Grid Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="5" ColumnDefinitions="*, *, *, *, *">
+                        <RadioButton x:Name=" GaitTruncBalanceNormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="GaitGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" GaitTruncBalanceMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="GaitGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" GaitTruncBalanceModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="GaitGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" GaitTruncBalanceSevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="GaitGroup" HorizontalOptions="Center" />
+                    </Grid>
+
+                    <Label Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="5" Style="{StaticResource MicroTextLabel}" Text="Bladder/Bowel" HorizontalOptions="Start" VerticalOptions="End" FontAttributes="Bold" />
+                    <Grid Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="5" ColumnDefinitions="*, *, *, *, *">
+                        <RadioButton x:Name=" BladderBowelNormal_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="BladderGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" BladderBowelMild_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="BladderGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" BladderBowelModerate_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="BladderGroup" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" BladderBowelSevere_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="BladderGroup" HorizontalOptions="Center" />
+                    </Grid>
+
+                </Grid>
+
+                <Grid Grid.Row="4" RowDefinitions="*, *, *, *, *" ColumnDefinitions="*, *, *, *, 2*, 2*, 2*">
+                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource MicroTextLabel}" Text="Babinski" HorizontalOptions="Start" VerticalOptions="End" FontAttributes="Bold" />
+
+
+
+                    <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7" ColumnDefinitions="*, *, *, *, 2*, 2*, 2*">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="R" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" BabinskiRYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="BabinskiRGroup" Content="Yes" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" BabinskiRNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="BabinskiRGroup" Content="No"  HorizontalOptions="Center" />
+                    </Grid>
+
+
+                    <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="7" ColumnDefinitions="*, *, *, *, 2*, 2*, 2*">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="L" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" BabinskiLYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="BabinskiLGroup" Content="Yes" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" BabinskiLNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="BabinskiLGroup" Content="No"  HorizontalOptions="Center" />
+                    </Grid>
+
+                    
+                    <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource MicroTextLabel}" Text="Orthostatic Hypotension" HorizontalOptions="Start" VerticalOptions="End" FontAttributes="Bold" />
+                    <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7" ColumnDefinitions="*, *, *, *, 2*, 2*, 2*">
+                        <RadioButton x:Name=" OrthostaticYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="OrthostaticGroup" Content="Yes" HorizontalOptions="Center" />
+                        <RadioButton x:Name=" OrthostaticNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="OrthostaticGroup" Content="No"  HorizontalOptions="Center" />
+                    </Grid>
+ 
+                    
+                    <Label Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3" Style="{StaticResource MicroTextLabel}" Text="Muscle Tone" HorizontalOptions="Start" VerticalOptions="End" FontAttributes="Bold" />
+
+                    <Grid Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="4" ColumnDefinitions="*, *, *, * ">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="RU" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" MusculeToneRUNormal_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="MuscleToneRUGroup" Content="Normal"  HorizontalOptions="Center" />
+                        <RadioButton x:Name=" MusculeToneRUHypotonia_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="MuscleToneRUGroup" Content="Hypotonia"  HorizontalOptions="Center" />
+                        <RadioButton x:Name=" MusculeToneRUHypertoni_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="MuscleToneRUGroup" Content="Hypertonia"  HorizontalOptions="Center" />
+                     </Grid>
+
+                    <Grid Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="4" ColumnDefinitions="*, *, *, * ">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="LU" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" MusculeToneLUNormal_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="MuscleToneLUGroup" Content="Normal"  HorizontalOptions="Center" />
+                        <RadioButton x:Name=" MusculeToneLUHypotonia_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="MuscleToneLUGroup" Content="Hypotonia"  HorizontalOptions="Center" />
+                        <RadioButton x:Name=" MusculeToneLUHypertoni_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="MuscleToneLUGroup" Content="Hypertonia"  HorizontalOptions="Center" />
+                    </Grid>
+
+                    <Grid Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="4" ColumnDefinitions="*, *, *, * ">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="RL" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" MusculeToneRLNormal_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="MuscleToneRLGroup" Content="Normal"  HorizontalOptions="Center" />
+                        <RadioButton x:Name=" MusculeToneRLHypotonia_radioButton"  Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="MuscleToneRLGroup" Content="Hypotonia"  HorizontalOptions="Center" />
+                        <RadioButton x:Name=" MusculeToneRLHypertoni_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="MuscleToneRLGroup" Content="Hypertonia"  HorizontalOptions="Center" />
+                    </Grid>
+
+                    <Grid Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="4" ColumnDefinitions="*, *, *, * ">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="LL" HorizontalOptions="End" VerticalOptions="Center" FontAttributes="Bold" />
+                        <RadioButton x:Name=" MusculeToneLLNormal_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" GroupName="MuscleToneLLGroup" Content="Normal"  HorizontalOptions="Center" />
+                        <RadioButton x:Name=" MusculeToneLLHypotonia_radioButton"  Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="MuscleToneLLGroup" Content="Hypotonia"  HorizontalOptions="Center" />
+                        <RadioButton x:Name=" MusculeToneLLHypertoni_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="MuscleToneLLGroup" Content="Hypertonia"  HorizontalOptions="Center" />
+                    </Grid>
+                    
+                </Grid>
+
+                <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="6" ColumnDefinitions="3*, *">
+                    <Label Style="{StaticResource SmallTextLabel}" Grid.Column="0" HorizontalOptions="End" Text="TOTAL" FontAttributes="Bold" VerticalOptions="Center" />
+                    <Border Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                        <Entry x:Name=" AddNewVisitTotal_textbox" Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                    </Border>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Column="1" RowDefinitions="1.5*, 7*, 21*, 7*">
+            <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="0" ColumnDefinitions="*, 3*, 2*, 5*, 2*, 3*">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Text="Date" VerticalOptions="Center" HorizontalOptions="End" />
+                <Border Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                    <DatePicker x:Name=" VisitDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                </Border>
+                <Label Grid.Column="2" Style="{StaticResource MicroTextLabel}" Text="Examined By" VerticalOptions="Center" HorizontalOptions="End" />
+                <Border Grid.Column="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name=" Examinedby_combobox" Style="{StaticResource MicroPicker}" BackgroundColor="#5a81ab" TextColor="White">
+                        <Picker.Items>
+                            <x:String>A</x:String>
+                            <x:String>B</x:String>
+                            <x:String>C</x:String>
+                            <x:String>D</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                <Label Grid.Column="4" Style="{StaticResource MicroTextLabel}" Text="Other Visits" VerticalOptions="Center" HorizontalOptions="End" />
+                <Border Grid.Column="5" StrokeShape="RoundRectangle 10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name=" comboBox1" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+            <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="1" ColumnDefinitions="*, *">
+                <Border Style="{StaticResource MiddlePaddingBorder}" Grid.Column="0" BackgroundColor="#c8d1db">
+                    <Grid RowDefinitions="*, *, *, *, *" ColumnDefinitions="*, *">
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontAttributes="Bold" Text="Status" />
+                        <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                            <CheckBox x:Name=" FirstVisit_checkbox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="First Visit" VerticalOptions="Center" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="2" Orientation="Horizontal">
+                            <CheckBox x:Name=" Administrative_checkbox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Administrative" VerticalOptions="Center" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="3" Orientation="Horizontal">
+                            <CheckBox x:Name=" Routine_checkbox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Routine" VerticalOptions="Center" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                            <CheckBox x:Name=" SuspectedRelapse_checkbox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Suspected Relapse" VerticalOptions="Center" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+                            <CheckBox x:Name=" Phone_checkbox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Phone" VerticalOptions="Center" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+                            <CheckBox x:Name=" Retrospective_checkbox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Retrospective" VerticalOptions="Center" />
+                        </StackLayout>
+                        
+                    </Grid>
+                </Border>
+                <Border Style="{StaticResource MiddlePaddingBorder}" Grid.Column="1" BackgroundColor="#c8d1db">
+                    <Grid Style="{StaticResource MiddleSpacing}" RowDefinitions="*, 2*, 2*, 2*" ColumnDefinitions="*, *, *, *, *, *, *, *">
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" Text="Vital Signs" FontAttributes="Bold" />
+                        
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Text="Height:" />
+                        <Border Grid.Row="1" Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <Entry x:Name=" Height_textbox" Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                        </Border>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="End" Text="Weight:" />
+                        <Border Grid.Row="1" Grid.Column="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <Entry x:Name=" Weight_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                        </Border>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="End" Text="BMI:" />
+                        <Border Grid.Row="1" Grid.Column="5" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <Entry x:Name=" BMI_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                        </Border>
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="6" VerticalOptions="Center" HorizontalOptions="End" Text="Pulse:" />
+                        <Border Grid.Row="1" Grid.Column="7" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <Entry x:Name=" Pulse_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                        </Border>
+
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="End" Text="Blood Pressure:" />
+                        <Border Grid.Row="2" Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <Entry x:Name=" BloodPressure_textBox1" Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <Entry x:Name=" BloodPressure_textBox2" Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                        </Border>
+
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="End" Text="Counts (One Breath):" />
+                        <Border Grid.Row="2" Grid.Column="7" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <Entry x:Name=" Counts_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                        </Border>
+                        
+                        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="End" Text="Temperature:" />
+                        <Border Grid.Row="3" Grid.Column="7" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                            <Entry x:Name=" Temperature_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <StackLayout x:Name="layout_Symptoms" Grid.Row="2">
+                
+            </StackLayout>
+            <Grid Grid.Row="3" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*, *, *, *, *" RowDefinitions="2*, *, 2*, 2*">
+                <Button Style="{StaticResource MicroButton}" x:Name="Button_Symptoms" MinimumHeightRequest="0" Padding="0" Grid.Row="0" Grid.Column="0" Text="SYMPTOMS" FontAttributes="Bold" BackgroundColor="#1D3A5A" Clicked="Button_Symptoms_Clicked" />
+                <Button Style="{StaticResource MicroButton}" x:Name="Button_Tests" MinimumHeightRequest="0" Padding="0" Grid.Row="0" Grid.Column="1" Text="TESTS" FontAttributes="Bold" BackgroundColor="#316297" Clicked="Button_Tests_Clicked" />
+                <Button Style="{StaticResource MicroButton}" x:Name="Button_EDSS" MinimumHeightRequest="0" Padding="0" Grid.Row="0" Grid.Column="2" Text="EDSS" FontAttributes="Bold" BackgroundColor="#5A81AB" Clicked="Button_EDSS_Clicked" />
+                <Button Style="{StaticResource MicroButton}" x:Name="Button_WalkingVideo" MinimumHeightRequest="0" Padding="0" Grid.Row="0" Grid.Column="3" Text="Walking Video" FontAttributes="Bold" BackgroundColor="#83A0C0" Clicked="Button_WalkingVideo_Clicked" />
+                <Button Style="{StaticResource MicroButton}" x:Name="Button_SpeechVoice" MinimumHeightRequest="0" Padding="0" Grid.Row="0" Grid.Column="4" Text="Speech Voice" FontAttributes="Bold" BackgroundColor="#83A0C0" Clicked="Button_SpeechVoice_Clicked" />
+
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Text="Remarks" FontAttributes="Bold" x:Name=" Remarks_textbox" VerticalOptions="End" />
+                <Border Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="4" StrokeShape="RoundRectangle 10">
+                    <Editor BackgroundColor="White"/>
+                </Border>
+
+                <Button Style="{StaticResource MicroButton}" x:Name="Button_AddNewVisit" MinimumHeightRequest="0" Padding="0" Grid.Row="2" Grid.Column="4" Text="Add New Visit" FontAttributes="Bold" BackgroundColor="#1D3A5A" Clicked="Button_AddNewVisit_Clicked" />
+                <Button Style="{StaticResource MicroButton}" x:Name="Button_Save" Grid.Row="3" Grid.Column="4" MinimumHeightRequest="0" Padding="0" Text="Save" FontAttributes="Bold" BackgroundColor="#1D3A5A" Clicked="Button_Save_Clicked" />
+
+            </Grid>
+        </Grid>
+        
+        
+    </Grid>
+</ContentPage>

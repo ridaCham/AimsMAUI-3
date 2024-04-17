@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.EDSSView"
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand"
+             >
+    <Border Style="{StaticResource MiddlePaddingBorder}" BackgroundColor="#c8d1db">
+        <Grid Style="{StaticResource SmallSpacing}" RowDefinitions="*, *, *, *, *, *, *, *, *, *, 1.5*, 6.5*" ColumnDefinitions="2*, *, *, *, *, *, *, *, *, *">
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="18" Text="EDSS" FontAttributes="Bold" />
+
+
+            <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="10"  ColumnDefinitions="2*, *, *, *, *, *, *, *, *, *">
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Text="Pyramidal" />
+                <Button Style="{StaticResource MicroButton}" x:Name="button_PyramidalInfo" Clicked="button_PyramidalInfo_Clicked"  Grid.Column="1" Text="?" MinimumHeightRequest="0" Padding="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="IndianRed" />
+                <RadioButton x:Name=" Pyramidal0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="PyramidalGroup" Content="0" />
+                <RadioButton x:Name=" Pyramidal1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="PyramidalGroup" Content="1" />
+                <RadioButton x:Name=" Pyramidal2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="PyramidalGroup" Content="2" />
+                <RadioButton x:Name=" Pyramidal3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="PyramidalGroup" Content="3" />
+                <RadioButton x:Name=" Pyramidal4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="PyramidalGroup" Content="4" />
+                <RadioButton x:Name=" Pyramidal5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="7" GroupName="PyramidalGroup" Content="5" />
+                <RadioButton x:Name=" Pyramidal6_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="8" GroupName="PyramidalGroup" Content="6" />
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="10"  ColumnDefinitions="2*, *, *, *, *, *, *, *, *, *">
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Text="Cerebellar" />
+                <Button Style="{StaticResource MicroButton}" x:Name="button_CerebellarInfo" Clicked="button_CerebellarInfo_Clicked"  Grid.Column="1" Text="?" MinimumHeightRequest="0" Padding="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="IndianRed" />
+                <RadioButton x:Name=" Cerebellar0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="CerebellarGroup" Content="0" />
+                <RadioButton x:Name=" Cerebellar1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="CerebellarGroup" Content="1" />
+                <RadioButton x:Name=" Cerebellar2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="CerebellarGroup" Content="2" />
+                <RadioButton x:Name=" Cerebellar3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="CerebellarGroup" Content="3" />
+                <RadioButton x:Name=" Cerebellar4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="CerebellarGroup" Content="4" />
+                <RadioButton x:Name=" Cerebellar5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="7" GroupName="CerebellarGroup" Content="5" />
+             </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="10"  ColumnDefinitions="2*, *, *, *, *, *, *, *, *, *">
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Text="Brainstem" />
+                <Button Style="{StaticResource MicroButton}" x:Name="button_BrainstemInfo" Clicked="button_BrainstemInfo_Clicked"  Grid.Column="1" Text="?" MinimumHeightRequest="0" Padding="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="IndianRed" />
+                <RadioButton x:Name=" Brainstem0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="BrainstemGroup" Content="0" />
+                <RadioButton x:Name=" Brainstem1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="BrainstemGroup" Content="1" />
+                <RadioButton x:Name=" Brainstem2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="BrainstemGroup" Content="2" />
+                <RadioButton x:Name=" Brainstem3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="BrainstemGroup" Content="3" />
+                <RadioButton x:Name=" Brainstem4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="BrainstemGroup" Content="4" />
+                <RadioButton x:Name=" Brainstem5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="7" GroupName="BrainstemGroup" Content="5" />
+            </Grid>
+
+
+            <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="10"  ColumnDefinitions="2*, *, *, *, *, *, *, *, *, *">
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Text="Sensory" />
+                <Button Style="{StaticResource MicroButton}" x:Name="button_SensoryInfo" Clicked="button_SensoryInfo_Clicked"  Grid.Column="1" Text="?" MinimumHeightRequest="0" Padding="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="IndianRed" />
+                <RadioButton x:Name=" Sensory0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="SensoryGroup" Content="0" />
+                <RadioButton x:Name=" Sensory1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="SensoryGroup" Content="1" />
+                <RadioButton x:Name=" Sensory2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="SensoryGroup" Content="2" />
+                <RadioButton x:Name=" Sensory3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="SensoryGroup" Content="3" />
+                <RadioButton x:Name=" Sensory4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="SensoryGroup" Content="4" />
+                <RadioButton x:Name=" Sensory5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="7" GroupName="SensoryGroup" Content="5" />
+                <RadioButton x:Name=" Sensory6_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="8" GroupName="SensoryGroup" Content="6" />
+            </Grid>
+
+
+
+            <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="10"  ColumnDefinitions="2*, *, *, *, *, *, *, *, *, *">
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Text="Bowel/Bladder" />
+                <Button Style="{StaticResource MicroButton}" x:Name="button_BowelInfo" Clicked="button_BowelInfo_Clicked"  Grid.Column="1" Text="?" MinimumHeightRequest="0" Padding="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="IndianRed" />
+                <RadioButton x:Name=" BowelBladder0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="BowelGroup" Content="0" />
+                <RadioButton x:Name=" BowelBladder1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="BowelGroup" Content="1" />
+                <RadioButton x:Name=" BowelBladder2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="BowelGroup" Content="2" />
+                <RadioButton x:Name=" BowelBladder3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="BowelGroup" Content="3" />
+                <RadioButton x:Name=" BowelBladder4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="BowelGroup" Content="4" />
+                <RadioButton x:Name=" BowelBladder5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="7" GroupName="BowelGroup" Content="5" />
+                <RadioButton x:Name=" BowelBladder6_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="8" GroupName="BowelGroup" Content="6" />
+            </Grid>
+
+
+            <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="10"  ColumnDefinitions="2*, *, *, *, *, *, *, *, *, *">
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Text="Visual" />
+                <Button Style="{StaticResource MicroButton}" x:Name="button_VisualInfo" Clicked="button_VisualInfo_Clicked"  Grid.Column="1" Text="?" MinimumHeightRequest="0" Padding="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="IndianRed" />
+                <RadioButton x:Name=" Visual0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="VisualGroup" Content="0" />
+                <RadioButton x:Name=" Visual1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="VisualGroup" Content="1" />
+                <RadioButton x:Name=" Visual2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="VisualGroup" Content="2" />
+                <RadioButton x:Name=" Visual3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="VisualGroup" Content="3" />
+                <RadioButton x:Name=" Visual4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="VisualGroup" Content="4" />
+                <RadioButton x:Name=" Visual5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="7" GroupName="VisualGroup" Content="5" />
+                <RadioButton x:Name=" Visual6_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="8" GroupName="VisualGroup" Content="6" />
+            </Grid>
+
+
+            <Grid Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="10"  ColumnDefinitions="2*, *, *, *, *, *, *, *, *, *">
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Text="Mental" />
+                <Button Style="{StaticResource MicroButton}" x:Name="button_MentalInfo" Clicked="button_MentalInfo_Clicked"  Grid.Column="1" Text="?" MinimumHeightRequest="0" Padding="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="IndianRed" />
+                <RadioButton x:Name=" Mental0_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="MentalGroup" Content="0" />
+                <RadioButton x:Name=" Mental1_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="MentalGroup" Content="1" />
+                <RadioButton x:Name=" Mental2_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="4" GroupName="MentalGroup" Content="2" />
+                <RadioButton x:Name=" Mental3_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="5" GroupName="MentalGroup" Content="3" />
+                <RadioButton x:Name=" Mental4_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="6" GroupName="MentalGroup" Content="4" />
+                <RadioButton x:Name=" Mental5_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="7" GroupName="MentalGroup" Content="5" />
+            </Grid>
+
+            <Grid Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="10"  Grid.RowSpan="2"  ColumnDefinitions="2*, *, *, *, *, *, *, *, *, *"  RowDefinitions="*,*">
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Text="Ambulation" />
+                <Button Style="{StaticResource MicroButton}" x:Name="button_AmbulationInfo" Clicked="button_AmbulationInfo_Clicked"  Grid.Column="1" Text="?" MinimumHeightRequest="0" Padding="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="IndianRed" />
+                <RadioButton x:Name=" Ambulation0_radiobutton" Style="{StaticResource MicroRadioButton}"  Grid.Row="0" Grid.Column="2" GroupName="AmbulationGroup" Content="0" />
+                <RadioButton x:Name=" Ambulation1_radiobutton" Style="{StaticResource MicroRadioButton}"  Grid.Row="0" Grid.Column="3" GroupName="AmbulationGroup" Content="1" />
+                <RadioButton x:Name=" Ambulation2_radiobutton" Style="{StaticResource MicroRadioButton}"  Grid.Row="0" Grid.Column="4" GroupName="AmbulationGroup" Content="2" />
+                <RadioButton x:Name=" Ambulation3_radiobutton" Style="{StaticResource MicroRadioButton}"  Grid.Row="0" Grid.Column="5" GroupName="AmbulationGroup" Content="3" />
+                <RadioButton x:Name=" Ambulation4_radiobutton" Style="{StaticResource MicroRadioButton}"  Grid.Row="0" Grid.Column="6" GroupName="AmbulationGroup" Content="4" />
+                <RadioButton x:Name=" Ambulation5_radiobutton" Style="{StaticResource MicroRadioButton}"  Grid.Row="0" Grid.Column="7" GroupName="AmbulationGroup" Content="5" />
+                <RadioButton x:Name=" Ambulation6_radiobutton" Style="{StaticResource MicroRadioButton}"  Grid.Row="0" Grid.Column="8" GroupName="AmbulationGroup" Content="6" />
+                <RadioButton x:Name=" Ambulation7_radiobutton" Style="{StaticResource MicroRadioButton}"  Grid.Row="0" Grid.Column="9" GroupName="AmbulationGroup" Content="7" />
+
+                <RadioButton x:Name=" Ambulation8_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Row="1" Grid.Column="2" GroupName="AmbulationGroup" Content="8" />
+                <RadioButton x:Name=" Ambulation9_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Row="1" Grid.Column="3" GroupName="AmbulationGroup" Content="9" />
+                <RadioButton x:Name=" Ambulation10_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Row="1" Grid.Column="4" GroupName="AmbulationGroup" Content="10" />
+                <RadioButton x:Name=" Ambulation11_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Row="1" Grid.Column="5" GroupName="AmbulationGroup" Content="11" />
+                <RadioButton x:Name=" Ambulation12_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Row="1" Grid.Column="6" GroupName="AmbulationGroup" Content="12" />
+                <RadioButton x:Name=" Ambulation13_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Row="1" Grid.Column="7" GroupName="AmbulationGroup" Content="13" />
+                <RadioButton x:Name=" Ambulation14_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Row="1" Grid.Column="8" GroupName="AmbulationGroup" Content="14" />
+                <RadioButton x:Name=" Ambulation15_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Row="1" Grid.Column="9" GroupName="AmbulationGroup" Content="15" />
+            </Grid>
+            
+
+ 
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="10" Grid.Column="8" VerticalOptions="Center" HorizontalOptions="End" Text="Score" FontAttributes="Bold" />
+
+            <Border Grid.Row="10" Grid.Column="9" StrokeShape="RoundRectangle 10" HorizontalOptions="FillAndExpand" VerticalOptions="Center" StrokeThickness="0" >
+                <Picker x:Name=" Total_combox" Style="{StaticResource MicroPicker}" MinimumHeightRequest="0">
+                    <Picker.Items>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>1,5</x:String>
+                        <x:String>2</x:String>
+                        <x:String>2,5</x:String>
+                        <x:String>3</x:String>
+                        <x:String>3,5</x:String>
+                        <x:String>4</x:String>
+                        <x:String>4,5</x:String>
+                        <x:String>5</x:String>
+                        <x:String>5,5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>6,5</x:String>
+                        <x:String>7</x:String>
+                        <x:String>7,5</x:String>
+                        <x:String>8</x:String>
+                        <x:String>8,5</x:String>
+                        <x:String>9</x:String>
+                        <x:String>9,5</x:String>
+                        <x:String>10</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+
+            <StackLayout x:Name="layout_Information" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="10">
+
+            </StackLayout>
+
+        </Grid>
+    </Border>
+</ContentView>

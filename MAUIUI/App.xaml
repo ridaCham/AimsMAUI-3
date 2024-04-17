@@ -1,0 +1,197 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUIUI"
+             x:Class="MAUIUI.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+            <!--CONTENTPAGE-->
+            <Style TargetType="ContentPage" x:Key="SmallPaddingPage">
+                <Setter Property="Padding" Value="{Binding SmallPadding}" />
+            </Style>
+            <Style TargetType="ContentPage" x:Key="MiddlePaddingPage">
+                <Setter Property="Padding" Value="{Binding MiddlePadding}" />
+            </Style>
+            <Style TargetType="ContentPage" x:Key="LargePaddingPage">
+                <Setter Property="Padding" Value="{Binding LargePadding}" />
+            </Style>
+            <Style TargetType="ContentPage" x:Key="MegaPaddingPage">
+                <Setter Property="Padding" Value="{Binding MegaPadding}" />
+            </Style>
+            <Style TargetType="ContentPage" x:Key="UltraPaddingPage">
+                <Setter Property="Padding" Value="{Binding UltraPadding}" />
+            </Style>
+            <Style TargetType="ContentPage" x:Key="MaximumPaddingPage">
+                <Setter Property="Padding" Value="{Binding MaximumPadding}" />
+            </Style>
+
+            <!--GRID-->
+            <Style TargetType="Grid" x:Key="SmallSpacing">
+                <Setter Property="ColumnSpacing" Value="{Binding SmallSpacing}" />
+                <Setter Property="RowSpacing" Value="{Binding SmallSpacing}" />
+            </Style>
+            <Style TargetType="Grid" x:Key="MiddleSpacing">
+                <Setter Property="ColumnSpacing" Value="{Binding MiddleSpacing}" />
+                <Setter Property="RowSpacing" Value="{Binding MiddleSpacing}" />
+            </Style>
+            <Style TargetType="Grid" x:Key="LargeSpacing">
+                <Setter Property="ColumnSpacing" Value="{Binding LargeSpacing}" />
+                <Setter Property="RowSpacing" Value="{Binding LargeSpacing}" />
+            </Style>
+            <Style TargetType="Grid" x:Key="SmallRowSpacing">
+                <Setter Property="RowSpacing" Value="{Binding SmallSpacing}" />
+            </Style>
+            <Style TargetType="Grid" x:Key="MiddleRowSpacing">
+                <Setter Property="RowSpacing" Value="{Binding MiddleSpacing}" />
+            </Style>
+            <Style TargetType="Grid" x:Key="LargeRowSpacing">
+                <Setter Property="RowSpacing" Value="{Binding LargeSpacing}" />
+            </Style>
+            <Style TargetType="Grid" x:Key="SmallColumnSpacing">
+                <Setter Property="ColumnSpacing" Value="{Binding SmallSpacing}" />
+            </Style>
+            <Style TargetType="Grid" x:Key="MiddleColumnSpacing">
+                <Setter Property="ColumnSpacing" Value="{Binding MiddleSpacing}" />
+            </Style>
+            <Style TargetType="Grid" x:Key="LargeColumnSpacing">
+                <Setter Property="ColumnSpacing" Value="{Binding LargeSpacing}" />
+            </Style>
+
+            <!--STACK LAYOUT-->
+            <Style TargetType="StackLayout" x:Key="SmallSpacingStackLayout">
+                <Setter Property="Spacing" Value="{Binding SmallSpacing}" />
+            </Style>
+            <Style TargetType="StackLayout" x:Key="MiddleSpacingStackLayout">
+                <Setter Property="Spacing" Value="{Binding MiddleSpacing}" />
+            </Style>
+            <Style TargetType="StackLayout" x:Key="LargeSpacingStackLayout">
+                <Setter Property="Spacing" Value="{Binding LargeSpacing}" />
+            </Style>
+            <Style TargetType="StackLayout" x:Key="SmallMarginLeftStackLayout">
+                <Setter Property="Margin" Value="{Binding SmallMarginLeft}" />
+            </Style>
+            <Style TargetType="StackLayout" x:Key="MiddleMarginLeftStackLayout">
+                <Setter Property="Margin" Value="{Binding MiddleMarginLeft}" />
+            </Style>
+            <Style TargetType="StackLayout" x:Key="LargeMarginLeftStackLayout">
+                <Setter Property="Margin" Value="{Binding LargeMarginLeft}" />
+            </Style>
+
+
+            <!--LABEL-->
+            <Style TargetType="Label" x:Key="MicroTextLabel">
+                <Setter Property="FontSize" Value="{Binding MicroText}" />
+            </Style>
+            <Style TargetType="Label" x:Key="SmallTextLabel">
+                <Setter Property="FontSize" Value="{Binding SmallText}" />
+            </Style>
+            <Style TargetType="Label" x:Key="MiddleTextLabel">
+                <Setter Property="FontSize" Value="{Binding MiddleText}" />
+            </Style>
+            <Style TargetType="Label" x:Key="LargeTextLabel">
+                <Setter Property="FontSize" Value="{Binding LargeText}" />
+            </Style>
+            <Style TargetType="Label" x:Key="XLTextLabel">
+                <Setter Property="FontSize" Value="{Binding XLText}" />
+            </Style>
+            <Style TargetType="Label" x:Key="MegaTextLabel">
+                <Setter Property="FontSize" Value="{Binding MegaText}" />
+            </Style>
+
+            <!--RADIOBUTTON-->
+            <Style TargetType="RadioButton" x:Key="MicroRadioButton">
+                <Setter Property="FontSize" Value="{Binding MicroText}" />
+            </Style>
+            <Style TargetType="RadioButton" x:Key="SmallRadioButton">
+                <Setter Property="FontSize" Value="{Binding SmallText}" />
+            </Style>
+            <Style TargetType="RadioButton" x:Key="MiddleRadioButton">
+                <Setter Property="FontSize" Value="{Binding MiddleText}" />
+            </Style>
+
+            <!--ENTRY-->
+            <Style TargetType="Entry" x:Key="MicroEntry">
+                <Setter Property="FontSize" Value="{Binding MicroText}" />
+                <Setter Property="MinimumHeightRequest" Value="0" />
+                <Setter Property="HeightRequest" Value="{Binding MicroEntryHeight}" />
+            </Style>
+            <Style TargetType="Entry" x:Key="MiddleEntry">
+                <Setter Property="FontSize" Value="{Binding MiddleText}" />
+                <Setter Property="MinimumHeightRequest" Value="0" />
+                <Setter Property="HeightRequest" Value="{Binding MiddleEntryHeight}" />
+            </Style>
+
+            <!--EDITOR-->
+            <Style TargetType="Editor" x:Key="MicroEditor">
+                <Setter Property="FontSize" Value="{Binding MicroText}" />
+                <Setter Property="MinimumHeightRequest" Value="0" />
+            </Style>
+            <Style TargetType="Editor" x:Key="MiddleEditor">
+                <Setter Property="FontSize" Value="{Binding MiddleText}" />
+                <Setter Property="MinimumHeightRequest" Value="0" />
+            </Style>
+
+            <!--PICKER-->
+            <Style TargetType="Picker" x:Key="MicroPicker" >
+                <Setter Property="FontSize" Value="{Binding MicroText}" />
+                 <Setter Property="MinimumHeightRequest" Value="0" />
+                <Setter Property="HeightRequest" Value="{Binding MicroEntryHeight}" />
+                <Setter Property="BackgroundColor" Value="#5a81ab" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style TargetType="Picker" x:Key="SmallPicker">
+                <Setter Property="FontSize" Value="{Binding SmallText}" />
+                <Setter Property="MinimumHeightRequest" Value="0" />
+                <Setter Property="HeightRequest" Value="{Binding MiddleEntryHeight}" />
+                <Setter Property="BackgroundColor" Value="#5a81ab" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <!--BUTTON-->
+            <Style TargetType="Button" x:Key="MicroButton">
+                <Setter Property="FontSize" Value="{Binding MicroText}" />
+                    
+            </Style>
+            <Style TargetType="Button" x:Key="MiddleButton">
+                <Setter Property="FontSize" Value="{Binding MiddleText}" />
+            </Style>
+            <Style TargetType="Button" x:Key="ElasticLargeButton">
+                <Setter Property="FontSize" Value="{Binding ElasticLargeText}" />
+            </Style>
+            <Style TargetType="Button" x:Key="ElasticMiddleButton">
+                <Setter Property="FontSize" Value="{Binding ElasticMiddleText}" />
+            </Style>
+            
+            <!--BORDER-->
+            <Style TargetType="Border" x:Key="SmallPaddingBorder">
+                <Setter Property="Padding" Value="{Binding SmallPadding}"  />
+             </Style>
+            <Style TargetType="Border" x:Key="MiddlePaddingBorder">
+                <Setter Property="Padding" Value="{Binding MiddlePadding}" />
+            </Style>
+            <Style TargetType="Border" x:Key="LargePaddingBorder">
+                <Setter Property="Padding" Value="{Binding LargePadding}" />
+            </Style>
+            
+            <!--DATEPICKER-->
+            <Style TargetType="DatePicker" x:Key="MaxTodayDate">
+                <Setter Property="MaximumDate" Value="{Binding TodayDate}" />
+                <Setter Property="FontSize" Value="{Binding MicroText}" />
+                <Setter Property="MinimumHeightRequest" Value="0" />
+                <Setter Property="HeightRequest" Value="{Binding MicroEntryHeight}" />
+                <Setter Property="BackgroundColor" Value="#5a81ab" />
+                <Setter Property="Format" Value="dd/MM/yyyy" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+        </ResourceDictionary>
+        
+
+
+    </Application.Resources>
+</Application>

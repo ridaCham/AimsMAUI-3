@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.VaccinePage"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+    
+    
+    <Grid Style="{StaticResource LargeSpacing}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        
+        <Grid Grid.Column="0" Grid.Row="0" Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            
+            
+            <Grid Grid.Row="0" Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label  Grid.Column="1"   Text="Other Hepatitis-A" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                <Border  Grid.Column="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="Otherhepa_combobox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+            
+            
+            <StackLayout x:Name="layout_VaccineHepatitisA" Grid.Row="1">
+
+            </StackLayout>
+            
+            
+            <Grid Grid.Row="2" Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label  Grid.Column="1"   Text="Other Hepatitis-B" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                <Border  Grid.Column="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="Otherhepb_combobox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+            
+            
+            <StackLayout x:Name="layout_VaccineHepatitisB" Grid.Row="3">
+
+            </StackLayout>
+            
+            
+            <Grid Grid.Row="4" Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label  Grid.Column="1"   Text="Other Flu" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                <Border  Grid.Column="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="Otherflu_combobox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+            
+            <StackLayout x:Name="layout_VaccineFlu" Grid.Row="5">
+
+            </StackLayout>
+            
+            <Grid Grid.Row="6" Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label  Grid.Column="1" Text="Other" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                <Border  Grid.Column="2" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="Othervaccine_combobox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+            
+            <StackLayout x:Name="layout_VaccineOther" Grid.Row="7">
+
+            </StackLayout>
+            
+        </Grid>
+
+
+        <Grid Grid.Column="1" Grid.Row="0" Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+  
+            <Border Style="{StaticResource LargePaddingBorder}" Grid.Row="0" StrokeShape="RoundRectangle 10" BackgroundColor="#c8d1db">
+                
+                <Grid Style="{StaticResource MiddleSpacing}" ColumnDefinitions="0.5*,*,*,0.5*" RowDefinitions="*,*,*,*,*,*">
+ 
+                    <HorizontalStackLayout Grid.Column="1" Grid.Row="1" HorizontalOptions="Start" VerticalOptions="Center" >
+                        <CheckBox x:Name="VaccineTuberculosis_checkBox"   />
+                        <Label Style="{StaticResource MicroTextLabel}" Text="Tuberculosis" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <Border Grid.Column="2" Grid.Row="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                        <DatePicker x:Name="VaccineTuberculosisDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+ 
+                    <HorizontalStackLayout Grid.Column="1" Grid.Row="2" HorizontalOptions="Start" VerticalOptions="Center" >
+                        <CheckBox x:Name="VaccineHerpes_checkBox" />
+                        <Label Style="{StaticResource MicroTextLabel}" Text="Herpes Zoste" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <Border Grid.Column="2" Grid.Row="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                        <DatePicker x:Name="VaccineHerpesZosterDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+ 
+                    <HorizontalStackLayout Grid.Column="1" Grid.Row="3" HorizontalOptions="Start" VerticalOptions="Center" >
+                        <CheckBox x:Name="VaccineYellowFever_checkBox" />
+                        <Label Style="{StaticResource MicroTextLabel}" Text="Yellow Fever" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <Border Grid.Column="2" Grid.Row="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                        <DatePicker x:Name="VaccineYellowFeverDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+
+                    <HorizontalStackLayout Grid.Column="1" Grid.Row="4" HorizontalOptions="Start" VerticalOptions="Center" >
+                        <CheckBox x:Name="VaccineHPV_checkBox"/>
+                        <Label Style="{StaticResource MicroTextLabel}" Text="HPV" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <Border Grid.Column="2" Grid.Row="4" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                        <DatePicker  x:Name="VaccineHPVDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+
+                </Grid>
+                
+             </Border>
+ 
+            <Grid Grid.Row="1" Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label  Grid.Column="1"   Text="Other" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                <Border  Grid.Column="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="Othercovid_combobox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+ 
+            <StackLayout x:Name="layout_VaccineCovid" Grid.Row="2">
+
+            </StackLayout>
+ 
+  
+        </Grid>
+ 
+        <Border  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource SmallPaddingBorder}" StrokeThickness="0">
+
+            <Grid Style="{StaticResource SmallSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Text="Remarks"  HorizontalOptions="Start" VerticalOptions="Center"
+                       FontAttributes="Bold" Style="{StaticResource MicroTextLabel}"/>
+
+                <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" BackgroundColor="White" Stroke="Gray" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" VerticalOptions="Fill" >
+                    <Editor x:Name="VaccineRemarks_textBox" />
+                </Border>
+ 
+                <Button Grid.Column="1" Grid.Row="1"  BackgroundColor="#5a81ab" Text="Save"  HorizontalOptions="Fill" VerticalOptions="End" 
+                        Style="{StaticResource MicroButton}"   x:Name="Button_SaveTreatments" Clicked="Button_SaveTreatments_Clicked" />
+ 
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>
+    

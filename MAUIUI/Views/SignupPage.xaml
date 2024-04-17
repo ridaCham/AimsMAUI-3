@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.SignupPage"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+ 
+    <Grid  Style="{StaticResource SmallSpacing}"   RowDefinitions="*,*" >
+ 
+            <StackLayout Grid.Row="0" Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Image Source="aims_logo.png" WidthRequest="300" />
+            </StackLayout>
+        
+        <Grid Style="{StaticResource SmallSpacing}"  Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Column="1" Style="{StaticResource MiddleSpacing}" HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label  Grid.Row="0"  Text="Sign Up"  TextColor="#316297" Style="{StaticResource LargeTextLabel}" HorizontalOptions="Center" VerticalOptions="Start" />
+                <Label  Grid.Row="1"  Text="Please fill in this form to create an account." Style="{StaticResource MicroTextLabel}"  HorizontalOptions="Start" VerticalOptions="Center" />
+
+                <Border  Grid.Row="2" StrokeShape="RoundRectangle 10,10,10,10"  Stroke="DarkSlateGray" BackgroundColor="White">
+                    <Entry Placeholder="Email" x:Name="UsernameEntry" Style="{StaticResource MiddleEntry}"/>
+                </Border>
+  
+                <Border Grid.Row="3" StrokeShape="RoundRectangle 10,10,10,10"  Stroke="DarkSlateGray" BackgroundColor="White">
+                    <Entry Placeholder="Password" IsPassword="True" x:Name="NewPasswordEntry" Style="{StaticResource MiddleEntry}"/>
+                </Border>
+ 
+                <Border Grid.Row="4" StrokeShape="RoundRectangle 10,10,10,10"  Stroke="DarkSlateGray" BackgroundColor="White">
+                    <Entry Placeholder="Password Repeat" IsPassword="True" x:Name="ConfirmNewPasswordEntry" Style="{StaticResource MiddleEntry}"/>
+                </Border>
+ 
+                <Button Grid.Row="5" Text="Sign Up" TextColor="White" Clicked="SignUpButton_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="#316297" />
+ 
+                <HorizontalStackLayout  Grid.Row="6"  >
+                    <CheckBox />
+                    <Label Style="{StaticResource MicroTextLabel}" Text="By creating an account you agree to our Terms and Privacy." VerticalOptions="Center" />
+                </HorizontalStackLayout>
+                 
+            </Grid>
+ 
+        </Grid>
+ 
+    </Grid>
+</ContentPage>

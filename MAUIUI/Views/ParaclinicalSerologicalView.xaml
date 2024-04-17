@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.ParaclinicalSerologicalView"
+             VerticalOptions="FillAndExpand"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+        <Grid Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid  Grid.Row="0" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,*,4*">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Text="Exam Date"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border  Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                    <DatePicker Style="{StaticResource MaxTodayDate}" />
+                </Border>
+            </Grid>
+            <Grid  Grid.Row="1" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,3.5*,2*,3*,3*">
+                 <Label Style="{StaticResource MicroTextLabel}" Grid.Column="3" Text="Comments"  VerticalOptions="Center" HorizontalOptions="Center" />
+            </Grid>
+            
+            
+            <Grid  Grid.Row="2" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,3.5*,2*,3*,3*" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*" >
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="0" Text="HBV Surface Antigen"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="1" Text="Anti HCV Antibody"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="2" Text="Anti HIV Antibody"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="3" Text="Anti Varicella Antibody"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="4" Text="Pregnancy Test"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="5" Text="Quantifer Gold Test"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="6" Text="Mantoux Test"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="7" Text="Stool Botulism Toxin"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="8" Text="Neurofilament Light Chain"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="9" Text="Glial Fibriler Asidik Protein"  VerticalOptions="Center" HorizontalOptions="End" />
+  
+                
+                <Grid Grid.Column="2"  Grid.Row="0" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+                </Grid>
+                <Grid Grid.Column="2"  Grid.Row="1" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+                </Grid>
+                <Grid Grid.Column="2"  Grid.Row="2" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+                </Grid>
+                <Grid Grid.Column="2"  Grid.Row="3" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+                </Grid>
+                <Grid Grid.Column="2"  Grid.Row="4" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+                </Grid>
+                <Grid Grid.Column="2"  Grid.Row="5" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+                </Grid>
+                <Grid Grid.Column="2"  Grid.Row="6" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+                </Grid>
+                <Grid Grid.Column="2"  Grid.Row="7" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+
+
+                <Border  Grid.Column="3" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry  Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="3" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry  Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="3" Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry  Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="3" Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry  Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="3" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry  Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="3" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry  Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="3" Grid.Row="6" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry  Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="3" Grid.Row="7" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry  Style="{StaticResource MicroEntry}" />
+                </Border>
+
+                
+                <Grid Grid.Column="2" Grid.Row="8" Grid.ColumnSpan="2" Grid.RowSpan="2" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="4*,*,4*,4*"  RowDefinitions="*,*" >
+                    <Border  Grid.Column="0" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="0" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Label Style="{StaticResource LargeTextLabel}" Grid.Column="1" Grid.Row="0" Text="/"  VerticalOptions="Center" HorizontalOptions="Center" />
+                    <Label Style="{StaticResource LargeTextLabel}" Grid.Column="1" Grid.Row="1" Text="/"  VerticalOptions="Center" HorizontalOptions="Center" />
+                    <Border  Grid.Column="2" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="2" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Label Style="{StaticResource SmallTextLabel}" Grid.Column="3" Grid.Row="0" Text="*ng/ml"  VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label Style="{StaticResource SmallTextLabel}" Grid.Column="3" Grid.Row="1" Text="*ng/ml"  VerticalOptions="Center" HorizontalOptions="Start" />
+                </Grid>
+                
+                
+            </Grid>
+
+            
+            
+            <Grid  Grid.Row="3" Style="{StaticResource MiddleSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Style="{StaticResource MicroButton}" Grid.Column="1" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold" x:Name="Button_SaveBloodChemistry"/>
+            </Grid>
+
+        </Grid>
+    </Border>
+</ContentView>

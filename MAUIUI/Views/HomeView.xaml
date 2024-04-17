@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             x:Class="MAUIUI.Views.HomeView"
+               HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                 Padding="10"
+             >
+
+
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="25*" />
+        </Grid.RowDefinitions>
+
+
+        <Label Grid.Row="0" x:Name="patientCountLabel" Text="Patients (123)" />
+        <ListView Grid.Row="1" x:Name="ListView_Patients" BackgroundColor="#c8d1db" SeparatorColor="Black">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10" HorizontalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Name}" FontAttributes="Bold"  WidthRequest="100"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding SurName}"  WidthRequest="100"/>
+                            <Label Grid.Row="0" Grid.Column="2" Text="{Binding BirthDate}"  WidthRequest="100"/>
+                            <Label Grid.Row="0" Grid.Column="3" Text="{Binding Gender}"  WidthRequest="100"/>
+                            <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" HeightRequest="1" BackgroundColor="Black" VerticalOptions="End" Margin="0,0,0,0"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+        
+        
+        <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="10"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <micro:ChartView x:Name="GenderChart1"/>
+            <Border Grid.Row="0" Grid.Column="0" StrokeShape="RoundRectangle 10" Background="Black" >
+                <micro:ChartView x:Name="GenderChart"/>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2" StrokeShape="RoundRectangle 10" Background="Black" >
+                <micro:ChartView x:Name="MSTreatementChart"/>
+            </Border>
+            <Border Grid.Row="0"  Grid.Column="1" StrokeShape="RoundRectangle 10" Background="Black" >
+                <micro:ChartView x:Name="AgeChart" />
+            </Border>
+            <Border Grid.Row="1" Grid.Column="0" StrokeShape="RoundRectangle 10" Background="Black" >
+                <micro:ChartView x:Name="DiseasseChart"/>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="1" StrokeShape="RoundRectangle 10" Background="Black" >
+                <micro:ChartView x:Name="MsClassificationChart"/>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="2" StrokeShape="RoundRectangle 10" Background="Black" >
+            </Border>
+
+        </Grid>
+    </Grid>
+    
+
+
+ 
+</ContentView>
+

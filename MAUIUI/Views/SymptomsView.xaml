@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.SymptomsView"
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand">
+    <Border Style="{StaticResource MiddlePaddingBorder}" BackgroundColor="#c8d1db">
+        <Grid RowDefinitions="*, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *, *" ColumnDefinitions="*, *, *">
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Symptoms" FontAttributes="Bold" />
+            <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                <CheckBox x:Name=" BlurredVision_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Blurred Vision" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="2" Orientation="Horizontal">
+                <CheckBox x:Name=" FieldDefect_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Field Defect / Scotoma" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="3" Orientation="Horizontal">
+                <CheckBox x:Name=" Oscillopsia_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Oscillopsia" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="4" Orientation="Horizontal">
+                <CheckBox x:Name=" DiplopiaGazeParesis_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Diplopia / Gaze Paresis" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="5" Orientation="Horizontal">
+                <CheckBox x:Name=" NeckWeakness_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Neck Weakness" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="6" Orientation="Horizontal">
+                <CheckBox x:Name=" Dysphagia_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Dysphagia" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="7" Orientation="Horizontal">
+                <CheckBox x:Name=" TregeminalNerve_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Tregeminal Nerve Involvement" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Style="{StaticResource MiddleMarginLeftStackLayout}" Grid.Column="0" Grid.Row="8" Orientation="Horizontal">
+                <CheckBox x:Name=" Neuralgia_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Neuralgia" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Style="{StaticResource MiddleMarginLeftStackLayout}" Grid.Column="0" Grid.Row="9" Orientation="Horizontal">
+                <CheckBox x:Name=" AtypicalPain_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Atypical Pain" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Style="{StaticResource MiddleMarginLeftStackLayout}" Grid.Column="0" Grid.Row="10" Orientation="Horizontal">
+                <CheckBox x:Name=" TregminalParesthesiae_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Paresthesiae" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Style="{StaticResource MiddleMarginLeftStackLayout}" Grid.Column="0" Grid.Row="11" Orientation="Horizontal">
+                <CheckBox x:Name=" Hypoesthesiae_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Hypoesthesiae" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="12" Orientation="Horizontal">
+                <CheckBox x:Name=" MotorUpperExtremities_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Motor Weakness: Upper Extremities" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="13" Orientation="Horizontal">
+                <CheckBox x:Name=" MotorLowerExtremities_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Motor Weakness: Lower Extremities" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="14" Orientation="Horizontal">
+                <CheckBox x:Name=" AtaxiaUpperExtremities_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Ataxia: Upper Extremeties" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="15" Orientation="Horizontal">
+                <CheckBox x:Name=" AtaxiaLowerExtremities_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Ataxia: Lower Extremities" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="16" Orientation="Horizontal">
+                <CheckBox x:Name=" GaitDisturbanceParesis_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Gait Disturbance: Paresis" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="17" Orientation="Horizontal">
+                <CheckBox x:Name=" GaitDisturbanceAtaxia_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Gait Disturbance: Ataxia" VerticalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                <CheckBox x:Name=" GaitDisturbanceSpasticity_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Gait Disturbance: Spasticity" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+                <CheckBox x:Name=" Tremor_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Tremor" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+                <CheckBox x:Name=" Dysaesthesiae_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Dysaesthesiae" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="4" Orientation="Horizontal">
+                <CheckBox x:Name=" PainHeadeche_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Pain, Headache" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="5" Orientation="Horizontal">
+                <CheckBox x:Name=" LhermittesSign_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Lhermitte's Sign" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="6" Orientation="Horizontal">
+                <CheckBox x:Name=" Micturition_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Micturition" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="7" Orientation="Horizontal">
+                <CheckBox x:Name=" DefecationProblems_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Defecation Problems" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="8" Orientation="Horizontal">
+                <CheckBox x:Name=" SexualFunctionsProblems_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Sexual Functions Problems" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="9" Orientation="Horizontal">
+                <CheckBox x:Name=" MoodProblems_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Mood Problems" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="10" Orientation="Horizontal">
+                <CheckBox x:Name=" CognitionProblems_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Cognition Problems" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="11" Orientation="Horizontal">
+                <CheckBox x:Name=" Fatigue_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Fatigue" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="12" Orientation="Horizontal">
+                <CheckBox x:Name=" ExtrapyramidalSymtoms_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Extrapyramidal Symptoms" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="13" Orientation="Horizontal">
+                <CheckBox x:Name=" HypotonicSpeech_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Hypotonic Speech" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="14" Orientation="Horizontal">
+                <CheckBox x:Name=" NazoneSpeech_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Nazone Speech" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="15" Orientation="Horizontal">
+                <CheckBox x:Name=" Hemiplegia_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Hemiplegia" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="16" Orientation="Horizontal">
+                <CheckBox x:Name=" RespiratoryProblem_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Respiratory Problem" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="17" Orientation="Horizontal">
+                <CheckBox x:Name=" ExcessiveSweating_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Excessive Sweating" VerticalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout Grid.Column="2" Grid.Row="1" Orientation="Horizontal">
+                <CheckBox x:Name=" Hypotonia_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Hypotonia" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="2" Orientation="Horizontal">
+                <CheckBox x:Name=" Hypersalivation_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Hypersalivation" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="3" Orientation="Horizontal">
+                <CheckBox x:Name=" TonicSpasms_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Tonic Spasms" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="4" Orientation="Horizontal">
+                <CheckBox x:Name=" Presth_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Paresthesiae" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="5" Orientation="Horizontal">
+                <CheckBox x:Name=" Vertigo_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Vertigo" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="6" Orientation="Horizontal">
+                <CheckBox x:Name=" HearingLoss_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Hearing Loss" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="7" Orientation="Horizontal">
+                <CheckBox x:Name=" FacialPalsycheckBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Facial Palsy" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="8" Orientation="Horizontal">
+                <CheckBox x:Name=" Myokymia_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Myokymia" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="9" Orientation="Horizontal">
+                <CheckBox x:Name=" Dysarthria_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Dysarthria" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="10" Orientation="Horizontal">
+                <CheckBox x:Name=" Hemispasm_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Hemispasm" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="11" Orientation="Horizontal">
+                <CheckBox x:Name=" Nausea_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Nausea" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="12" Orientation="Horizontal">
+                <CheckBox x:Name=" Vomiting_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Vomiting" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="13" Orientation="Horizontal">
+                <CheckBox x:Name=" Hiccups_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Hiccups" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="14" Orientation="Horizontal">
+                <CheckBox x:Name=" Nystagmus_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Nystagmus" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="15" Orientation="Horizontal">
+                <CheckBox x:Name=" Seizures_checkBox" />
+                <Label Style="{StaticResource MicroTextLabel}" Text="Seizures" VerticalOptions="Center" />
+            </StackLayout>
+
+            <StackLayout Style="{StaticResource LargeSpacingStackLayout}" Grid.Column="2" Grid.Row="17" Orientation="Horizontal">
+                <Label Style="{StaticResource MicroTextLabel}" Text="Fluxation" />
+                <RadioButton x:Name=" FluxationYes_radioButton" Style="{StaticResource MicroRadioButton}" GroupName="FluxationGroup" Content="Yes" />
+                <RadioButton x:Name=" FluxationNo_radioButton" Style="{StaticResource MicroRadioButton}" GroupName="FluxationGroup" Content="No" />
+            </StackLayout>
+
+        </Grid>
+    </Border>
+</ContentView>

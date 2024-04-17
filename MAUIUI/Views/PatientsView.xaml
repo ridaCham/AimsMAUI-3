@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.PatientsView"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand"
+             Padding="10">
+    <Grid
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        RowSpacing="10"
+        >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="12*" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" x:Name="patientCountLabel" Text="Patients (123)" />
+        <ListView Grid.Row="1" x:Name="ListView_Patients" BackgroundColor="#c8d1db" ItemSelected="ListView_Patients_ItemSelected" SeparatorColor="Black">
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell >
+                        <Grid Padding="10" HorizontalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Name}" FontAttributes="Bold"  WidthRequest="100"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding SurName}"  WidthRequest="100"/>
+                            <Label Grid.Row="0" Grid.Column="2" Text="{Binding BirthDate}"  WidthRequest="100"/>
+                            <Label Grid.Row="0" Grid.Column="3" Text="{Binding Gender}"  WidthRequest="100"/>
+
+                            <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" HeightRequest="1" BackgroundColor="Black" VerticalOptions="End" Margin="0,0,0,0"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout Grid.Row="2" Orientation="Horizontal" Margin="0, 10" Spacing="10">
+            <Border StrokeShape="RoundRectangle 10,10,10,10" Stroke="Gray">
+                <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_DeletePatient" Text="Delete Patient" BackgroundColor="White" TextColor="Red" FontAttributes="Bold" Padding="30, 10" Pressed="Button_DeletePatient_Pressed" Released="Button_DeletePatient_Released" Clicked="Button_DeletePatient_Clicked"/>
+            </Border>
+            <Border StrokeShape="RoundRectangle 10,10,10,10" Stroke="Gray">
+                <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_PatientDetails" Text="Patient Details" BackgroundColor="White" TextColor="LightSeaGreen" FontAttributes="Bold" Padding="40, 15" Pressed="Button_PatientDetails_Pressed" Released="Button_PatientDetails_Released" Clicked="Button_PatientDetails_Clicked"/>
+            </Border>
+            <Border StrokeShape="RoundRectangle 10,10,10,10" Stroke="Gray" HorizontalOptions="EndAndExpand">
+                <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_AddNewPatient" Text="Add New Patient" BackgroundColor="White" TextColor="LightSeaGreen" FontAttributes="Bold" Padding="40, 15" Pressed="Button_AddNewPatient_Pressed" Released="Button_AddNewPatient_Released" Clicked="Button_AddNewPatient_Clicked"/>
+            </Border>
+        </StackLayout>
+
+        <Grid Grid.Row="3" VerticalOptions="FillAndExpand" ColumnSpacing="15" RowSpacing="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Identification" Grid.Row="0" Grid.Column="0" BackgroundColor="#5a81ab" Text="Identification" FontAttributes="Bold" Clicked="Button_Identification_Clicked"/>
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_MedicalHistory" Grid.Row="0" Grid.Column="1" BackgroundColor="#5a81ab" Text="Medical History" FontAttributes="Bold" Clicked="Button_MedicalHistory_Clicked"/>
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Diagnosis" Grid.Row="0" Grid.Column="2" BackgroundColor="#5a81ab" Text="Diagnosis" FontAttributes="Bold" Clicked="Button_Diagnosis_Clicked"/>
+
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Visits" Grid.Row="1" Grid.Column="0" BackgroundColor="#5a81ab" Text="Visit" FontAttributes="Bold" Clicked="Button_Visits_Clicked" />
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Relapses" Grid.Row="1" Grid.Column="1" BackgroundColor="#5a81ab" Text="Relapses" FontAttributes="Bold" Clicked="Button_Relapses_Clicked" />
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Pregnancy" Grid.Row="1" Grid.Column="2" BackgroundColor="#5a81ab" Text="Pregnancy" FontAttributes="Bold" Clicked="Button_Pregnancy_Clicked" />
+
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_ParaclinicalTests" Clicked="Button_ParaclinicalTests_Clicked"  Grid.Row="2" Grid.Column="0" BackgroundColor="#5a81ab" Text="Paraclinical Tests" FontAttributes="Bold" />
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Treatments" Grid.Row="2" Grid.Column="1" BackgroundColor="#5a81ab" Text="Treatments" FontAttributes="Bold" Clicked="Button_Treatments_Clicked"/>
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Notes" Clicked="Button_Notes_Clicked" Grid.Row="2" Grid.Column="2" BackgroundColor="#5a81ab" Text="Notes" FontAttributes="Bold" />
+        </Grid>
+
+
+    </Grid>
+</ContentView>

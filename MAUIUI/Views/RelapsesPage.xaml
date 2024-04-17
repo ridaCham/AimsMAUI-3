@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.RelapsesPage"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+
+    <Grid Style="{StaticResource LargeSpacing}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+
+        <Border Style="{StaticResource SmallPaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+            <Grid Grid.Row="0" Style="{StaticResource MiddleSpacing}" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Style="{StaticResource LargeSpacing}" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0"   Text="Date of Onset" HorizontalOptions="End" VerticalOptions="Center"
+                     Style="{StaticResource MicroTextLabel }"/>
+                    <Border  Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                        <DatePicker x:Name = "RelapsesDateofOnsetDate_textBox" Style= "{StaticResource MaxTodayDate}" />
+                    </Border>
+                </Grid>
+                <Grid Grid.Column="1" Style="{StaticResource MiddleSpacing}" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0"   Text="Duration (Days)" HorizontalOptions="End" VerticalOptions="Center" 
+                        Style=  "{StaticResource MicroTextLabel }"/>
+                    <Border Grid.Column="1"   BackgroundColor="White"  Stroke="Gray"  
+                        StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                        <Entry x:Name =" Duration_textbox "  Style="{StaticResource MicroEntry}" />
+                    </Border>
+                </Grid>
+                <Grid Grid.Column="2" Style="{StaticResource MiddleSpacing}" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0"   Text="Other Relapses" HorizontalOptions="End" VerticalOptions="Center"  
+                           Style= "{StaticResource MicroTextLabel }"/>
+                    <Border Grid.Column="1"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                        <Picker BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}" x:Name ="OtherThyroidFunctions_combobox " SelectedIndexChanged="OtherThyroidFunctions_combobox_SelectedIndexChanged">
+                            <Picker.Items>
+
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="1" Style="{StaticResource LargeSpacing}" >
+            <Grid.RowDefinitions>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0"    Style="{StaticResource LargeSpacing}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Border Style="{StaticResource MiddlePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+                    <Grid Grid.Row="0" Style="{StaticResource LargeSpacing}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0"   Text="Impact of ADL Functions"  
+                               FontAttributes="Bold" Style="{StaticResource MicroTextLabel }"/>
+                        <RadioButton x:Name =" ADLFunctionSoru_radioButton" Style=  "{StaticResource MicroRadioButton}" Grid.Column="0" Grid.Row="1" Content="?"/>
+                        <RadioButton x:Name =" ADLFunctionYes_radioButton" Style= "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="1" Content="Yes"/>
+                        <RadioButton x:Name =" ADLFunctionNo_radioButton" Style= "{StaticResource MicroRadioButton}" Grid.Column="2" Grid.Row="1" Content="No"/>
+                    </Grid>
+                </Border>
+                <Grid Grid.Row="1"    Style="{StaticResource LargeSpacing}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0"   Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+                        <Grid  Style="{StaticResource LargeSpacing}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Column="0" Grid.Row="0"   Text="Recovery" 
+                                    FontAttributes="Bold" Style="{StaticResource MicroTextLabel }"/>
+                            <RadioButton x:Name = "RecoverySoru_radioButton" Style=  "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="1" Content="?"/>
+                                <RadioButton x:Name =" RecoveryComplete_radioButton" Style= "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="2" Content="Comolete"/>
+                                <RadioButton x:Name =" RecoveryPartial_radioButton" Style= "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="3" Content="Partial"/>
+                                <RadioButton x:Name =" RecoveryNone_radioButton" Style= "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="4" Content="None"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Column="1"    Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+                        <Grid Style="{StaticResource LargeSpacing}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label  Grid.Column="0" Grid.Row="0"   Text="Severity"
+                                         FontAttributes="Bold" Style="{StaticResource MicroTextLabel }"/>
+                            <RadioButton x:Name =" SeveritySoru_radioButton" Style=  "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="1" Content="?"/>
+                            <RadioButton x:Name =" SeverityMild_radioButton" Style= "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="2" Content="Mild"/>
+                            <RadioButton x:Name =" SeverityModerate_radioButton" Style= "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="3" Content="Moderate"/>
+                            <RadioButton x:Name =" SeveritySevere_radioButton" Style= "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="4" Content="Severe"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Grid>
+
+            <Border Grid.Column="1"   Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+                <Grid Style="{StaticResource LargeSpacing}"   >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label  Grid.ColumnSpan="2" Grid.Row="0"   Text="Functional Systems Affected"
+                            FontAttributes="Bold" Style="{StaticResource MicroTextLabel }"/>
+                    <HorizontalStackLayout Grid.Column="1" Grid.Row="1"  >
+                        <CheckBox x:Name=" PyramidalTract_checkBox" />
+                        <Label  Style="{StaticResource MicroTextLabel }" Text="Pyramidal Tract" VerticalOptions="Center"  />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout  Grid.Column="1" Grid.Row="2" >
+                        <CheckBox x:Name="Cerebellum_checkBox" />
+                        <Label Style="{StaticResource MicroTextLabel }" Text="Cerebellum" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout  Grid.Column="1" Grid.Row="3" >
+                        <CheckBox x:Name=" Brainstem_checkBox" />
+                        <Label Style="{StaticResource MicroTextLabel }" Text="Brainstem" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout  Grid.Column="1" Grid.Row="4" >
+                        <CheckBox x:Name=" Sensory_checkBox" />
+                        <Label Style="{StaticResource MicroTextLabel }" Text="Sensory Funcotions" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout  Grid.Column="1" Grid.Row="5" >
+                        <CheckBox x:Name=" Bowel_checkBox" />
+                        <Label Style="{StaticResource MicroTextLabel }" Text="Bowel Bladder" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout  Grid.Column="1" Grid.Row="6">
+                        <CheckBox x:Name=" VisualFunctions_checkBox" />
+                        <Label Style="{StaticResource MicroTextLabel }" Text="Visual Functions" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout  Grid.Column="1" Grid.Row="7">
+                        <CheckBox x:Name=" Neuropsych_checkBox" />
+                        <Label Style="{StaticResource MicroTextLabel }" Text="Neuropsycho. Functions" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <Label Style="{StaticResource MicroTextLabel }" Grid.Column="0" Grid.Row="8"   
+                           Text="Other" HorizontalOptions="Center" VerticalOptions="Center" />
+                    <Border  Grid.Column="1" Grid.Row="8"   BackgroundColor="White"  Stroke="Gray" 
+                        StrokeShape="RoundRectangle 10,10,10,10" HorizontalOptions="Fill" VerticalOptions="Center" >
+                        <Entry x:Name=" FunOther_textBox" Style="{StaticResource MicroEntry}" />
+                    </Border>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Column="2"    Style="{StaticResource LargeSpacing}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0"   Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+                    <Grid Style="{StaticResource SmallSpacing}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0"   Text="Treatment"
+                                    FontAttributes="Bold" Style="{StaticResource MicroTextLabel }"/>
+                        <RadioButton x:Name =" TreatmentSoru_radioButton" Style= "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="1" Content="?"/>
+                        <RadioButton x:Name =" TreatmentNot_radioButton" Style= "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="2" Content="Not Treated"/>
+                        <RadioButton x:Name =" TreatmentAmbulatory_radioButton" Style=  "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="3" Content="Ambulatory"/>
+                        <RadioButton x:Name= " TreatmentHospital_radioButton" Style= "{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="4" Content="Hospital"/>
+                        <Border Grid.Column="1" Grid.Row="5"   StrokeShape="RoundRectangle 10,10,10,10" 
+                                         HorizontalOptions="Fill" VerticalOptions="Center"  StrokeThickness="0" >
+                            <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name =" Treatmentcombo_comboBox" Style= "{StaticResource MicroPicker }">
+                                <Picker.Items>
+                                    
+                                    
+                                    <x:String>Service</x:String>
+                                    <x:String>Intensive Care</x:String>
+                                    
+                                    
+                                </Picker.Items>
+                            </Picker>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Border Grid.Row="1"    Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+                    <Grid  Style="{StaticResource SmallSpacing}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label  Grid.Column="0" Grid.Row="0"   Text="Corticosteroids"
+                                         FontAttributes="Bold" Style="{StaticResource MicroTextLabel }"/>
+                        <RadioButton x:Name =" CosticosteroidsSoru_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0" Grid.Row="1"   Content="?" />
+                        <RadioButton x:Name=" CosticosteroidsYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0" Grid.Row="2" Content="Yes" />
+                        <RadioButton x:Name=" CosticosteroidsNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0" Grid.Row="3" Content="No" />
+                        <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  StrokeShape="RoundRectangle 10,10,10,10" 
+                                         HorizontalOptions="Fill" VerticalOptions="Center" StrokeThickness="0"  >
+                            <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" Costicosteroids_comboBox" Style="{StaticResource MicroPicker }">
+                                <Picker.Items>
+                                    <x:String>ACTH</x:String>
+                                    <x:String>Cortisone Acetate</x:String>
+                                    <x:String>Dexamethasone</x:String>
+                                    <x:String>Hydrocortisone</x:String>
+                                    <x:String>Methylprednisolone</x:String>
+                                    <x:String>Plasmapheresis</x:String>
+                                    <x:String>Prednisolone</x:String>
+                                    <x:String>Prednisone</x:String>
+
+
+                                </Picker.Items>
+                            </Picker>
+                        </Border>
+                        <Label Grid.Column="1" Grid.Row="2" Text="Starting On" HorizontalOptions="Start" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                        <Border  Grid.Column="2"  Grid.Row="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                            <DatePicker x:Name=" RelapsesCosticosteroidsStartDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                        </Border>
+                        <Label Grid.Column="1" Grid.Row="3" Text="Ending On" HorizontalOptions="Start" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                        <Border  Grid.Column="2"  Grid.Row="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                            <DatePicker x:Name=" RelapsesCosticosteroidsEndDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+
+        <Border Grid.Row="2"    Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" 
+                Stroke="LightGray" BackgroundColor="#c8d1db">
+            <Grid   Style="{StaticResource SmallSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="1" Grid.Row="0" Text="Remarks"  VerticalOptions="Center" 
+                       FontAttributes="Bold" Style="{StaticResource MicroTextLabel}"/>
+                <Border Grid.Column="1" Grid.Row="1" BackgroundColor="White"  
+                        Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" HorizontalOptions="Fill" VerticalOptions="Fill" >
+                    <Editor x:Name=" OtherTreatmentRemarks_textBox" />
+                </Border>
+
+                <Label Grid.Column="0" Grid.Row="0" Text="Other Treatment"  VerticalOptions="Center" 
+       FontAttributes="Bold" Style="{StaticResource MicroTextLabel}"/>
+                <Grid Grid.Column="0" Grid.Row="1" Style="{StaticResource SmallSpacing}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  StrokeShape="RoundRectangle 10,10,10,10" 
+                  HorizontalOptions="Fill" VerticalOptions="Center"  StrokeThickness="0" >
+                        <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" OtherTreatment_comboBox" Style="{StaticResource MicroPicker }">
+                            <Picker.Items>
+                                
+                                
+                                <x:String>Neuropsych. training</x:String>
+                                <x:String>Physiotherapy</x:String>
+                                <x:String>Psychotherapy</x:String>
+                                <x:String>Neostigmine</x:String>
+                                <x:String>Pyridostigmine</x:String>
+                                <x:String>Atropine</x:String>
+                                <x:String>Botulism</x:String>
+                                <x:String>Antitoxin</x:String>
+                                <x:String>Other</x:String>
+
+                                
+
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+                    <Label Grid.Column="0" Grid.Row="1" Text="Starting On" HorizontalOptions="Center" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border  Grid.Column="1"  Grid.Row="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                        <DatePicker x:Name=" RelapsesOtherStartDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+                    <Label Grid.Column="2" Grid.Row="1" Text="Ending On" HorizontalOptions="Center" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border  Grid.Column="3"  Grid.Row="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                        <DatePicker x:Name=" RelapsesOtherEndingDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+                </Grid>
+
+            </Grid>
+        </Border>
+        <Border  Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" StrokeThickness="0">
+
+            <Grid Style="{StaticResource MiddleSpacing}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Text="Remarks"  VerticalOptions="Center" 
+                       FontAttributes="Bold" Style="{StaticResource MicroTextLabel}"/>
+            <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" HorizontalOptions="Fill" VerticalOptions="Fill" >
+                    <Editor x:Name=" Remarks_textBox" />
+            </Border>
+
+            <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource MicroButton}"   BackgroundColor="#5a81ab" Text="Add New" 
+                           HorizontalOptions="Fill" VerticalOptions="Center" x:Name="Button_AddNewRelapses" Clicked="Button_AddNewRelapses_Clicked" />
+
+
+                <Button Grid.Column="1" Grid.Row="2"  BackgroundColor="#5a81ab" Text="Save"  HorizontalOptions="Fill" 
+                        VerticalOptions="Center" Style="{StaticResource MicroButton}" x:Name="Button_SaveRelapses" Clicked="Button_SaveRelapses_Clicked"/>
+            
+          
+            
+        </Grid>
+        </Border>
+    </Grid>
+</ContentPage>

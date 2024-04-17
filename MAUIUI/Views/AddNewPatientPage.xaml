@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.AddNewPatientPage"             
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+
+    <Grid Style="{StaticResource LargeSpacing}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="1"  Grid.Row="1"  Style="{StaticResource SmallPaddingBorder}" StrokeThickness="0">
+            <Grid  Style="{StaticResource LargeColumnSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <Image x:Name="pictureBox1" BackgroundColor="#c8d1db"  HeightRequest="200" HorizontalOptions="Center" WidthRequest="200" Grid.Column="1" Grid.Row="0"/>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Name*"  Grid.Column="0" Grid.Row="1"  Style="{StaticResource MicroTextLabel}" />
+                <Border  Grid.Column="1" Grid.Row="1" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                    <Entry x:Name="NameField_textBox" TextChanged="NameField_textBoxChanged" Style="{StaticResource MicroEntry}"/>
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Surname*"  Grid.Column="0" Grid.Row="2"  Style="{StaticResource MicroTextLabel}" />
+                <Border  Grid.Column="1" Grid.Row="2" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                    <Entry x:Name="SurNameField_textBox" TextChanged="SurNameField_textBoxChanged" Style="{StaticResource MicroEntry}"/>
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Birth Date*"  Grid.Column="0" Grid.Row="3" Style="{StaticResource MicroTextLabel}"  />
+                <Border  Grid.Column="1"  Grid.Row="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                    <DatePicker  x:Name="BirthDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Gender"  Grid.Column="0" Grid.Row="4" Style="{StaticResource MicroTextLabel}"  />
+                <Border Grid.Column="1" Grid.Row="4"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="Gender_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="TC"  Grid.Column="0" Grid.Row="5" Style="{StaticResource MicroTextLabel}"  />
+                <Border  Grid.Column="1" Grid.Row="5" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                    <Entry  Style="{StaticResource MicroEntry}" x:Name="TCEntry" TextChanged="TCEntry_TextChanged"/>
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Birth Country"  Grid.Column="0" Grid.Row="6"  Style="{StaticResource MicroTextLabel}" />
+                <Border  Grid.Column="1" Grid.Row="6"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="BirthCountry_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Turkey</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Birth City"  Grid.Column="0" Grid.Row="7" Style="{StaticResource MicroTextLabel}"  />
+                <Border  Grid.Column="1" Grid.Row="7"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="BirthCity_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Adana</x:String>
+                            <x:String>Adıyaman</x:String>
+                            <x:String>Afyonkarahisar</x:String>
+                            <x:String>Ağrı</x:String>
+                            <x:String>Aksaray</x:String>
+                            <x:String>Amasya</x:String>
+                            <x:String>Ankara</x:String>
+                            <x:String>Antalya</x:String>
+                            <x:String>Ardahan</x:String>
+                            <x:String>Artvin</x:String>
+                            <x:String>Aydın</x:String>
+                            <x:String>Balıkesir</x:String>
+                            <x:String>Bartın</x:String>
+                            <x:String>Batman</x:String>
+                            <x:String>Bayburt</x:String>
+                            <x:String>Bilecik</x:String>
+                            <x:String>Bingöl</x:String>
+                            <x:String>Bitlis</x:String>
+                            <x:String>Bolu</x:String>
+                            <x:String>Burdur</x:String>
+                            <x:String>Bursa</x:String>
+                            <x:String>Çanakkale</x:String>
+                            <x:String>Çankırı</x:String>
+                            <x:String>Çorum</x:String>
+                            <x:String>Denizli</x:String>
+                            <x:String>Diyarbakır</x:String>
+                            <x:String>Düzce</x:String>
+                            <x:String>Edirne</x:String>
+                            <x:String>Elazığ</x:String>
+                            <x:String>Erzincan</x:String>
+                            <x:String>Erzurum</x:String>
+                            <x:String>Eskişehir</x:String>
+                            <x:String>Gaziantep</x:String>
+                            <x:String>Giresun</x:String>
+                            <x:String>Gümüşhane</x:String>
+                            <x:String>Hakkâri</x:String>
+                            <x:String>Hatay</x:String>
+                            <x:String>Iğdır</x:String>
+                            <x:String>Isparta</x:String>
+                            <x:String>İstanbul</x:String>
+                            <x:String>İzmir</x:String>
+                            <x:String>Kahramanmaraş</x:String>
+                            <x:String>Karabük</x:String>
+                            <x:String>Karaman</x:String>
+                            <x:String>Kars</x:String>
+                            <x:String>Kastamonu</x:String>
+                            <x:String>Kayseri</x:String>
+                            <x:String>Kilis</x:String>
+                            <x:String>Kırıkkale</x:String>
+                            <x:String>Kırklareli</x:String>
+                            <x:String>Kırşehir</x:String>
+                            <x:String>Kocaeli</x:String>
+                            <x:String>Konya</x:String>
+                            <x:String>Kütahya</x:String>
+                            <x:String>Malatya</x:String>
+                            <x:String>Manisa</x:String>
+                            <x:String>Mardin</x:String>
+                            <x:String>Mersin</x:String>
+                            <x:String>Muğla</x:String>
+                            <x:String>Muş</x:String>
+                            <x:String>Nevşehir</x:String>
+                            <x:String>Niğde</x:String>
+                            <x:String>Ordu</x:String>
+                            <x:String>Osmaniye</x:String>
+                            <x:String>Rize</x:String>
+                            <x:String>Sakarya</x:String>
+                            <x:String>Samsun</x:String>
+                            <x:String>Şanlıurfa</x:String>
+                            <x:String>Siirt</x:String>
+                            <x:String>Sinop</x:String>
+                            <x:String>Sivas</x:String>
+                            <x:String>Şırnak</x:String>
+                            <x:String>Tekirdağ</x:String>
+                            <x:String>Tokat</x:String>
+                            <x:String>Trabzon</x:String>
+                            <x:String>Tunceli</x:String>
+                            <x:String>Uşak</x:String>
+                            <x:String>Van</x:String>
+                            <x:String>Yalova</x:String>
+                            <x:String>Yozgat</x:String>
+                            <x:String>Zonguldak</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+ 
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Height (cm)"  Grid.Column="0" Grid.Row="8" Style="{StaticResource MicroTextLabel}" />
+                <Border  Grid.Column="1" Grid.Row="8" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                    <Entry x:Name="Height_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Weight (kg)"  Grid.Column="0" Grid.Row="9"  Style="{StaticResource MicroTextLabel}" />
+                <Border  Grid.Column="1" Grid.Row="9" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                    <Entry x:Name="Weight_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+            </Grid>
+        </Border>
+
+
+        <StackLayout Orientation="Vertical" Grid.Column="2" Grid.Row="1">
+            
+            <Grid  Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Patient Number"  Grid.Column="0" Grid.Row="0" Style="{StaticResource MicroTextLabel}"/>
+                <Border  Grid.Column="1" Grid.Row="0" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                    <Entry x:Name="Patientnumber_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="File Number"  Grid.Column="2" Grid.Row="0" Style="{StaticResource MicroTextLabel}"/>
+                <Border  Grid.Column="3" Grid.Row="0" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                    <Entry x:Name="Filenumber_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Health Insurance"  Grid.Column="0" Grid.Row="1" Style="{StaticResource MicroTextLabel}" />
+                <Border  Grid.Column="1" Grid.Row="1" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                    <Entry x:Name="HealthInsurence_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Insurance Reference"  Grid.Column="2" Grid.Row="1" Style="{StaticResource MicroTextLabel}" />
+                <Border  Grid.Column="3" Grid.Row="1" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                    <Entry x:Name="InsuranceReference_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+            </Grid>
+
+
+            <Grid Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Address"  Grid.Column="0" Grid.Row="0"  Style="{StaticResource MicroTextLabel}" />
+                <Border  Grid.Column="1" Grid.Row="0" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="AdressField_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="State"  Grid.Column="0" Grid.Row="1"  Style="{StaticResource MicroTextLabel}" />
+                <Border  Grid.Column="1" Grid.Row="1" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="StateField_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+            </Grid>
+
+            <Grid  Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Country"  Grid.Column="0" Grid.Row="0" Style="{StaticResource MicroTextLabel}"  />
+                <Border  Grid.Column="1" Grid.Row="0"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="Country_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Turkey</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="City"  Grid.Column="2" Grid.Row="0" Style="{StaticResource MicroTextLabel}"  />
+                <Border  Grid.Column="3" Grid.Row="0"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="City_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Adana</x:String>
+                            <x:String>Adıyaman</x:String>
+                            <x:String>Afyonkarahisar</x:String>
+                            <x:String>Ağrı</x:String>
+                            <x:String>Aksaray</x:String>
+                            <x:String>Amasya</x:String>
+                            <x:String>Ankara</x:String>
+                            <x:String>Antalya</x:String>
+                            <x:String>Ardahan</x:String>
+                            <x:String>Artvin</x:String>
+                            <x:String>Aydın</x:String>
+                            <x:String>Balıkesir</x:String>
+                            <x:String>Bartın</x:String>
+                            <x:String>Batman</x:String>
+                            <x:String>Bayburt</x:String>
+                            <x:String>Bilecik</x:String>
+                            <x:String>Bingöl</x:String>
+                            <x:String>Bitlis</x:String>
+                            <x:String>Bolu</x:String>
+                            <x:String>Burdur</x:String>
+                            <x:String>Bursa</x:String>
+                            <x:String>Çanakkale</x:String>
+                            <x:String>Çankırı</x:String>
+                            <x:String>Çorum</x:String>
+                            <x:String>Denizli</x:String>
+                            <x:String>Diyarbakır</x:String>
+                            <x:String>Düzce</x:String>
+                            <x:String>Edirne</x:String>
+                            <x:String>Elazığ</x:String>
+                            <x:String>Erzincan</x:String>
+                            <x:String>Erzurum</x:String>
+                            <x:String>Eskişehir</x:String>
+                            <x:String>Gaziantep</x:String>
+                            <x:String>Giresun</x:String>
+                            <x:String>Gümüşhane</x:String>
+                            <x:String>Hakkâri</x:String>
+                            <x:String>Hatay</x:String>
+                            <x:String>Iğdır</x:String>
+                            <x:String>Isparta</x:String>
+                            <x:String>İstanbul</x:String>
+                            <x:String>İzmir</x:String>
+                            <x:String>Kahramanmaraş</x:String>
+                            <x:String>Karabük</x:String>
+                            <x:String>Karaman</x:String>
+                            <x:String>Kars</x:String>
+                            <x:String>Kastamonu</x:String>
+                            <x:String>Kayseri</x:String>
+                            <x:String>Kilis</x:String>
+                            <x:String>Kırıkkale</x:String>
+                            <x:String>Kırklareli</x:String>
+                            <x:String>Kırşehir</x:String>
+                            <x:String>Kocaeli</x:String>
+                            <x:String>Konya</x:String>
+                            <x:String>Kütahya</x:String>
+                            <x:String>Malatya</x:String>
+                            <x:String>Manisa</x:String>
+                            <x:String>Mardin</x:String>
+                            <x:String>Mersin</x:String>
+                            <x:String>Muğla</x:String>
+                            <x:String>Muş</x:String>
+                            <x:String>Nevşehir</x:String>
+                            <x:String>Niğde</x:String>
+                            <x:String>Ordu</x:String>
+                            <x:String>Osmaniye</x:String>
+                            <x:String>Rize</x:String>
+                            <x:String>Sakarya</x:String>
+                            <x:String>Samsun</x:String>
+                            <x:String>Şanlıurfa</x:String>
+                            <x:String>Siirt</x:String>
+                            <x:String>Sinop</x:String>
+                            <x:String>Sivas</x:String>
+                            <x:String>Şırnak</x:String>
+                            <x:String>Tekirdağ</x:String>
+                            <x:String>Tokat</x:String>
+                            <x:String>Trabzon</x:String>
+                            <x:String>Tunceli</x:String>
+                            <x:String>Uşak</x:String>
+                            <x:String>Van</x:String>
+                            <x:String>Yalova</x:String>
+                            <x:String>Yozgat</x:String>
+                            <x:String>Zonguldak</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Phone"  Grid.Column="0" Grid.Row="1" Style="{StaticResource MicroTextLabel}"  />
+                <Border  Grid.Column="1" Grid.Row="1" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="Phone_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="E-mail"  Grid.Column="2" Grid.Row="1" Style="{StaticResource MicroTextLabel}"  />
+                <Border  Grid.Column="3" Grid.Row="1" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="Email_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Employment Status"  Grid.Column="0" Grid.Row="2" Style="{StaticResource MicroTextLabel}"  />
+                <Border  Grid.Column="1" Grid.Row="2"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="EmployementStatus_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Employed</x:String>
+                            <x:String>Retired</x:String>
+                            <x:String>Student</x:String>
+                            <x:String>Unemployed</x:String>
+                            <x:String>Housewife</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Eduction"  Grid.Column="2" Grid.Row="2" Style="{StaticResource MicroTextLabel}" />
+                <Border  Grid.Column="3" Grid.Row="2"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker x:Name="Education_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Elementary School</x:String>
+                            <x:String>High School</x:String>
+                            <x:String>College</x:String>
+                            <x:String>University</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+
+            </Grid>
+ 
+            <Grid  Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Deceased?" Grid.Column="0" Grid.Row="0" Style="{StaticResource MicroTextLabel}"  />
+                <StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
+                    <RadioButton x:Name="YesDeceased_radioButton" Content="Yes" GroupName="DeceasedGroup" Style="{StaticResource MicroRadioButton}"/>
+                    <RadioButton x:Name="NoDeceased_radioButton" Content="No" GroupName="DeceasedGroup" IsChecked="True" Style="{StaticResource MicroRadioButton}" />
+                </StackLayout>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Cause of Death" Grid.Column="2" Grid.Row="0" Style="{StaticResource MicroTextLabel}"  />
+                <Border Grid.Column="3" Grid.Row="0" x:Name="borderCauseOfDeath" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry  Style="{StaticResource MicroEntry}" IsEnabled="{Binding Path=IsChecked, Source={x:Reference YesDeceased_radioButton}}">
+                        <Entry.Triggers>
+                            <DataTrigger TargetType="Entry" Binding="{Binding Path=IsChecked, Source={x:Reference YesDeceased_radioButton}}" Value="True">
+                                <Setter Property="Text" Value="" />
+                            </DataTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Border.Triggers>
+                        <DataTrigger TargetType="Border" Binding="{Binding Path=IsChecked, Source={x:Reference YesDeceased_radioButton}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="White" />
+                        </DataTrigger>
+                        <DataTrigger TargetType="Border" Binding="{Binding Path=IsChecked, Source={x:Reference NoDeceased_radioButton}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="LightGray" />
+                        </DataTrigger>
+                    </Border.Triggers>
+                </Border>
+
+                <Label HorizontalOptions="End" VerticalOptions="Center" Text="Death Date" Grid.Column="2" Grid.Row="1"  Style="{StaticResource MicroTextLabel}" />
+                <Border x:Name="borderDeathDate" Grid.Column="3" Grid.Row="1" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry  Style="{StaticResource MicroEntry}" IsEnabled="{Binding Path=IsChecked, Source={x:Reference YesDeceased_radioButton}}">
+                        <Entry.Triggers>
+                            <DataTrigger TargetType="Entry" Binding="{Binding Path=IsChecked, Source={x:Reference YesDeceased_radioButton}}" Value="True">
+                                <Setter Property="Text" Value="" />
+                            </DataTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Border.Triggers>
+                        <DataTrigger TargetType="Border" Binding="{Binding Path=IsChecked, Source={x:Reference YesDeceased_radioButton}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="White" />
+                        </DataTrigger>
+                        <DataTrigger TargetType="Border" Binding="{Binding Path=IsChecked, Source={x:Reference NoDeceased_radioButton}}" Value="True">
+                            <Setter Property="BackgroundColor" Value="LightGray" />
+                        </DataTrigger>
+                    </Border.Triggers>
+                </Border>
+            </Grid>
+
+            <Grid  Style="{StaticResource LargeSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Column="1" Grid.Row="1" BackgroundColor="#5a81ab" Text="Save"  HorizontalOptions="Fill" VerticalOptions="End" Style="{StaticResource MicroButton}" x:Name="Button_SaveAddNewPatient" Clicked="Button_SaveAddNewPatient_Clicked" />
+            </Grid>
+
+
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

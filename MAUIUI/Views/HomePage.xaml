@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.HomePage"
+                BackgroundColor="#eaeff4">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Grid.Column="0" Orientation="Horizontal">
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                <Image 
+                    Source="aims_logo.png"
+                    Margin="50"
+                    HorizontalOptions="FillAndExpand"
+                    />
+                <StackLayout Orientation="Vertical" Spacing="10" Margin="10, 0">
+                    <Button 
+                        Style="{StaticResource MiddleButton}"
+                        x:Name="Button_Home"
+                        BackgroundColor="#1d3a5a"
+                        Clicked="Button_Home_Clicked"
+                        Text="HOME PAGE"
+                        FontAttributes="Bold"
+                        />
+                    <Button 
+                        Style="{StaticResource MiddleButton}"
+                        x:Name="Button_Patients"
+                        BackgroundColor="#316297"
+                        Clicked="Button_Patients_Clicked" 
+                        Text="PATIENTS"
+                        FontAttributes="Bold"
+                        />
+                    <Button 
+                        Style="{StaticResource MiddleButton}"
+                        x:Name="Button_Statistics"
+                        BackgroundColor="#5a81ab"
+                        Clicked="Button_Statistics_Clicked"
+                        Text="STATISTICS"
+                        FontAttributes="Bold"
+                        />
+                    <Button 
+                        Style="{StaticResource MiddleButton}"
+                        x:Name="Button_Analysis"
+                        BackgroundColor="#83a0c0"
+                        Clicked="Button_Analysis_Clicked"
+                        Text="ANALYSIS"
+                        FontAttributes="Bold"
+                        />
+                    
+
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Spacing="10" Margin="10, 10" VerticalOptions="EndAndExpand">
+                    <Button 
+                        Style="{StaticResource MiddleButton}"
+                        x:Name="Button_Import"
+                        BackgroundColor="LightSeaGreen"
+                        Text="IMPORT DATA"
+                        Clicked="Button_Import_Clicked"
+                        FontAttributes="Bold"
+                        />
+                    <Button 
+                        Style="{StaticResource MiddleButton}"
+                        x:Name="Button_Export"
+                        BackgroundColor="#103464"
+                        Text="EXPORT DATA"
+                        Clicked="Button_Export_Clicked"
+                        FontAttributes="Bold"
+                        />
+
+
+                </StackLayout>
+                
+            </StackLayout>
+            <!--<BoxView Color="Black" Grid.Column="0" WidthRequest="1" />-->
+            
+        </StackLayout>
+        <StackLayout x:Name="HomeContent" Grid.Column="1">
+            
+        </StackLayout>
+        
+    </Grid>
+</ContentPage>

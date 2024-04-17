@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.ImmunosuppressionAssociatedPage"
+             BackgroundColor="#eaeff4"
+             Style="{StaticResource LargePaddingPage}"
+             >
+    
+    <Grid Style="{StaticResource MiddleSpacing}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2.5*" />
+                <RowDefinition Height="2.5*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Text="Date of Diagnosis" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Border Grid.Row="0" Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                <DatePicker x:Name="IdmmunoDateofDiagnosisDate_textBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="4" Text="Other Immunosuppression" VerticalOptions="Center" HorizontalOptions="End" />
+            <Border Grid.Row="0" Grid.Column="5" VerticalOptions="Center" StrokeShape="RoundRectangle 10" StrokeThickness="0" >
+                <Picker x:Name="OtherImmunosuppression_combobox" Style="{StaticResource MicroPicker}">
+                    <Picker.Items>
+
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="0" Text="Immunosuppression-Associated" HorizontalOptions="End" />
+            <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" StrokeShape="RoundRectangle 10">
+                <Editor x:Name="Immunosuppression_textBox" Style="{StaticResource MicroEditor}" BackgroundColor="White" />
+            </Border>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="0" Text="Treatment Modality" HorizontalOptions="End" />
+            <Border Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" StrokeShape="RoundRectangle 10">
+                <Editor  x:Name="TreatmentModality_textBox" Style="{StaticResource MicroEditor}" BackgroundColor="White" />
+            </Border>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" FontAttributes="Bold" Text="Outcome" VerticalOptions="End" />
+            <Border Style="{StaticResource SmallPaddingBorder}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="6" StrokeShape="RoundRectangle 10" Stroke="DarkSlateGray" BackgroundColor="#c8d1db">
+                <Grid Style="{StaticResource SmallSpacing}" ColumnDefinitions="3*,7*,7*,7*,15*" RowDefinitions="*,*">
+                    <RadioButton x:Name="OutcomeRUnknown_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="0" Content="Unknown" />
+                    <RadioButton x:Name="OutcomeOngoing_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="1" Content="Ongoing" />
+                    <RadioButton x:Name="OutcomeRemission_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="2" Grid.Row="0" Content="Remission" />
+
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="2" Grid.Row="1" Content="Death" 
+                                 x:Name="OutcomeDeath_radioButton" CheckedChanged="OutcomeDeath_radioButton_Changed" />
+
+                    <Grid Grid.Column="3" Grid.Row="1" ColumnDefinitions="2*, 8* ,8*"  >
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Date" VerticalOptions="Center"  />
+                        <Border Grid.Column="1" VerticalOptions="Center" StrokeShape="RoundRectangle 10" >
+                            <Entry x:Name="ImmunoOutcomeDate_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White"/>
+                        </Border>
+                    </Grid>
+
+                </Grid>
+            </Border>
+
+
+        </Grid>
+        
+        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" FontAttributes="Bold" Text="Remarks" VerticalOptions="End" />
+        
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="2" ColumnDefinitions="7*, *" RowDefinitions="*, *">
+            <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" StrokeShape="RoundRectangle 10">
+                <Editor x:Name="ImmuRemarks_textBox" Style="{StaticResource MicroEditor}" BackgroundColor="White" />
+            </Border>
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Save" Grid.Row="1" Grid.Column="1" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold" Clicked="Button_Save_Clicked" />
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_AddNew"  Grid.Row="0" Grid.Column="1" BackgroundColor="#5a81ab" Text="Add New" FontAttributes="Bold" Clicked="Button_AddNew_Clicked" />
+        </Grid>
+
+    </Grid>
+</ContentPage>

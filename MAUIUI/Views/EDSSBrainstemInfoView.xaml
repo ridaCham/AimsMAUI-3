@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.EDSSBrainstemInfoView"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand">
+    <Grid RowDefinitions="*, 7*">
+        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Text="Brainstem Information" FontAttributes="Bold" HorizontalOptions="Start" />
+        <StackLayout Style="{StaticResource MiddleMarginLeftStackLayout}" Grid.Row="1" >
+            <Grid Style="{StaticResource SmallColumnSpacing}" RowDefinitions="*, *, *, *, *, *, *" ColumnDefinitions="*, 41*" VerticalOptions="FillAndExpand">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Text="0" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Normal" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="0" Text="1" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Signs only" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="0" Text="2" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Moderate nystagmus or other mild disability" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="0" Text="3" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Severe nystagmus, marked extraocular weakness or moderate disability of other cranial nerves" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="0" Text="4" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Marked dysrthria or other marked disability" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="5" Grid.Column="0" Text="5" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="5" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Inability to swallow or speak" />
+                
+            </Grid>
+        </StackLayout>
+    </Grid>
+</ContentView>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.StatisticsView"        
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand"
+         Style="{StaticResource LargePaddingPage}">
+
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+        <Grid Style="{StaticResource SmallSpacing}"  RowDefinitions="4*,10*,*" ColumnDefinitions="*,20*,*" >
+
+            <Grid  Grid.Row="0" Grid.Column="1" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,*,*,*,*,*" RowDefinitions="*,*,*,*,1.5*" >
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" Grid.Row="0" Text="City"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" Grid.Row="1" Text="Gender"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" Grid.Row="2" Text="Education"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" Grid.Row="3" Text="Age"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="2" Grid.Row="0" Text="Height"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="2" Grid.Row="1" Text="Weight"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="2" Grid.Row="2" Text="Smoking History"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="2" Grid.Row="3" Text="Alcohol Use"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="4" Grid.Row="0" Text="McDonald Classification"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="4" Grid.Row="1" Text="NMO Classification"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="4" Grid.Row="2" Text="MS Specific Treatment"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="4" Grid.Row="3" Text="Symptomatic Treatment"  VerticalOptions="Center" HorizontalOptions="End" />
+
+                <Border  Grid.Column="1" Grid.Row="0"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0"  >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" StatisticsCity_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Adana</x:String>
+                            <x:String>Adıyaman</x:String>
+                            <x:String>Afyonkarahisar</x:String>
+                            <x:String>Ağrı</x:String>
+                            <x:String>Aksaray</x:String>
+                            <x:String>Amasya</x:String>
+                            <x:String>Ankara</x:String>
+                            <x:String>Antalya</x:String>
+                            <x:String>Ardahan</x:String>
+                            <x:String>Artvin</x:String>
+                            <x:String>Aydın</x:String>
+                            <x:String>Balıkesir</x:String>
+                            <x:String>Bartın</x:String>
+                            <x:String>Batman</x:String>
+                            <x:String>Bayburt</x:String>
+                            <x:String>Bilecik</x:String>
+                            <x:String>Bingöl</x:String>
+                            <x:String>Bitlis</x:String>
+                            <x:String>Bolu</x:String>
+                            <x:String>Burdur</x:String>
+                            <x:String>Bursa</x:String>
+                            <x:String>Çanakkale</x:String>
+                            <x:String>Çankırı</x:String>
+                            <x:String>Çorum</x:String>
+                            <x:String>Denizli</x:String>
+                            <x:String>Diyarbakır</x:String>
+                            <x:String>Düzce</x:String>
+                            <x:String>Edirne</x:String>
+                            <x:String>Elazığ</x:String>
+                            <x:String>Erzincan</x:String>
+                            <x:String>Erzurum</x:String>
+                            <x:String>Eskişehir</x:String>
+                            <x:String>Gaziantep</x:String>
+                            <x:String>Giresun</x:String>
+                            <x:String>Gümüşhane</x:String>
+                            <x:String>Hakkâri</x:String>
+                            <x:String>Hatay</x:String>
+                            <x:String>Iğdır</x:String>
+                            <x:String>Isparta</x:String>
+                            <x:String>İstanbul</x:String>
+                            <x:String>İzmir</x:String>
+                            <x:String>Kahramanmaraş</x:String>
+                            <x:String>Karabük</x:String>
+                            <x:String>Karaman</x:String>
+                            <x:String>Kars</x:String>
+                            <x:String>Kastamonu</x:String>
+                            <x:String>Kayseri</x:String>
+                            <x:String>Kilis</x:String>
+                            <x:String>Kırıkkale</x:String>
+                            <x:String>Kırklareli</x:String>
+                            <x:String>Kırşehir</x:String>
+                            <x:String>Kocaeli</x:String>
+                            <x:String>Konya</x:String>
+                            <x:String>Kütahya</x:String>
+                            <x:String>Malatya</x:String>
+                            <x:String>Manisa</x:String>
+                            <x:String>Mardin</x:String>
+                            <x:String>Mersin</x:String>
+                            <x:String>Muğla</x:String>
+                            <x:String>Muş</x:String>
+                            <x:String>Nevşehir</x:String>
+                            <x:String>Niğde</x:String>
+                            <x:String>Ordu</x:String>
+                            <x:String>Osmaniye</x:String>
+                            <x:String>Rize</x:String>
+                            <x:String>Sakarya</x:String>
+                            <x:String>Samsun</x:String>
+                            <x:String>Şanlıurfa</x:String>
+                            <x:String>Siirt</x:String>
+                            <x:String>Sinop</x:String>
+                            <x:String>Sivas</x:String>
+                            <x:String>Şırnak</x:String>
+                            <x:String>Tekirdağ</x:String>
+                            <x:String>Tokat</x:String>
+                            <x:String>Trabzon</x:String>
+                            <x:String>Tunceli</x:String>
+                            <x:String>Uşak</x:String>
+                            <x:String>Van</x:String>
+                            <x:String>Yalova</x:String>
+                            <x:String>Yozgat</x:String>
+                            <x:String>Zonguldak</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                
+                <Border  Grid.Column="1" Grid.Row="1"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" StatisticsGender_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                
+                <Border  Grid.Column="1" Grid.Row="2"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" StatisticsEducation_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Elementary School</x:String>
+                            <x:String>High School</x:String>
+                            <x:String>College</x:String>
+                            <x:String>University</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                
+                <Border  Grid.Column="1" Grid.Row="3"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0"  >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" StatisticsAge_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+
+                            <x:String>0-10</x:String>
+                            <x:String>10-20</x:String>
+                            <x:String>20-30</x:String>
+                            <x:String>30-40</x:String>
+                            <x:String>40-50</x:String>
+                            <x:String>50-60</x:String>
+                            <x:String>70+</x:String>
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                
+                <Border  Grid.Column="3" Grid.Row="0"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" StatisticsHeight_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+
+                            <x:String>0-50 cm</x:String>
+                            <x:String>50-100 cm</x:String>
+                            <x:String>100-150 cm</x:String>
+                            <x:String>150-200 cm</x:String>
+                            <x:String>200+</x:String>
+
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                
+                <Border  Grid.Column="3" Grid.Row="1"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" StatisticsWeight_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>0-20 kg</x:String>
+                            <x:String>20-40 kg</x:String>
+                            <x:String>40-60 kg</x:String>
+                            <x:String>60-80 kg</x:String>
+                            <x:String>80-100 kg</x:String>
+                            <x:String>100+</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                
+                <Border  Grid.Column="3" Grid.Row="2"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" StatisticsSmoke_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>0-5 per day</x:String>
+                            <x:String>5-10 per day</x:String>
+                            <x:String>10-15 per day</x:String>
+                            <x:String>1 pack per day</x:String>
+                            <x:String>2 packs a day</x:String>
+                            <x:String>+2 packs a day</x:String>
+                            <x:String>Ex Smoker</x:String>
+                            <x:String>Never Smoker</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                
+                <Border  Grid.Column="3" Grid.Row="3"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" StatisticsAlcohol_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>More than 3 units a day</x:String>
+                            <x:String>Less than 3 units a day</x:String>
+                            <x:String>Less than 3 units a week</x:String>
+                            <x:String>Never</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                
+                <Border  Grid.Column="5" Grid.Row="0"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0"  >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" McDonaldClassification_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>MS</x:String>
+                            <x:String>Possible MS</x:String>
+                            <x:String>Not MS</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                
+                <Border  Grid.Column="5" Grid.Row="1"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" DiagnosisNmoClassification_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Definite NMO</x:String>
+                            <x:String>Not NMO</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                
+                <Border  Grid.Column="5" Grid.Row="2"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" MsSpecificTreatment_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>Aubagio</x:String>
+                            <x:String>Avonex</x:String>
+                            <x:String>Betaferon</x:String>
+                            <x:String>Cladribine</x:String>
+                            <x:String>Copaxone</x:String>
+                            <x:String>Cyclophosphamide</x:String>
+                            <x:String>Difurat</x:String>
+                            <x:String>Extavia</x:String>
+                            <x:String>Findel</x:String>
+                            <x:String>Finimod</x:String>
+                            <x:String>Fingya</x:String>
+                            <x:String>Gilomid</x:String>
+                            <x:String>Gilenya</x:String>
+                            <x:String>IVIG</x:String>
+                            <x:String>Imuran</x:String>
+                            <x:String>Kesimpta</x:String>
+                            <x:String>Lemtrada</x:String>
+                            <x:String>Lidwina</x:String>
+                            <x:String>MabThera</x:String>
+                            <x:String>Mavenclad</x:String>
+                            <x:String>Mayzent</x:String>
+                            <x:String>Methotrexate</x:String>
+                            <x:String>Novantrone</x:String>
+                            <x:String>Ocrevus</x:String>
+                            <x:String>Ofatumumab</x:String>
+                            <x:String>Ozanimob</x:String>
+                            <x:String>Pharon</x:String>
+                            <x:String>Plegridy</x:String>
+                            <x:String>Ponvory</x:String>
+                            <x:String>Rebif[22]</x:String>
+                            <x:String>Rebif[44]</x:String>
+                            <x:String>Rituxan</x:String>
+                            <x:String>Siponimod</x:String>
+                            <x:String>Tecdimex</x:String>
+                            <x:String>Tecfidera</x:String>
+                            <x:String>Teflimes</x:String>
+                            <x:String>Tenipra</x:String>
+                            <x:String>Terigio</x:String>
+                            <x:String>Tysabri</x:String>
+                            <x:String>Vintor</x:String>
+                            <x:String>Zeposia</x:String>
+                            <x:String>Zinbryta</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+
+                <Border  Grid.Column="5" Grid.Row="3"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" SympTreatment_comboBox" Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>4-aminopyridine</x:String>
+                            <x:String>ACTH</x:String>
+                            <x:String>Amantadine</x:String>
+                            <x:String>Amitryptiline</x:String>
+                            <x:String>Ampyra</x:String>
+                            <x:String>Baclofen</x:String>
+                            <x:String>Benzodiazepine</x:String>
+                            <x:String>Bethanechol</x:String>
+                            <x:String>Botulinum</x:String>
+                            <x:String>Carbamezepine</x:String>
+                            <x:String>Clonazepam</x:String>
+                            <x:String>Clozapine</x:String>
+                            <x:String>Cortisone acete</x:String>
+                            <x:String>Covid Vaccine - AstraZeneca</x:String>
+                            <x:String>Covid Vaccine - BioNTech/Pfizer</x:String>
+                            <x:String>Covid Vaccine - Gamaleya/SputnikV</x:String>
+                            <x:String>Covid Vaccine - Janssen-Cilag/JohnsonJohnson</x:String>
+                            <x:String>Covid Vaccine - Moderna</x:String>
+                            <x:String>Covid Vaccine - Novovax</x:String>
+                            <x:String>Covid Vaccine - SinoVac</x:String>
+                            <x:String>Dantrolene</x:String>
+                            <x:String>Desmopressin</x:String>
+                            <x:String>Dexamethasone</x:String>
+                            <x:String>Diazepam</x:String>
+                            <x:String>Hydrocortisone</x:String>
+                            <x:String>Methylprednisonone</x:String>
+                            <x:String>Ondansetron</x:String>
+                            <x:String>Oxybutynin</x:String>
+                            <x:String>Papaverine</x:String>
+                            <x:String>Pemoline</x:String>
+                            <x:String>Plasmapheresis</x:String>
+                            <x:String>Prednisolone</x:String>
+                            <x:String>Prednisone</x:String>
+                            <x:String>Primidone</x:String>
+                            <x:String>Propanolol</x:String>
+                            <x:String>Prostaglandine E</x:String>
+                            <x:String>Sativex</x:String>
+                            <x:String>Sildenafil</x:String>
+                            <x:String>Tizanidine</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+
+                <Border Grid.Column="4" Grid.Row="4" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Button Style="{StaticResource MicroButton}" BackgroundColor="#5a81ab" Text="Search" x:Name="Button_SaveStatistics" Clicked="Button_SaveStatistics_Clicked"/>
+                </Border>
+                <Border Grid.Column="5" Grid.Row="4" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Button Style="{StaticResource MicroButton}" BackgroundColor="#5a81ab" Text="Clean" x:Name="Button_CleanStatistics" Clicked="Button_CleanStatistics_Clicked"/>
+                </Border>
+                
+            </Grid>
+
+            <Border Grid.Row="1" Grid.Column="1" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="OldLace" >
+
+                <!--<ListView Grid.Row="1" x:Name="ListView_Statistics" BackgroundColor="pink" SeparatorColor="black">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10" HorizontalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Name}" FontAttributes="Bold"  WidthRequest="100"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding SurName}"  WidthRequest="100"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding BirthDate}"  WidthRequest="100"/>
+                                    <Label Grid.Row="0" Grid.Column="3" Text="{Binding Gender}"  WidthRequest="100"/>
+
+                                    <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" HeightRequest="1" BackgroundColor="Black" VerticalOptions="End" Margin="0,0,0,0"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+                
+            </Border>
+
+            <Border Grid.Row="2" Grid.Column="1" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" VerticalOptions="Center"  >
+                <Grid Style="{StaticResource SmallSpacing}" ColumnDefinitions="5*,*" >
+                    <Button Style="{StaticResource MicroButton}" Grid.Column="1" BackgroundColor="#5a81ab" Text="Export Data"  />
+                </Grid>
+            </Border>
+
+        </Grid>
+    </Border>
+
+</ContentView>

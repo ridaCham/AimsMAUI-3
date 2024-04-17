@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.DiagnosisPage"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+
+    <Grid Style="{StaticResource LargeSpacing}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Style="{StaticResource LargeSpacing}" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1" Grid.Row="0" Text="Secondary Progressive Phase" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+                <Grid Style="{StaticResource LargeColumnSpacing}" RowDefinitions="*,2*,2*,2*" ColumnDefinitions="*,8*" >
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="1" Text="Start of Progression" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Border  Grid.Row="2" Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Start" HorizontalOptions="Start" >
+                        <DatePicker x:Name="DiagnosisStartDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+                </Grid>
+            </Border>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1" Grid.Row="2" Text="Radiologically Isolated Syndrome (RIS)" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold" />
+            <Border Grid.Column="1" Grid.Row="3" Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+                <Grid Style="{StaticResource LargeColumnSpacing}" RowDefinitions="*,2*,2*,2*" ColumnDefinitions="*,8*" >
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="1" Text="RIS Onset Date" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Border  Grid.Row="2" Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Start" HorizontalOptions="Start" >
+                        <DatePicker x:Name="DiagnosisRisDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+                </Grid>
+            </Border>
+
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="Beginning Of The Disease" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Border  Grid.Column="0" Grid.Row="1" Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+                <Grid Style="{StaticResource MiddleSpacing}" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="4*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="Date Of Onset" HorizontalOptions="End" VerticalOptions="Center"/>
+
+                    <Border   Grid.Column="1" Grid.Row="0" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                        <DatePicker x:Name="DiagnosisDateofOnsetDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+
+
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="1" Text="First Symptoms" HorizontalOptions="End" VerticalOptions="Center"/>
+                    <Grid Style="{StaticResource MiddleSpacing}" Grid.Column="1" Grid.Row="1" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <HorizontalStackLayout Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                            <CheckBox x:Name="Supratentorial_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Supratentorial" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center">
+                            <CheckBox x:Name="Brainstem_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Brainstem-Cerebellum" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Center">
+                            <CheckBox x:Name="Spinal_Cord_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Spinal Cord" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </Grid>
+
+
+                    <Grid Style="{StaticResource MiddleSpacing}" Grid.Column="1" Grid.Row="2"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <HorizontalStackLayout Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                            <CheckBox x:Name="Optic_Pathways_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Optic Pathways" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        
+                        <Label  Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Other" VerticalOptions="Center"  HorizontalOptions="End" />
+                        <Border Grid.Column="1" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" VerticalOptions="Center" >
+                            <Entry x:Name="OtherSymptoms_textBox" Style="{StaticResource MicroEntry}" />
+                        </Border>
+                    </Grid>
+
+
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="3" Text="Progression From Onset" HorizontalOptions="End" VerticalOptions="Center"/>
+                    <Grid Style="{StaticResource MiddleSpacing}" Grid.Column="1" Grid.Row="3" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <HorizontalStackLayout Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                            <CheckBox x:Name="ProgressionFromOnset_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Yes" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </Grid>
+
+                </Grid>
+
+            </Border>
+
+
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="2" Text="Diagnosis" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold" />
+
+            <Border Grid.Column="0" Grid.Row="3" Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+
+                <Grid Style="{StaticResource LargeColumnSpacing}" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="4*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="Confirmed Diagnosis" HorizontalOptions="End" VerticalOptions="Center"/>
+                    <Border Grid.Column="1" Grid.Row="0" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                        <DatePicker x:Name="DiagnosisConfirmedDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="1" Text="Confirmed By" HorizontalOptions="End" VerticalOptions="Center"/>
+                    <Grid Style="{StaticResource MiddleSpacing}" Grid.Column="1" Grid.Row="1" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <HorizontalStackLayout Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                            <CheckBox x:Name="ClinicalFindings_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Clinical Findings" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center">
+                            <CheckBox x:Name="MRI_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="MRI" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Center">
+                            <CheckBox x:Name="CSF_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="CSF" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Grid.Column="3" HorizontalOptions="Start" VerticalOptions="Center">
+                            <CheckBox x:Name="EvokedPotentiels_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Evoked Potentials" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </Grid>
+
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="2"  Text="Other" HorizontalOptions="End" VerticalOptions="Center"/>
+                    <Grid Style="{StaticResource MiddleSpacing}" Grid.Column="1" Grid.Row="2" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0"  BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" VerticalOptions="Center" >
+                            <Entry x:Name="OtherDiagnosis_textBox" Style="{StaticResource MicroEntry}" />
+                        </Border>
+                    </Grid>
+
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="3" Text="McDonald Classification" HorizontalOptions="End" VerticalOptions="Center"/>
+                    <Grid Style="{StaticResource MiddleSpacing}" Grid.Column="1" Grid.Row="3"  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" StrokeShape="RoundRectangle 10" VerticalOptions="Center" StrokeThickness="0" >
+                            <Picker x:Name="McDonaldClassification_comboBox" Style="{StaticResource MicroPicker}" BackgroundColor="#5a81ab"  TextColor="White">
+                                <Picker.Items>
+                                    <x:String>MS</x:String>
+                                    <x:String>Possible MS</x:String>
+                                    <x:String>Not MS</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </Border>
+                    </Grid>
+
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="4" Text="Poser Classification" HorizontalOptions="End" VerticalOptions="Center"/>
+                    <Grid Style="{StaticResource MiddleSpacing}" Grid.Column="1" Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" StrokeShape="RoundRectangle 10" VerticalOptions="Center" StrokeThickness="0" >
+                            <Picker x:Name="PoserClassification_comboBox" Style="{StaticResource MicroPicker}" BackgroundColor="#5a81ab"  TextColor="White">
+                                <Picker.Items>
+                                    <x:String>Clinically Definite A1</x:String>
+                                    <x:String>Clinically Definite A2</x:String>
+                                    <x:String>Laboratory-supported Definite B1</x:String>
+                                    <x:String>Laboratory-supported Definite B2</x:String>
+                                    <x:String>Laboratory-supported Definite B3</x:String>
+                                    <x:String>Clinacally Probable C1</x:String>
+                                    <x:String>Clinacally Probable C2</x:String>
+                                    <x:String>Clinacally Probable C3</x:String>
+                                    <x:String>Laboratory-supported Probable D1</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </Border>
+                    </Grid>
+
+
+
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="5" Text="NMO Classification" HorizontalOptions="End" VerticalOptions="Center"/>
+                    <Grid Style="{StaticResource MiddleSpacing}" Grid.Column="1" Grid.Row="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" StrokeShape="RoundRectangle 10" VerticalOptions="Center" StrokeThickness="0" >
+                            <Picker x:Name="MNOClassification_comboBox" Style="{StaticResource MicroPicker}" BackgroundColor="#5a81ab"  TextColor="White">
+                                <Picker.Items>
+                                    <x:String>Definite NMO</x:String>
+                                    <x:String>Not NMO</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </Border>
+                    </Grid>
+
+
+
+                </Grid>
+            </Border>
+
+        </Grid>
+
+
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="Remarks"  VerticalOptions="Center" FontAttributes="Bold"/>
+            <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"  BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" VerticalOptions="Fill" >
+                <Editor x:Name="Remarks_textbox" Style="{StaticResource MicroEditor}" />
+            </Border>
+            <Button Style="{StaticResource MicroButton}" Grid.Column="1"  Grid.Row="2" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold"
+                    x:Name="Button_SaveDiagnosis" Clicked="Button_SaveDiagnosis_Clicked"  />
+        </Grid>
+
+
+    </Grid>
+</ContentPage>

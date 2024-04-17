@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.VaccineHepatitisBView"             
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand">
+
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" BackgroundColor="#c8d1db">
+        <Grid Style="{StaticResource MiddleSpacing}" ColumnDefinitions="0.5*,*,*,*,0.5*">
+            <Label Style="{StaticResource MicroTextLabel}" Text="Hepatitis-B" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Border Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                <DatePicker x:Name="VaccineHepatitisBDate_textBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+            <Grid Grid.Column="3"  ColumnDefinitions="*,*,8*" RowDefinitions="2*,3*,2*" Style="{StaticResource SmallSpacing}">
+                <Button MinimumHeightRequest="0" Padding="0" Grid.Column="3" Grid.Row="1" BackgroundColor="#5a81ab" Text="Add New"
+                        HorizontalOptions="Fill" Style="{StaticResource MicroButton}" x:Name="Button_AddNewVaccineHepatitisB" Clicked="Button_AddNewVaccineHepatitisB_Clicked" />
+            </Grid>
+        </Grid>
+    </Border>
+
+</ContentView>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.AddNewParaclinicalCSFView"
+             VerticalOptions="FillAndExpand"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+
+    <Border Style="{StaticResource LargePaddingBorder}" Stroke="LightGray" StrokeShape="RoundRectangle 10" BackgroundColor="OldLace">
+        <Grid Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+
+            <Grid  Grid.Row="0" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,*,2*,2*">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Text="CSF Collection Date"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border  Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+					<DatePicker x:Name=" CsfCollectionDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                </Border>
+
+                <Grid Grid.Column="2"   ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Start" VerticalOptions="Center">
+					<RadioButton x:Name=" Kept_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Kept"/>
+					<RadioButton x:Name=" NonKept_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Non-Kept"/>
+                </Grid>
+            </Grid>
+
+            <Grid  Grid.Row="1" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="0.5*,20*,20*,20*,0.5*">
+
+                <Grid  Grid.Column="1" Style="{StaticResource MiddleSpacing}" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*" ColumnDefinitions="7*,15*,10*,15*">
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="CSF" HorizontalOptions="Start" FontAttributes="Bold"/>
+					<Grid Grid.Column="1" Grid.ColumnSpan="3"  Grid.Row="1" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Start" VerticalOptions="Center">
+						<RadioButton x:Name=" Traumatic_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Traumatic"/>
+						<RadioButton x:Name=" Typical_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal MS - Typical"/>
+					</Grid>
+					<Grid Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Start" VerticalOptions="Center">
+						<RadioButton x:Name=" Normal_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal" />
+						<RadioButton x:Name=" Atypical_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal MS - Atypical"/>
+					</Grid>
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="3" Text="Chemistry" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="4" Text="Total Protein (mg/l)"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="5" Text="Glucose (mg/l)"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="6" Text="Albumin (mg/l)"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="7" Text="Q Albumin"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="8" Text="lgG (mg/l)"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="9" Text="lgG Index"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="10" Text="Other"  VerticalOptions="Center" HorizontalOptions="End" />
+					<Border  Grid.Column="2" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="TotalProtein_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name=" Glucose_textBox" Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="6" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="Albumin_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="7" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="QAlbumin_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="8" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="IgG_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="9" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="IgGIndex_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="10" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="Other_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+                </Grid>
+                <Grid  Grid.Column="2" Style="{StaticResource MiddleSpacing}" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*" ColumnDefinitions="7*,20*,15*,10*">
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"  Text="Cell Counts" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="1" Text="White Cell Count (/mm3)"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="2" Text="Lymphocytes (%)"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="3" Text="Granulocytes (%)"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="4" Text="Plasma Cells (%)"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="5" Text="Erythrocytes (/mm3)"  VerticalOptions="Center" HorizontalOptions="End" />
+					<Border  Grid.Column="2" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="WhiteCellCount_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="Lymphocytes_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="Granulocytes_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="PlasmaCells_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="Erythrocytes_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="7" Text="JC Virus" HorizontalOptions="Start" FontAttributes="Bold"/>
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="8" Text="JC Virus in CSF"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="9" Text="Result"  VerticalOptions="Center" HorizontalOptions="End" />
+					<Border  Grid.Column="2" Grid.Row="8"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+						<Picker x:Name=" JCVirusinCSF_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+							<Picker.Items>
+								<x:String>Done</x:String>
+								<x:String>Not Done</x:String>
+							</Picker.Items>
+						</Picker>
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="9"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0"  >
+						<Picker x:Name="Result_comboBox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+							<Picker.Items>
+								<x:String>Negative</x:String>
+								<x:String>Positive</x:String>
+							</Picker.Items>
+						</Picker>
+					</Border>
+				</Grid>
+				<Grid  Grid.Column="3" Style="{StaticResource MiddleSpacing}" RowDefinitions="*,4*,*,4*" ColumnDefinitions="7*,15*,10*,15*">
+					<Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="CSF" HorizontalOptions="Start" FontAttributes="Bold"/>
+					<Grid Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" RowDefinitions="*,*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Start" VerticalOptions="Start">
+						<RadioButton x:Name="NotDone_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Row="0"  Content="Not Done"/>
+						<RadioButton x:Name="OCBAbsent_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Row="1"  Content="OCB Absent in CSF"/>
+						<RadioButton x:Name="OCBDetected_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Row="2"  Content="OCB Detected in CSF"/>
+					</Grid>
+					<Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="2" Text="Number of Oligoclonal Bands in CSF"  VerticalOptions="Center" HorizontalOptions="End" />
+					<Border  Grid.Column="2" Grid.Row="2"  Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="NumOCBinCSF_textBox" Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Grid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" RowDefinitions="*,*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Start" VerticalOptions="Start">
+						<RadioButton x:Name=" MatchedOCB_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Row="0"  Content="Matched OCB Detected in Serum"/>
+						<RadioButton x:Name=" NOMatchedOCB_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Row="1"  Content="No Matched OCB in Serum"/>
+						<RadioButton x:Name="SerumNotDone_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Row="2"  Content="Serum Sample Not Done"/>
+					</Grid>
+				</Grid>
+			</Grid>
+
+            <Grid Grid.Row="3" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="7*,*" RowDefinitions="*,2*,*,2*" >
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="Remarks"  VerticalOptions="Center" FontAttributes="Bold"/>
+                <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="3"  BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" VerticalOptions="Fill" >
+					<Editor x:Name="Remarks_textBox" Style="{StaticResource MicroEditor}"/>
+                </Border>
+                <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource MiddleSpacing}" RowDefinitions="*,*" >
+ 
+                    <Button Style="{StaticResource MicroButton}" Grid.Row="1" MinimumHeightRequest="0" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold"
+                        x:Name="Button_SaveAddNewCSF" Clicked="Button_SaveAddNewCSF_Clicked"/>
+                </Grid>
+            </Grid>
+
+        </Grid>
+    </Border>
+
+</ContentView>

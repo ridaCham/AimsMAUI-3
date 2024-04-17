@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.ParaclinicalTestsPage"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+
+    <Grid Style="{StaticResource LargeSpacing}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,*,*,*,*,*,*,*,*" >
+            <Button Grid.Column="0" BackgroundColor="#1D3A5A" Text="MRI"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}"  x:Name="Button_ParaclinicalMRIView" Clicked="Button_ParaclinicalMRIView_Clicked"/>
+            <Button Grid.Column="1" BackgroundColor="#1D3A5A" Text="BLOOD CHEMISTRY"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}"  x:Name="Button_ParaclinicalBloodChemistryView" Clicked="Button_ParaclinicalBloodChemistryView_Clicked"/>
+            <Button Grid.Column="2" BackgroundColor="#1D3A5A" Text="HAEMATOLOGY"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}"  x:Name="Button_ParaclinicalHaematologyView" Clicked="Button_ParaclinicalHaematologyView_Clicked"  />
+            <Button Grid.Column="3" BackgroundColor="#1D3A5A" Text="EVOKED POTENTIALS"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}"  x:Name="Button_ParaclinicalEvokedPotentialsView" Clicked="Button_ParaclinicalEvokedPotentialsView_Clicked"/>
+            <Button Grid.Column="4" BackgroundColor="#1D3A5A" Text="THYROID FUNCTIONS"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}"  x:Name="Button_ParaclinicalThyroidFunctionsView" Clicked="Button_ParaclinicalThyroidFunctionsView_Clicked"/>
+            <Button Grid.Column="5" BackgroundColor="#1D3A5A" Text="AUTO-ANTIBODY"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}"  x:Name="Button_ParaclinicalAutoAntibodyView" Clicked="Button_ParaclinicalAutoAntibodyView_Clicked"/>
+            <Button Grid.Column="6" BackgroundColor="#1D3A5A" Text="CSF"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}"   x:Name="Button_ParaclinicalCSFView" Clicked="Button_ParaclinicalCSFView_Clicked"/>
+            <Button Grid.Column="7" BackgroundColor="#1D3A5A" Text="SEROLOGICAL"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}"   x:Name="Button_ParaclinicalSerologicalView" Clicked="Button_ParaclinicalSerologicalView_Clicked"/>
+            <Button Grid.Column="8" BackgroundColor="#1D3A5A" Text="NOTES"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}" x:Name="Button_ParaclinicalNotesView" Clicked="Button_ParaclinicalNotesView_Clicked"/>
+        </Grid>
+        
+
+        <StackLayout x:Name="layout_ParaclinicalTests" Grid.Row="1">
+
+        </StackLayout>
+        
+    </Grid>
+
+</ContentPage>

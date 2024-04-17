@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.EDSSVisualInfoView"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand">
+    <Grid RowDefinitions="*, 7*">
+        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Text="Visual Information" FontAttributes="Bold" HorizontalOptions="Start" />
+        <StackLayout Style="{StaticResource MiddleMarginLeftStackLayout}" Grid.Row="1" >
+            <Grid Style="{StaticResource SmallColumnSpacing}" RowDefinitions="*, *, *, *, *, *, *" ColumnDefinitions="*, 41*" VerticalOptions="FillAndExpand">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Text="0" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Normal" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="0" Text="1" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Scotoma with visual acuity (corrected) better than 6/9" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="0" Text="2" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Worse eye with maximal visual acuity (corrected) of 6-9 - 6/12" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="0" Text="3" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Worse eye with maximal visual acuity (corrected) of 6-18 - 6/24" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="0" Text="4" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Worse eye with maximal visual acuity (corrected) of 6-36 - 6/60 or grade 3 plus maximal acuity of better eye of 6/18 or less" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="5" Grid.Column="0" Text="5" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="5" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Worse eye with maximal visual acuity (corrected) of 6/60 or grade 4 plus maximal acuity of better eye of 6/18 or less" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="6" Grid.Column="0" Text="6" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="6" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Grade 5 plus maximal visual acuity of better eye worse than 6/18" />
+            </Grid>
+        </StackLayout>
+
+    </Grid>
+</ContentView>

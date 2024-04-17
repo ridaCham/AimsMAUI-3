@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.TestsView"
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand">
+
+    <Grid Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*, *">
+        <Border Style="{StaticResource MiddlePaddingBorder}" Grid.Column="0" BackgroundColor="#c8d1db">
+            <Grid Style="{StaticResource MiddleSpacing}" RowDefinitions="*, *, *, *, *, *, *, *, *, *" ColumnDefinitions="8*, *, 3*, 3*, *">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Face to Face Tests" FontAttributes="Bold" />
+
+                
+                <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="8*, *, 3*, 3*, *">
+                    <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Dominant Hand" HorizontalOptions="End" VerticalOptions="Center" />
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="FaceDominantHandGroup" Content="Left" HorizontalOptions="Center" />
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="FaceDominantHandGroup" Content="Right"  HorizontalOptions="Center" />
+                </Grid>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="0" Text="Ambulation Index" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center" StrokeThickness="0" >
+                    <Picker Style="{StaticResource MicroPicker}">
+                        <Picker.Items>
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                            <x:String>6</x:String>
+                            <x:String>7</x:String>
+                            <x:String>8</x:String>
+                            <x:String>9</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+                
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="0" Text="Time to Walk 8 m. (sec.)" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="3" Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+                <Border Grid.Row="3" Grid.Column="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="0" Text="Nine Hole Peg Test (sec.)" HorizontalOptions="End" VerticalOptions="Center"/>
+                <StackLayout Style="{StaticResource SmallSpacingStackLayout}" Orientation="Horizontal" Grid.Row="4" Grid.Column="2">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="R" VerticalOptions="Center" />
+                    <Border StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                        <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                    </Border>
+                </StackLayout>
+                <StackLayout Style="{StaticResource SmallSpacingStackLayout}" Orientation="Horizontal" Grid.Row="4" Grid.Column="3">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="L" VerticalOptions="Center" />
+                    <Border StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                        <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                    </Border>
+                </StackLayout>
+                <StackLayout Style="{StaticResource SmallSpacingStackLayout}" Orientation="Horizontal" Grid.Row="5" Grid.Column="2">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="R" VerticalOptions="Center" />
+                    <Border StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                        <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                    </Border>
+                </StackLayout>
+                <StackLayout Style="{StaticResource SmallSpacingStackLayout}" Orientation="Horizontal" Grid.Row="5" Grid.Column="3">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="L" VerticalOptions="Center" />
+                    <Border StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                        <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                    </Border>
+                </StackLayout>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="6" Grid.Column="0" Text="Pasat Test" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="6" Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="6" Grid.Column="3" Text="/ 60" VerticalOptions="Center" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="7" Grid.Column="0" Text="Stroop Test" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="7" Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="7" Grid.Column="3" Text="*Average" TextColor="Gray" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="8" Grid.Column="0" Text="Wisconsin Test" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="8" Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="9" Grid.Column="0" Text="Digit Symbol Test" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="9" Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+
+            </Grid>
+        </Border>
+        <Border Style="{StaticResource MiddlePaddingBorder}" Grid.Column="1" BackgroundColor="#c8d1db">
+            <Grid Style="{StaticResource MiddleSpacing}" RowDefinitions="*, *, *, *, *, *, *, *, *, *" ColumnDefinitions="8*, *, 3*, 3*, *">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Digital Tests" FontAttributes="Bold" />
+
+
+                <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" ColumnDefinitions="8*, *, 3*, 3*, *">
+                    <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Dominant Hand" HorizontalOptions="End" VerticalOptions="Center" />
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="2" GroupName="DigitalDominantHandGroup" Content="Left" HorizontalOptions="Center" />
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="3" GroupName="DigitalDominantHandGroup" Content="Right"  HorizontalOptions="Center" />
+                </Grid>
+
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="0" Text="Ambulation Index" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center" StrokeThickness="0" >
+                    <Picker Style="{StaticResource MicroPicker}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2">
+                        <Picker.Items>
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                            <x:String>6</x:String>
+                            <x:String>7</x:String>
+                            <x:String>8</x:String>
+                            <x:String>9</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="0" Text="Time to Walk 8 m. (sec.)" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="3" Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+                <Border Grid.Row="3" Grid.Column="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="0" Text="Nine Hole Peg Test (sec.)" HorizontalOptions="End" VerticalOptions="Center"/>
+                <StackLayout Style="{StaticResource SmallSpacingStackLayout}" Orientation="Horizontal" Grid.Row="4" Grid.Column="2">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="R" VerticalOptions="Center" />
+                    <Border StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                        <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                    </Border>
+                </StackLayout>
+                <StackLayout Style="{StaticResource SmallSpacingStackLayout}" Orientation="Horizontal" Grid.Row="4" Grid.Column="3">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="L" VerticalOptions="Center" />
+                    <Border StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                        <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                    </Border>
+                </StackLayout>
+                <StackLayout Style="{StaticResource SmallSpacingStackLayout}" Orientation="Horizontal" Grid.Row="5" Grid.Column="2">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="R" VerticalOptions="Center" />
+                    <Border StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                        <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                    </Border>
+                </StackLayout>
+                <StackLayout Style="{StaticResource SmallSpacingStackLayout}" Orientation="Horizontal" Grid.Row="5" Grid.Column="3">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="L" VerticalOptions="Center" />
+                    <Border StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                        <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                    </Border>
+                </StackLayout>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="6" Grid.Column="0" Text="Pasat Test" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="6" Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="6" Grid.Column="3" Text="/ 60" VerticalOptions="Center" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="7" Grid.Column="0" Text="Stroop Test" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="7" Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="7" Grid.Column="3" Text="*Average" TextColor="Gray" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="8" Grid.Column="0" Text="Wisconsin Test" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="8" Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="9" Grid.Column="0" Text="Digit Symbol Test" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Border Grid.Row="9" Grid.Column="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center">
+                    <Entry Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                </Border>
+
+            </Grid>
+        </Border>
+    </Grid>
+    
+</ContentView>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.MedicalHistoryPage"
+             BackgroundColor="#eaeff4"
+             Style="{StaticResource LargePaddingPage}"
+             >
+    <Grid Style="{StaticResource MiddleSpacing}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Text="Entry In The Clinic"  VerticalOptions="EndAndExpand" FontAttributes="Bold"/>
+        
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="1.5*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="1.5*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="Date" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="1" Text="Referred By" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="2" Text="Visit Frequency Planned" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="3" Text="Previous Relapses" VerticalOptions="Center" HorizontalOptions="End"/>
+
+
+            <Border Grid.Column="1" Grid.Row="0" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                <DatePicker Style="{StaticResource MaxTodayDate}" x:Name="MedicalHistoryDate_textBox" />
+            </Border>
+            
+            <Border Grid.Column="1" Grid.Row="1" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0"   >
+                <Picker x:Name="Referred_comboBox" Style="{StaticResource MicroPicker}" BackgroundColor="#5a81ab"  TextColor="White">
+                    <Picker.Items>
+                        <x:String>General Practitioner</x:String>
+                        <x:String>Neurologist</x:String>
+                        <x:String>Ophtalmologist</x:String>
+                        <x:String>Physiatrist</x:String>
+                        <x:String>Physiotherapist</x:String>
+                        <x:String>Psychiatrist</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+            <Border Grid.Column="1" Grid.Row="2"  StrokeThickness="0" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  >
+                <Picker x:Name="VisitFre_comboBox" Style="{StaticResource MicroPicker}" BackgroundColor="#5a81ab"  TextColor="White" >
+                    <Picker.Items>
+                        <x:String>1 month</x:String>
+                        <x:String>3 months</x:String>
+                        <x:String>6 months</x:String>
+                        <x:String>9 months</x:String>
+                        <x:String>1 year</x:String>
+                        <x:String>18 months</x:String>
+                        <x:String>2 year</x:String>
+                        <x:String>3 year</x:String>
+                        <x:String>4 year</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+            <Border Grid.Column="1" Grid.Row="3" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center">
+                <Entry x:Name="Previous_textbox" Style="{StaticResource MicroEntry}" BackgroundColor="White"/>
+            </Border>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="0" Text="Ethnic Origin" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="1" Text="Dominant Hand" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="2" Text="Smoking History" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="3" Text="Alcohol Use" VerticalOptions="Center" HorizontalOptions="End"/>
+
+            <Border Grid.Column="3" Grid.Row="0" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0"   >
+                <Picker x:Name="Ethnic_comboBox" Style="{StaticResource MicroPicker}" BackgroundColor="#5a81ab"  TextColor="White">
+                    <Picker.Items>
+                        <x:String>African</x:String>
+                        <x:String>Asian</x:String>
+                        <x:String>Caucasian</x:String>
+                        <x:String>Hispanic</x:String>
+                        <x:String>Inuit</x:String>
+                        <x:String>Semite</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+            <Grid Grid.Column="3" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <RadioButton x:Name="DominantUnknown_radio" Style="{StaticResource MicroRadioButton}" Grid.Column="0" Content="?"/>
+                <RadioButton x:Name="DominantLeft_radio" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Content="Left Hand"/>
+                <RadioButton x:Name="DominantRight_radio" Style="{StaticResource MicroRadioButton}" Grid.Column="2" Content="Right Hand"/>
+            </Grid>
+            
+            <Border Grid.Column="3" Grid.Row="2" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0" >
+                <Picker x:Name="Smoking_comboBox" Style="{StaticResource MicroPicker}" BackgroundColor="#5a81ab"  TextColor="White" >
+                    <Picker.Items>
+                        <x:String>0-5 per day</x:String>
+                        <x:String>5-10 per day</x:String>
+                        <x:String>10-15 per day</x:String>
+                        <x:String>1 pack per day</x:String>
+                        <x:String>2 packs a day</x:String>
+                        <x:String>+2 packs a day</x:String>
+                        <x:String>Ex Smoker</x:String>
+                        <x:String>Never Smoker</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+            <Border Grid.Column="3" Grid.Row="3" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0" >
+                <Picker x:Name="AlcoholUse_comboBox" Style="{StaticResource MicroPicker}" BackgroundColor="#5a81ab"  TextColor="White">
+                    <Picker.Items>
+                        <x:String>More than 3 units a day</x:String>
+                        <x:String>Less than 3 units a day</x:String>
+                        <x:String>Less than 3 units a week</x:String>
+                        <x:String>Never</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+ 
+        </Grid>
+
+
+        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Text="Disease And Medical Conditions"  VerticalOptions="EndAndExpand" FontAttributes="Bold"/>
+        <Grid Grid.Row="3" ColumnSpacing="10" RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Malignancy" Grid.Row="0" Grid.Column="0" BackgroundColor="#5a81ab" Text="Malignancy" FontAttributes="Bold" Clicked="Button_Malignancy_Clicked"  />
+            <Button Style="{StaticResource ElasticMiddleButton}" Grid.Row="0" Grid.Column="1" BackgroundColor="#5a81ab" Text="Herpes Zoster" FontAttributes="Bold" x:Name="Button_HerpesZoster" Clicked="Button_HerpesZoster_Clicked" />
+            <Button Style="{StaticResource ElasticMiddleButton}" Grid.Row="0" Grid.Column="2" BackgroundColor="#5a81ab" Text="Covid-19" FontAttributes="Bold" x:Name="Button_Covid" Clicked="Button_Covid_Clicked"/>
+
+            <Button Style="{StaticResource ElasticMiddleButton}" Grid.Row="1" Grid.Column="0" BackgroundColor="#5a81ab" Text="Vaccine" FontAttributes="Bold" x:Name="Button_Vaccine" Clicked="Button_Vaccine_Clicked"/>
+            <Button Style="{StaticResource ElasticMiddleButton}" Grid.Row="1" Grid.Column="1" BackgroundColor="#5a81ab" Text="Immunosuppression-Associated or Severe Infection" FontAttributes="Bold" x:Name="Button_ImmunosuppressionAssociated" Clicked="Button_ImmunosuppressionAssociated_Clicked" />
+            <Button Style="{StaticResource ElasticMiddleButton}" Grid.Row="1" Grid.Column="2" BackgroundColor="#5a81ab" Text="Other Medical Condition" FontAttributes="Bold" x:Name="Button_OtherMedicalConditionPage" Clicked="Button_OtherMedicalCondition_Clicked"/>
+        </Grid>
+
+        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Text="Family Disease History" FontAttributes="Bold" VerticalOptions="End"/>
+        
+        <StackLayout x:Name="layout_FamilyDiseaseHistory" Grid.Row="5" HorizontalOptions="Fill" VerticalOptions="Fill" >
+            
+        </StackLayout>
+
+        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="6" Text="Remarks" FontAttributes="Bold" VerticalOptions="End"/>
+        <Grid Grid.Row="7" ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" StrokeShape="RoundRectangle 10,10,10,10">
+                <Editor x:Name="Remarks_textBox" FontSize="14" BackgroundColor="White"/>
+            </Border>
+            <Button x:Name="Button_SaveMedicalHistory" Clicked="Button_SaveMedicalHistory_Clicked" Style="{StaticResource ElasticMiddleButton}" Grid.Column="1" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold" />
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.ParaclinicalEvokedPotentialsView"
+             VerticalOptions="FillAndExpand"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+        <Grid Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+
+            <Grid  Grid.Row="0" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,*,2*,2*">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Text="Exam Date"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                    <DatePicker x:Name="EvokedExamDate_textBox" Style="{StaticResource MaxTodayDate}"  />
+                </Border>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Text="Other Evoked Potentials"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border Grid.Column="3" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0" >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name="OtherEvokedPotentials_combobox" Style="{StaticResource MicroPicker}" SelectedIndexChanged="OtherEvokedPotentials_combobox_SelectedIndexChanged">
+                        <Picker.Items>
+
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+            
+            <Grid  Grid.Row="1" Style="{StaticResource LargeColumnSpacing}"  ColumnDefinitions="*,*,*,*,*,*"  RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*" >
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="0" Text="VEP" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2"  Grid.Row="0" Text="Right"  FontAttributes="Bold"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="0" Text="Left"  FontAttributes="Bold"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Grid Grid.Column="2"  Grid.Row="1" ColumnDefinitions="*,*" Style="{StaticResource MiddleSpacing}" HorizontalOptions="Fill" VerticalOptions="Center">
+                    <RadioButton x:Name="RightVEPNormal_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="RightVEPAnormal_checkBox"  Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+                <Grid Grid.Column="4"  Grid.Row="1" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Fill" VerticalOptions="Center">
+                    <RadioButton x:Name="LeftVEPNormal_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="LeftVEPAnormal_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="1"  Grid.Row="2" Text="Amplitude"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border   Grid.Column="2"  Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" Padding="0" >
+                    <Entry x:Name="RightVEPAmplitude_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="1"  Grid.Row="3" Text="P100 Latency (msec)"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border   Grid.Column="2"  Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" Padding="0" >
+                    <Entry x:Name="RightVEPMsec_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="3"  Grid.Row="2" Text="Amplitude"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border   Grid.Column="4"  Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" Padding="0" >
+                    <Entry x:Name="LeftVEPAmplitude_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="3"  Grid.Row="3" Text="P100 Latency (msec)"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border   Grid.Column="4"  Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" Padding="0" >
+                    <Entry x:Name="LeftVEPMsec_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="1"  Grid.Row="4" Text="Normal Range for Latency (msec)"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border   Grid.Column="2"  Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" Padding="0" >
+                    <Entry x:Name="NormalRangeForMsec_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border   Grid.Column="3"  Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" Padding="0" >
+                    <Entry x:Name="TotalRangeForMsec_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="5" Text="BAEP" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Grid Grid.Column="2"  Grid.Row="6" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="RightBAEPNormal_checkBox" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="RightBAEPAbnormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+                <Grid Grid.Column="4"  Grid.Row="6" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="LeftBAEPNormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="LeftBAEPAbnormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="7" Text="SEP" FontAttributes="Bold"   
+                       VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="8" Text="Upper Extremity"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Grid Grid.Column="2"  Grid.Row="8" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="RightUPSEPNormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="RightUPSEPAbnormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="9" Text="Lower Extremity"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Grid Grid.Column="2"  Grid.Row="9" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="RightLowerSEPNormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="RightLowerSEPAbnormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="3"  Grid.Row="8" Text="Upper Extremity"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Grid Grid.Column="4"  Grid.Row="8" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="LeftUPSEPNormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="LeftUPSEPAbnormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="3"  Grid.Row="9" Text="Lower Extremity"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Grid Grid.Column="4"  Grid.Row="9" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="LeftLowerSEPNormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="LeftLowerSEPAbnormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="10" Text="MEP" FontAttributes="Bold" 
+                       VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="11" Text="Upper Extremity"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Grid Grid.Column="2"  Grid.Row="11" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="RightUpMEPNormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="RightUpMEPAbnormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="12" Text="Lower Extremity"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Grid Grid.Column="2"  Grid.Row="12" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="RightLowerMEPNormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="RightLowerMEPAbnormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="3"  Grid.Row="11" Text="Upper Extremity"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Grid Grid.Column="4"  Grid.Row="11" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="LeftUPMEPNormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="LeftUPMEPAbnormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="3"  Grid.Row="12" Text="Lower Extremity"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Grid Grid.Column="4"  Grid.Row="12" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="LeftLowerMEPNormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Normal"/>
+                    <RadioButton x:Name="LeftLowerMEPAbnormal_checkBox " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Abnormal"/>
+                </Grid>
+
+            </Grid>
+
+
+            <Grid Grid.Row="3" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="7*,*" RowDefinitions="*,2*,*,2*" >
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="Remarks"  VerticalOptions="Center" FontAttributes="Bold"/>
+                <Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="3"  BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" HorizontalOptions="Fill" VerticalOptions="Fill" >
+                    <Editor  x:Name="Remarks_textBox" Style="{StaticResource MicroEditor}"/>
+                </Border>
+                <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource MiddleSpacing}" RowDefinitions="*,*" >
+                    <Button Style="{StaticResource MicroButton}" Grid.Row="0" MinimumHeightRequest="0" BackgroundColor="#5a81ab" Text="Add New" FontAttributes="Bold"
+                        x:Name="Button_AddNewEvokedPotentials" Clicked="Button_AddNewEvokedPotentials_Clicked"/>
+                    <Button Style="{StaticResource MicroButton}" Grid.Row="1" MinimumHeightRequest="0" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold"
+                        x:Name="Button_SaveEvokedPotentials" Clicked="Button_SaveEvokedPotentials_Clicked"/>
+                </Grid>
+            </Grid>
+ 
+        </Grid>
+    </Border>
+</ContentView>

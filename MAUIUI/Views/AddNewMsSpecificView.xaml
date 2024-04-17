@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.AddNewMsSpecificView"
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand">
+
+    <Border Style="{StaticResource SmallPaddingBorder}" StrokeShape="RoundRectangle 10" 
+            Stroke="LightGray" BackgroundColor="OldLace">
+
+        <Grid Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0"   Text="MS Specific Treatment" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+            <Border Grid.Column="1"  Grid.Row="0"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0"  >
+                <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" MsSpecificTreatment_comboBox" Style="{StaticResource MicroPicker}">
+                    <Picker.Items>
+
+
+                        <x:String>Aubagio</x:String>
+                        <x:String>Avonex</x:String>
+                        <x:String>Betaferon</x:String>
+                        <x:String>Cladribine</x:String>
+                        <x:String>Copaxone</x:String>
+                        <x:String>Cyclophosphamide</x:String>
+                        <x:String>Difurat</x:String>
+                        <x:String>Extavia</x:String>
+                        <x:String>Findel</x:String>
+                        <x:String>Finimod</x:String>
+                        <x:String>Fingya</x:String>
+                        <x:String>Gilomid</x:String>
+                        <x:String>Gilenya</x:String>
+                        <x:String>IVIG</x:String>
+                        <x:String>Imuran</x:String>
+                        <x:String>Kesimpta</x:String>
+                        <x:String>Lemtrada</x:String>
+                        <x:String>Lidwina</x:String>
+                        <x:String>MabThera</x:String>
+                        <x:String>Mavenclad</x:String>
+                        <x:String>Mayzent</x:String>
+                        <x:String>Methotrexate</x:String>
+                        <x:String>Novantrone</x:String>
+                        <x:String>Ocrevus</x:String>
+                        <x:String>Ofatumumab</x:String>
+                        <x:String>Ozanimob</x:String>
+                        <x:String>Pharon</x:String>
+                        <x:String>Plegridy</x:String>
+                        <x:String>Ponvory</x:String>
+                        <x:String>Rebif[22]</x:String>
+                        <x:String>Rebif[44]</x:String>
+                        <x:String>Rituxan</x:String>
+                        <x:String>Secenek</x:String>
+                        <x:String>Tecdimex</x:String>
+                        <x:String>Tecfidera</x:String>
+                        <x:String>Teflimes</x:String>
+                        <x:String>Tenipra</x:String>
+                        <x:String>Terigio</x:String>
+                        <x:String>Tysabri</x:String>
+                        <x:String>Vintor</x:String>
+                        <x:String>Zeposia</x:String>
+                        <x:String>Zinbryta</x:String>
+
+
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+
+
+            <Label Grid.Column="0" Grid.Row="1"   Text="Posology" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+            <Border Grid.Column="1"  Grid.Row="1"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" MsPosology_comboBox" Style="{StaticResource MicroPicker}">
+                    <Picker.Items>
+
+
+                        <x:String>Single Dose</x:String>
+                        <x:String>Hour</x:String>
+                        <x:String>2 Hours</x:String>
+                        <x:String>Day</x:String>
+                        <x:String>Week</x:String>
+                        <x:String>Month</x:String>
+                        <x:String>3 months</x:String>
+                        <x:String>6 months</x:String>
+                        <x:String>Other</x:String>
+
+
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+
+
+            <Border Grid.Column="1"  Grid.Row="2"   BackgroundColor="White"  Stroke="Gray"  
+                        StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                <Entry x:Name=" OtherSpecificPosology_textBox" Style="{StaticResource MicroEntry}" />
+            </Border>
+
+
+            <Label Grid.Column="0" Grid.Row="3"   Text="Starting on" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+            <Border Grid.Column="1"  Grid.Row="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                <DatePicker x:Name=" MsSpecificStartDate_textBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+
+
+            <Label Grid.Column="0" Grid.Row="4"   Text="Ending on" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+            <Border Grid.Column="1"  Grid.Row="4" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                <DatePicker x:Name=" MsSpecificEndDate_textBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+
+
+            <Label Grid.Column="0" Grid.Row="5"   Text="Reason for Discontinuation" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+            <Border Grid.Column="1"  Grid.Row="5"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" MsReasonfordis_comboBox" Style="{StaticResource MicroPicker}">
+                    <Picker.Items>
+
+
+                        <x:String>Adverse Event</x:String>
+                        <x:String>Allergic reaction</x:String>
+                        <x:String>Lack of efficacy</x:String>
+                        <x:String>Lack of tolerance</x:String>
+                        <x:String>Non adherence</x:String>
+                        <x:String>Patient choice/convenience</x:String>
+                        <x:String>Persistence of relapses</x:String>
+                        <x:String>Persisting MRI activity</x:String>
+                        <x:String>Pregnancy confirmed</x:String>
+                        <x:String>Pregnancy planned</x:String>
+                        <x:String>Progression of disease</x:String>
+                        <x:String>Progression of EDSS</x:String>
+                        <x:String>Scheluded Stop</x:String>
+
+
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+
+            <Grid Grid.Column="1" Grid.Row="6" ColumnDefinitions="*,8*,8*,*" RowDefinitions="*,8*,*" Style="{StaticResource SmallSpacing}">
+
+                <Button   MinimumHeightRequest="0" Padding="0" Grid.Column="2" Grid.Row="1" HorizontalOptions="Fill" Style="{StaticResource MicroButton}" 
+                          BackgroundColor="#5a81ab" Text="Save"    x:Name="Button_SaveAddNewMsSpecific" Clicked="Button_SaveAddNewMsSpecific_Clicked"  />
+
+                <Button  MinimumHeightRequest="0" Padding="0" Grid.Column="1" Grid.Row="1" HorizontalOptions="Fill" Style="{StaticResource MicroButton}" 
+                        BackgroundColor="#5a81ab" Text="Cancel"    x:Name="Button_CancelAddNewMsSpecific" Clicked="Button_CancelAddNewMsSpecific_Clicked" />
+                
+            </Grid>
+
+        </Grid>
+    </Border>
+</ContentView>

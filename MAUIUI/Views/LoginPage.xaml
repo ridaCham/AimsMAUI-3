@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.LoginPage"
+             >
+
+    <ScrollView VerticalOptions="FillAndExpand" BackgroundColor="AliceBlue">
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="FillAndExpand" >
+
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Image Source="aims_logo.png" WidthRequest="300" />
+            </StackLayout>
+            
+            <StackLayout Spacing="25" Orientation="Vertical" VerticalOptions="StartAndExpand" >
+
+                <Border  StrokeShape="RoundRectangle 10,10,10,10" Stroke="DarkSlateGray" BackgroundColor="White">
+                    <Entry x:Name="Entry_Username" Style="{StaticResource MiddleEntry}" Placeholder="Username" TextColor="Black" /> 
+                </Border>
+
+                <Border StrokeShape="RoundRectangle 10,10,10,10" Stroke="DarkSlateGray" BackgroundColor="White">
+                    <Entry x:Name="Entry_Password" Style="{StaticResource MiddleEntry}" Placeholder="Password" TextColor="Black" IsPassword="True" />
+                </Border>
+                
+                <StackLayout Orientation="Horizontal" WidthRequest="500">
+                    <Label Style="{StaticResource MicroTextLabel}" Text="Change Password" TextDecorations="Underline" HorizontalOptions="StartAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="ChangePassword" Tapped="ChangePassword_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Button x:Name="Button_Login"  Clicked="Button_Login_Clicked" SizeChanged="Button_Login_SizeChanged" Style="{StaticResource MiddleButton}" Text="Login" BackgroundColor="#316297" WidthRequest="150" HorizontalOptions="End"/>
+                    
+                </StackLayout>
+            </StackLayout>
+             
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

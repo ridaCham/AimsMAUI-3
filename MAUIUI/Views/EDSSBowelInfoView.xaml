@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.EDSSBowelInfoView"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand">
+    <Grid RowDefinitions="*, 7*">
+        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Text="Bowel/Bladder Information" FontAttributes="Bold" HorizontalOptions="Start" />
+        <StackLayout Style="{StaticResource MiddleMarginLeftStackLayout}" Grid.Row="1" >
+            <Grid Style="{StaticResource SmallColumnSpacing}" RowDefinitions="*, *, *, *, *, *, *" ColumnDefinitions="*, 41*" VerticalOptions="FillAndExpand">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Text="0" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Normal" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="0" Text="1" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Mild urinary hesitancy, urgency or retention" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="0" Text="2" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Moderate hesitancy, urgency, retention of bowel or bladder, or rare urinary incontinence(intermittent self-catheterisation, manuel compression to evacuate bladder or finger evacuation of stool)" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="0" Text="3" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Frequent urinary incontinence" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="0" Text="4" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="In need of regular intermitten catheterisation (and constant use of measures to evacuate stool)" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="5" Grid.Column="0" Text="5" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="5" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Indwelling catheter" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="6" Grid.Column="0" Text="6" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="6" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="Loss or bowel and bladder function" />
+            </Grid>
+        </StackLayout>
+
+    </Grid>
+</ContentView>

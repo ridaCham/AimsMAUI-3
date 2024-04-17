@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.AddNewParaclinicalAutoAntibodyView"
+             VerticalOptions="FillAndExpand"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="OldLace">
+        <Grid Style="{StaticResource SmallSpacing}" RowDefinitions="2*,25*,0.5*">
+
+            <Grid  Grid.Row="0" Style="{StaticResource SmallSpacing}" ColumnDefinitions="*,5*">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Text="Exam Date"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border  Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                    <DatePicker Style="{StaticResource MaxTodayDate}" x:Name="AutoantibodyExamDate_textBox"/>
+                </Border>
+                <Grid   Grid.Column="1"  Style="{StaticResource SmallSpacing}" ColumnDefinitions="6*,5.5*,3.5*,4*,3*">
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1" Text="Comments"  VerticalOptions="End" HorizontalOptions="Start" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Text="Normal"  VerticalOptions="End" HorizontalOptions="End" />
+ 
+                </Grid>
+            </Grid>
+
+
+            <Grid  Grid.Row="1" Style="{StaticResource SmallSpacing}" ColumnDefinitions="*,*" >
+
+
+                <Grid  Grid.Column="0" Style="{StaticResource LargeColumnSpacing}" ColumnDefinitions="3.5*,*,2*,3*" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*" >
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="0" Text="ANA"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="1" Text="Anti-mitochondrial"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="2" Text="Anti parietal cell antibodies"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="3" Text="ASMA"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="4" Text="Anti-Ro"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="5" Text="La"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="6" Text="Sm"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="7" Text="RNP"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="8" Text="Scl-70"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="9" Text="Jo1"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="10" Text="Anti-DNA"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="11" Text="ANCA"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="12" Text="Anti-LKM"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="13" Text="Anti-cardiolipin"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="14" Text="LAC"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="15" Text="Anti-transglutaminase"  VerticalOptions="Center" HorizontalOptions="End" />
+
+                    <Border  Grid.Column="1" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" Padding="0">
+                        <Entry x:Name="ANA_textBox " Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="Anti_mitochondries_textBox "  Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="AntiParietalCellAntibodies_textBox "  Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="Asma_textBox "  Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="Anti_Ro_textBox "  Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  x:Name="La_textBox " Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="6" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="Sm_textBox "  Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="7" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="Rnp_textBox "  Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="8" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  x:Name="Scl_70_textBox " Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="9" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  x:Name=" Jo1_textBox" Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="10" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  x:Name="AntiDNA_textBox " Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="11" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  x:Name="ANCA_textBox " Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="12" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  x:Name="Anti_LKM_textBox " Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="13" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  x:Name="Anti_cardiolipin_textBox " Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="14" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  x:Name="LAC_textBox " Style="{StaticResource MicroEntry}" />
+                    </Border>
+                    <Border  Grid.Column="1" Grid.Row="15" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                        <Entry  x:Name="Anti_transgluamnase_textBox " Style="{StaticResource MicroEntry}" />
+                    </Border>
+
+					<Grid Grid.Column="2"  Grid.Row="0" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="AnaYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="AnaNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="1" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="Anti_mitochondriesYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="Anti_mitochondriesNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="2" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="AntiPartielCellAntibodiesYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="AntiPartielCellAntibodiesNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="3" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="AsmaYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="AsmaNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="4" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="AntiRoYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="AntiRoNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="5" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="LAYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="LaNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="6" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="SmYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="SmNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="7" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="RnpYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name=" RNPNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="8" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="Scl_70Yes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="Scl_70No_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="9" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="Jo1Yes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="Jo1No_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="10" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="AntiDNAYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="AntiDNANo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="11" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="ANCAYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="AncaNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="12" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="Anti_LKMYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="Anti_LKMNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="13" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="Anti_cardiolipinYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="Anti_cardiolipinNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="14" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="LACYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="LACNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+					<Grid Grid.Column="2"  Grid.Row="15" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="Anti_transglutaminaseYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+						<RadioButton x:Name="Anti_transglutaminaseNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+					</Grid>
+
+					<Border  Grid.Column="3" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="AnaComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="Anti_mitochondriesComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="AntiParietalCellAntibodiesComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="AsmaComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="Anti_RoComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name=" LAComment_textBox" Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="6" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="SmComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="7" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="RnpComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="8" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="Scl_70Comment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="9" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="Jo1Comment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="10" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name=" AntiDNAComment_textBox" Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="11" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="AncaComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="12" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="Anti_LKMComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="13" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="AntiCardiolipinComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="14" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="LACComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="3" Grid.Row="15" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry  x:Name="Anti_transgluamnaseComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+                </Grid>
+
+                <Grid  Grid.Column="1" Style="{StaticResource LargeColumnSpacing}" ColumnDefinitions="5*,4*,5*,*" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,2*,*,*" >
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="0" Text="Acetylcholine"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="1" Text="Anti-Musk"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="2" Text="Anti Ryaidin"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="3" Text="Anti Gliadin"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="4" Text="Anti Rapsonidine"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="5" Text="LRP-4"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="6" Text="Titin"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="7" Text="Calcium Channel Antibody"  VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="8" Text="Anti-NMO" VerticalOptions="Center" HorizontalOptions="End" />
+                    <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="9" Text="Anti-MOG" VerticalOptions="Center" HorizontalOptions="End" />
+					<Grid Grid.Column="1"  Grid.Row="0" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="AcetylcholineNegative_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+						<RadioButton x:Name=" AcetylcholinePositive_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+					</Grid>
+					<Grid Grid.Column="1"  Grid.Row="1" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name=" AntiMuskNegative_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+						<RadioButton x:Name=" AntiMuskPositive_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+					</Grid>
+					<Grid Grid.Column="1"  Grid.Row="2" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="AntiRyaidinNegative_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+						<RadioButton x:Name="AntiRyaidinPositive_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+					</Grid>
+					<Grid Grid.Column="1"  Grid.Row="3" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="AntiGliadinNegative_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+						<RadioButton x:Name=" AntiGliadinPositive_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+					</Grid>
+					<Grid Grid.Column="1"  Grid.Row="4" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name=" AntiRapsonidineNegative_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+						<RadioButton x:Name="AntirapsonidinePositive_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+					</Grid>
+					<Grid Grid.Column="1"  Grid.Row="5" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="LRP_4Negative_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+						<RadioButton x:Name=" LRP_4Positive_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+					</Grid>
+					<Grid Grid.Column="1"  Grid.Row="6" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="TitinNegative_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+						<RadioButton x:Name=" TitinPositive_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+					</Grid>
+					<Grid Grid.Column="1"  Grid.Row="7" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="CaliciumChannelAntibodyNegative_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+						<RadioButton x:Name=" CaliciumChannelAntibodyPositive_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+					</Grid>
+					<Grid Grid.Column="1"  Grid.Row="8" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="AntiNMONegative_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+						<RadioButton x:Name=" AntiNMOPositive_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+					</Grid>
+					<Grid Grid.Column="1"  Grid.Row="9" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+						<RadioButton x:Name="AntiMOGNegative_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Negative"/>
+						<RadioButton x:Name="AntiMOGPositive_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="Positive"/>
+					</Grid>
+
+					<Border  Grid.Column="2" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="AcetylcholineComments_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="Anti_muskComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="Anti_ryaidinComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="Anti_gliadinComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name=" AntiRapsonidineComment_textBox" Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name=" LRP_4Comment_textBox" Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="6" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="TitinComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="7" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name=" CaliciumChannelAntibodyComment_textBox" Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="8" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="AntiNMOComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+					<Border  Grid.Column="2" Grid.Row="9" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+						<Entry x:Name="AntiMOGComment_textBox " Style="{StaticResource MicroEntry}" />
+					</Border>
+
+
+                    <Grid  Grid.Column="2" Grid.Row="12" Grid.RowSpan="2"  Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,9*" RowDefinitions="3*,3*">
+ 
+                        <Button  Grid.Column="1" Grid.Row="1" Style="{StaticResource MicroButton}" BackgroundColor="#5a81ab" Text="Save" 
+                                  MinimumHeightRequest="0" FontAttributes="Bold"  x:Name="Button_SaveAddNewAutoAntibody" Clicked="Button_SaveAddNewAutoAntibody_Clicked" />
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+    </Border>
+
+</ContentView>

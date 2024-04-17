@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.AddNewParaclinicalHaematologyView"
+             VerticalOptions="FillAndExpand"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+
+
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="OldLace">
+        <Grid Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+ 
+            <Grid  Grid.Row="0" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,*,2*,2*">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Text="Exam Date"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                    <DatePicker  x:Name="BloodExamDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                </Border> 
+            </Grid>
+
+            <Grid  Grid.Row="1" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="3*,2*,2*,3*,2*,2*">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1" Text="Normal"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Text="Comments"  VerticalOptions="Center" HorizontalOptions="Center" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4" Text="Normal"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="5" Text="Comments"  VerticalOptions="Center" HorizontalOptions="Center" />
+            </Grid>
+
+
+            <Grid  Grid.Row="2" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="3.5*,*,2*,3* ,3.5*,*,2*,3*" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*" >
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="0" Text="White Cell Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="1" Text="Red Cell Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="2" Text="Lymphocyte Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="3" Text="Lymphocyte Count Lower Limit of Normal"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="4" Text="T Cell Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="5" Text="CD4 T Cell Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="6" Text="CD8 T Cell Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="7" Text="CD19 T Cell Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="8" Text="NK Cell Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0"  Grid.Row="9" Text="Neutrophil Count"  VerticalOptions="Center" HorizontalOptions="End" />
+				<Border  Grid.Column="1" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="WhiteCellCoount_textBox"  Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="1" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="RedCellCoount_textBox"  Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="1" Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="LymphocyteCount_textBox"  Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="1" Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="LymphocyteLoweLimit_textBox"  Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="1" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="TCellCount_textBox"  Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="1" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="CD4TCellCoount_textBox"  Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="1" Grid.Row="6" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="CD8TCellCoount_textBox"  Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="1" Grid.Row="7" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="CD19TCellCoount_textBox"  Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="1" Grid.Row="8" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="NKCellCount_textBox"  Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="1" Grid.Row="9" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="NeutrophilCount_textBox"  Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Grid Grid.Column="2"  Grid.Row="0" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="WhiteNormalYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="WhiteNormalNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="2"  Grid.Row="1" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="RedCellNormalYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="RedCellNormalNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="2"  Grid.Row="2" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="LymphocyteNormalYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="LymphocyteNormalNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="2"  Grid.Row="3" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="LymphocyteLoweLimitNormalYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="LymphocyteLoweLimitNormalNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="2"  Grid.Row="4" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="TCellNormalYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="TCellNormalNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="2"  Grid.Row="5" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="CD4TNormalYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="CD4TNormalNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="2"  Grid.Row="6" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="CD8TNormalYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="CD8TNormalNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="2"  Grid.Row="7" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="CD19TNormalYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="CD19TNormalNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="2"  Grid.Row="8" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="NKCellNormalYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="NKCellNormalNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="2"  Grid.Row="9" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="NeutrophilNormalYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="NeutrophilNormalNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Border  Grid.Column="3" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="WhiteCellComments_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="3" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="RedCellComments_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="3" Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="LymphocyteComments_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="3" Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="LowerLimitComments_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="3" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="TCellComments_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="3" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="CD4TCellComments_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="3" Grid.Row="6" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="CD8TCellComments_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="3" Grid.Row="7" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="CD19TCellComments_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="3" Grid.Row="8" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="NKCellComments_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="3" Grid.Row="9" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="NeutrophilComments_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="0" Text="Monocyte Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="1" Text="Eosinophil Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="2" Text="Basophil Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="3" Text="Platelet Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="4" Text="Hemoglobin Count"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="5" Text="Erythrocyte Sedimentation Rate (ESR)"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="6" Text="Angiotensin Converting Enzyme (ACE)"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="7" Text="Lactate Dehydrogenase (LDH)"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="8" Text="Beta-2 Microglobulin"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="9" Text="Vitamin D"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4"  Grid.Row="10" Text="CD20"  VerticalOptions="Center" HorizontalOptions="End" />
+				<Border  Grid.Column="5" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="MonocyteCount_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="5" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="EosinophilCount_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="5" Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="BasophilCount_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="5" Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="PlateletCount_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="5" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="HemoglobinCount_textBoxx" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="5" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="ESR_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="5" Grid.Row="6" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="ACE_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="5" Grid.Row="7" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="LDH_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="5" Grid.Row="8" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="Beta2_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="5" Grid.Row="9" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="VitaminD_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="5" Grid.Row="10" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="CD20_textBox" Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Grid Grid.Column="6"  Grid.Row="0" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="MonocyteNormalYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="MonocyteNormalNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="6"  Grid.Row="1" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="EosinophilNormalYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="EosinophilNormalNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="6"  Grid.Row="2" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="BasophilYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="BasophilNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="6"  Grid.Row="3" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="PlateletYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="PlateletNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="6"  Grid.Row="4" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="HemoglobinYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="HemoglobinNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="6"  Grid.Row="5" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="ESRYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="ESRNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="6"  Grid.Row="6" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="ACEYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="ACENo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="6"  Grid.Row="7" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="LDHYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="LDHNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="6"  Grid.Row="8" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="Beta2Yes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="Beta2No_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="6"  Grid.Row="9" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="VitaminDYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="VitaminDNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Grid Grid.Column="6"  Grid.Row="10" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+					<RadioButton x:Name="CD20NormalYes_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+					<RadioButton x:Name="CD20NormalNo_radioButton " Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+				</Grid>
+				<Border  Grid.Column="7" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="MonocyteComments_textBox "  Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="7" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="EosinophilComments_textBox " Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="7" Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="BasophilComments_textBox3 " Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="7" Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="PlateletComments_textBox " Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="7" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="HemoglobinComments_textBox " Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="7" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="ECRComments_textBox " Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="7" Grid.Row="6" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="ACEComments_textBox " Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="7" Grid.Row="7" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="LDHComments_textBox " Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="7" Grid.Row="8" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="Beta2Comments_textBox " Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="7" Grid.Row="9" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="VitaminDComment_textBox " Style="{StaticResource MicroEntry}" />
+				</Border>
+				<Border  Grid.Column="7" Grid.Row="10" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+					<Entry x:Name="CD20Comment_textBox " Style="{StaticResource MicroEntry}" />
+				</Border>
+			</Grid>
+
+
+            <Grid  Grid.Row="3" Style="{StaticResource MiddleSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Style="{StaticResource MicroButton}" Grid.Column="2" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold" 
+                        x:Name="Button_SaveAddNewParaclinicalHaematology" Clicked="Button_SaveAddNewParaclinicalHaematology_Clicked"/>
+            </Grid>
+        </Grid>
+    </Border>
+</ContentView>
+
+

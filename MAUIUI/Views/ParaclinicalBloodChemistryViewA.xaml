@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.ParaclinicalBloodChemistryView"
+             VerticalOptions="FillAndExpand"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+        <Grid Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+ 
+            <Grid  Grid.Row="0" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,*,2*,2*">
+                 <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Text="Exam Date"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                    <DatePicker x:Name=" BloodExamDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                </Border>
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Text="Other Blood Chemistry"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Border Grid.Column="3" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0"  >
+                    <Picker BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}"  x:Name=" OtherBloodChemistry_combobox" SelectedIndexChanged="Picker_SelectedIndexChanged">
+                        <Picker.Items>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+            </Grid>
+
+
+            <Grid  Grid.Row="1" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="1*,3.5*,*,2*,3*,3*">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="3" Text="Normal"  VerticalOptions="Center" HorizontalOptions="Center" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4" Text="Comments"  VerticalOptions="Center" HorizontalOptions="Center" />
+            </Grid>
+            <Grid  Grid.Row="2" Style="{StaticResource MiddleSpacing}" ColumnDefinitions="*,3.5*,*,2*,3*,3*" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*" >
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="0" Text="Total Protein"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="1" Text="Albumin"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="2" Text="Calcium"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="3" Text="Urea"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="4" Text="Uric Acid"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="5" Text="Creatinine"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="6" Text="SGOT / AST"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="7" Text="SGPT / ALT"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="8" Text="Gamma - GT"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="9" Text="Bilirubin"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="10" Text="Alkaline Phosphatase"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="11" Text="Amylase"  VerticalOptions="Center" HorizontalOptions="End" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Column="1"  Grid.Row="12" Text="Lipase"  VerticalOptions="Center" HorizontalOptions="End" />
+
+                <Border  Grid.Column="2" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="TotalProtein_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="Albumin_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="Calicium_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="Urea_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="UricAcid_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry  x:Name="Creatinine_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="6" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="SGOT_AST_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="7" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="SGPT_ALT_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="8" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="Gamma_Gt_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="9" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="Bilirubin_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="10" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="AlkalinePhosphatase_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="11" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="Amylase_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="2" Grid.Row="12" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="Lipase_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+                <Grid Grid.Column="3"  Grid.Row="0" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="TotalProteinYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="TotalProteinNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="1" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="AlbuminYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="AlbuminNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="2" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="CaliciumYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="CaliciumNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="3" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="UreaYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="UreaNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="4" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="UricAcidYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="UricAcidNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="5" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="CreatinineYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="CreatinineNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="6" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="SGOT_ASTYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="SGOT_ASTLipaseNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="7" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="SGPT_ALTYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="SGPT_ALTNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="8" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="Gamma_GtYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="Gamma_GtNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="9" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="BilrubinYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="BilirubinNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="10" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="AlkalinePhosphataseYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="AlkalinePhosphataseNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="11" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="AmylaseYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="AmylaseNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+                <Grid Grid.Column="3"  Grid.Row="12" ColumnDefinitions="*,*" Style="{StaticResource SmallSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton x:Name="LipaseYes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                    <RadioButton x:Name="LipaseNo_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                </Grid>
+
+                <Border  Grid.Column="4" Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="TotalProteinComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="AlbuminComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="2" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="CaliciumComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="3" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="UreaComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="4" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="UricAcidComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="5" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="CreatinineComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="6" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="Sgot_altComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="7" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="SGPT_ALTComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="8" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="GAMMA_GTComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="9" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="BilirubinComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="10" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="AlkalinePhosphataseComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="11" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="AmylaseComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+                <Border  Grid.Column="4" Grid.Row="12" Style="{StaticResource SmallPaddingBorder}" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10" VerticalOptions="Center" >
+                    <Entry x:Name="LipaseComment_textBox" Style="{StaticResource MicroEntry}" />
+                </Border>
+
+            </Grid>
+
+            <Grid  Grid.Row="3" Style="{StaticResource MiddleSpacing}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Style="{StaticResource MicroButton}" Grid.Column="1" BackgroundColor="#5a81ab" Text="Add New" FontAttributes="Bold" x:Name="Button_AddNewBloodChemistry" Clicked="Button_AddNewBloodChemistry_Clicked"/>
+                <Button Style="{StaticResource MicroButton}" Grid.Column="2" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold" x:Name="Button_SaveBloodChemistry" Clicked="Button_SaveBloodChemistry_Clicked"/>
+            </Grid>
+            
+        </Grid>
+    </Border>
+</ContentView>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.AddNewMalignancyPage"
+             BackgroundColor="#eaeff4"
+             Style="{StaticResource LargePaddingPage}"
+             >
+    <Grid Style="{StaticResource MiddleSpacing}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2.5*" />
+                <RowDefinition Height="2.5*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Text="Date of Diagnosis" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Border Grid.Row="0" Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                <DatePicker x:Name=" MalignancyDateofDiagnosisDate_textBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="2" Text="State at Diagnosis" VerticalOptions="Center" HorizontalOptions="End" />
+            <Border StrokeThickness="0"  Grid.Row="0" Grid.Column="3" VerticalOptions="Center" StrokeShape="RoundRectangle 10">
+                <Picker x:Name=" StateDiagnosis_combobox" Style="{StaticResource MicroPicker}">
+                    <Picker.Items>
+                        <x:String>I</x:String>
+                        <x:String>II</x:String>
+                        <x:String>III</x:String>
+                        <x:String>IV</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="0" Text="Site of Primary Cancer" HorizontalOptions="End" />
+            <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" StrokeShape="RoundRectangle 10">
+                <Editor x:Name=" SiteofPrimary_textbox" Style="{StaticResource MicroEditor}" BackgroundColor="White" />
+            </Border>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="0" Text="Histological Diagnosis" HorizontalOptions="End" />
+            <Border Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" StrokeShape="RoundRectangle 10">
+                <Editor x:Name =" Histological_textbox" Style="{StaticResource MicroEditor}" BackgroundColor="White" />
+            </Border>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" FontAttributes="Bold" Text="Treatment Modality" VerticalOptions="End" />
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="3" FontAttributes="Bold" Text="Treatment Modality" VerticalOptions="End" />
+            <Border Style="{StaticResource MiddlePaddingBorder}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" StrokeShape="RoundRectangle 10" Stroke="DarkSlateGray" BackgroundColor="#c8d1db">
+                <Grid Style="{StaticResource SmallSpacing}" ColumnDefinitions="*, *" RowDefinitions="*, *, *">
+                    <HorizontalStackLayout Grid.Column="0" Grid.Row="0">
+                        <CheckBox />
+                        <Label x:Name=" NoTreatment_checkbox" Style="{StaticResource MicroTextLabel}" Text="No treatment" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Grid.Column="0" Grid.Row="1">
+                        <CheckBox />
+                        <Label x:Name=" Chemotherapy_checkbox" Style="{StaticResource MicroTextLabel}" Text="Chemotherapy" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Grid.Column="0" Grid.Row="2">
+                        <CheckBox />
+                        <Label x:Name=" Radiotherapy_checkbox" Style="{StaticResource MicroTextLabel}" Text="Radiotherapy" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Grid.Column="1" Grid.Row="0">
+                        <CheckBox />
+                        <Label x:Name=" Surgery_checkbox" Style="{StaticResource MicroTextLabel}" Text="Surgery" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <Grid Grid.Column="1" Grid.Row="1" ColumnDefinitions="*, 8*">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Other" VerticalOptions="Center" />
+                        <Border Grid.Column="1" VerticalOptions="Center" StrokeShape="RoundRectangle 10">
+                            <Entry x:Name=" Other_textbox" Style="{StaticResource MicroEntry}" BackgroundColor="White" />
+                        </Border>
+                    </Grid>
+
+                </Grid>
+            </Border>
+            <Border Style="{StaticResource SmallPaddingBorder}" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" StrokeShape="RoundRectangle 10" Stroke="DarkSlateGray" BackgroundColor="#c8d1db">
+                <Grid Style="{StaticResource SmallSpacing}" ColumnDefinitions="*, *" RowDefinitions="*, *, *">
+                    <RadioButton x:Name=" UnknownOutcome_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="0" Grid.Row="0" Content="Unknown" />
+                    <RadioButton x:Name=" Ongoing_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="0" Grid.Row="1" Content="Ongoing" />
+                    <RadioButton x:Name=" remission_radiobutton" Style="{StaticResource MicroRadioButton}" Grid.Column="0" Grid.Row="2" Content="Remission" />
+                    <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="0" Content="Death" x:Name="RadioButton_Death" CheckedChanged="RadioButton_Death_CheckedChanged" />
+                    <Grid Grid.Column="1" Grid.Row="1" ColumnDefinitions="*, 8*">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Date" VerticalOptions="Center" />
+                        <Border Grid.Column="1" VerticalOptions="Center" StrokeShape="RoundRectangle 10">
+                            <DatePicker x:Name=" MalignancyOutcomeDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                        </Border>
+                    </Grid>
+
+                </Grid>
+            </Border>
+
+
+        </Grid>
+        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" FontAttributes="Bold" Text="Remarks" VerticalOptions="End" />
+        <Grid  Style="{StaticResource MiddleSpacing}" Grid.Row="2" ColumnDefinitions="7*, *" RowDefinitions="*, *">
+            <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" StrokeShape="RoundRectangle 10">
+                <Editor x:Name=" remarks_textbox" Style="{StaticResource MicroEditor}" BackgroundColor="White" />
+            </Border>
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Save" Grid.Column="1" Grid.Row="1" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold" Clicked="Button_Save_Clicked" />
+        </Grid>
+
+    </Grid>
+</ContentPage>

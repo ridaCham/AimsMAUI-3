@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.AddNewOtherMedicalConditionPage"
+             BackgroundColor="#eaeff4"
+             Style="{StaticResource LargePaddingPage}"
+             >
+    <Grid Style="{StaticResource SmallSpacing}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="0" ColumnDefinitions="*,*,*,*,*,*" RowDefinitions="*,8*,*,3*" >
+
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Text="Date of Onset" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Border Grid.Row="0" Grid.Column="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                <DatePicker x:Name="OtherMedicalDateofDate_textBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="2" Text="Medical Condition" VerticalOptions="Center" HorizontalOptions="End" />
+            <Border Grid.Row="0" Grid.Column="3" VerticalOptions="Center" StrokeShape="RoundRectangle 10" StrokeThickness="0" >
+                <Picker x:Name="OtherMedicalCondition_comboBox" Style="{StaticResource MicroPicker}">
+                    <Picker.Items>
+                        <x:String>Abdominal pain</x:String>
+                        <x:String>Allergy</x:String>
+                        <x:String>Anaphylaxis</x:String>
+                        <x:String>Anemia</x:String>
+                        <x:String>Angina pectoris</x:String>
+                        <x:String>Anorexia</x:String>
+                        <x:String>Anxiety</x:String>
+                        <x:String>Arthralgia</x:String>
+                        <x:String>Astheria</x:String>
+                        <x:String>Autoimmune thyroid disease</x:String>
+                        <x:String>Blindness</x:String>
+                        <x:String>Blood and lymphatic disorders</x:String>
+                        <x:String>Blurred vision</x:String>
+                        <x:String>Broncho-pulmonary disorders</x:String>
+                        <x:String>Cardiovascular disorders</x:String>
+                        <x:String>Chest pain</x:String>
+                        <x:String>Chills</x:String>
+                        <x:String>Constipation</x:String>
+                        <x:String>Crohn's disease</x:String>
+                        <x:String>Depression</x:String>
+                        <x:String>Dermatological disorders</x:String>
+                        <x:String>Diarrhea</x:String>
+                        <x:String>Dizziness</x:String>
+                        <x:String>Dyspnea</x:String>
+                        <x:String>Endocrine disorders</x:String>
+                        <x:String>Epilepsy</x:String>
+                        <x:String>Fever</x:String>
+                        <x:String>Flu-like symptom</x:String>
+                        <x:String>Gastrointestinal disorders</x:String>
+                        <x:String>Genito-urinary disorders</x:String>
+                        <x:String>Hashimoto</x:String>
+                        <x:String>Headeche</x:String>
+                        <x:String>Hepatic disorders</x:String>
+                        <x:String>Hypersensivity reaction</x:String>
+                        <x:String>Hypertension</x:String>
+                        <x:String>Hypertonia</x:String>
+                        <x:String>Inflammatory bowel disease</x:String>
+                        <x:String>Injection site necrosis</x:String>
+                        <x:String>Injection site reaction</x:String>
+                        <x:String>Insomnia</x:String>
+                        <x:String>Liver test(s) abnormality</x:String>
+                        <x:String>Lymphopenia</x:String>
+                        <x:String>Migraine</x:String>
+                        <x:String>Muscle ache</x:String>
+                        <x:String>Musculoskeletal disorders</x:String>
+                        <x:String>Myastenia Gravis</x:String>
+                        <x:String>Myelodysplastic syndrome</x:String>
+                        <x:String>Nausea</x:String>
+                        <x:String>Neutropenia</x:String>
+                        <x:String>NMO</x:String>
+                        <x:String>Palpitation</x:String>
+                        <x:String>Pernicious anemia</x:String>
+                        <x:String>Pruritis</x:String>
+                        <x:String>Psoriasis</x:String>
+                        <x:String>Psychiatric disorders</x:String>
+                        <x:String>Rash</x:String>
+                        <x:String>Renal disorders</x:String>
+                        <x:String>Renal test(s) abnormality</x:String>
+                        <x:String>Retinal disorders</x:String>
+                        <x:String>Rheumatoid arhritis</x:String>
+                        <x:String>Rhinitis</x:String>
+                        <x:String>Seizures/convulsions</x:String>
+                        <x:String>Sinusitis</x:String>
+                        <x:String>Sjogren</x:String>
+                        <x:String>SLE (Systemic Lupus Erythematosus)</x:String>
+                        <x:String>Surgery</x:String>
+                        <x:String>Sweating</x:String>
+                        <x:String>Thyroid</x:String>
+                        <x:String>Tachycardia</x:String>
+                        <x:String>Thromboembolic events</x:String>
+                        <x:String>Tinnitus</x:String>
+                        <x:String>Type I diabetes mellitus</x:String>
+                        <x:String>Ulcerative colitis</x:String>
+                        <x:String>Vasodilation</x:String>
+                        <x:String>Vertigo</x:String>
+                        <x:String>Vitiligo</x:String>
+                        <x:String>Vomiting</x:String>
+
+
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+
+
+
+            <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" ColumnDefinitions="*,*,*" RowDefinitions="*,9*">
+                <Border Style="{StaticResource LargePaddingBorder}" Grid.Column="0" Grid.Row="1" StrokeShape="RoundRectangle 10" BackgroundColor="#c8d1db">
+
+                    <Grid Style="{StaticResource SmallSpacing}" ColumnDefinitions="3*,13*" RowDefinitions="*,*,*,*,*,*,*">
+                        <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" Grid.Row="0" Text="Severity" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <RadioButton x:Name="SeverityMild_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="1" Content="Mild" />
+                        <RadioButton x:Name="SeverityModerate_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="2" Content="Moderate" />
+                        <RadioButton x:Name="SeveritySevere_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="3" Content="Severe" />
+                        <RadioButton x:Name="SeverityLife_Thereatening_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="4" Content="Life-thereatening" />
+                    </Grid>
+
+                </Border>
+
+
+                <Border Style="{StaticResource LargePaddingBorder}" Grid.Column="1" Grid.Row="1" StrokeShape="RoundRectangle 10" BackgroundColor="#c8d1db">
+
+                    <Grid Style="{StaticResource SmallSpacing}" ColumnDefinitions="3*,13*" RowDefinitions="*,*,*,*,*,*,*">
+                        <Label Style="{StaticResource MicroTextLabel}"  Grid.Column="0" Grid.Row="0" Text="Outcome" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="End"/>
+                        <RadioButton x:Name="OutcomeUnknown_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="1" Content="Unknown" />
+                        <RadioButton x:Name="OutcomeOngoing_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="2" Content="Ongoing" />
+                        <RadioButton x:Name="OutcomeRecovery_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="3" Content="Recovery" />
+
+                        <RadioButton Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="4" Content="Death" 
+                                 x:Name="RadioButton_Death" CheckedChanged="RadioButton_Death_CheckedChanged" />
+
+                        <Grid Grid.Column="1" Grid.Row="5" ColumnDefinitions="*, 8*"  >
+                            <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Date" VerticalOptions="Center"  />
+                            <Border Grid.Column="1" VerticalOptions="Center" StrokeShape="RoundRectangle 10" >
+                                <DatePicker x:Name="OtherMedicalOutcomeDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                            </Border>
+                        </Grid>
+
+                    </Grid>
+
+                </Border>
+
+
+                <Border Style="{StaticResource LargePaddingBorder}" Grid.Column="2" Grid.Row="1" StrokeShape="RoundRectangle 10" BackgroundColor="#c8d1db">
+                    <Grid Style="{StaticResource SmallSpacing}" ColumnDefinitions="3*,13*"  RowDefinitions="*,*,*,*,*,*,*">
+                        <HorizontalStackLayout Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+                            <CheckBox x:Name="SeriousAdverse_checkBox" />
+                            <Label Style="{StaticResource MicroTextLabel}" Text="Serious Adverse Event" FontAttributes="Bold"  VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <RadioButton x:Name="ResultinDeath_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="1" Content="Result in death" />
+                        <RadioButton x:Name="IsLife_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="2" Content="Is life-thereatening" />
+                        <RadioButton x:Name="Permanent_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="3" Content="Permanent/serious disability incapacity" />
+                        <RadioButton x:Name="Requires_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="4" Content="Requires/prolongs hospitalisation" />
+                        <RadioButton x:Name="Congenital_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="5" Content="Congenital anomaly/birth defect" />
+                        <RadioButton x:Name="Othermedicalimportant_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="6" Content="Other medical important condition" />
+                    </Grid>
+                </Border>
+            </Grid>
+
+
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" FontAttributes="Bold" Text="Drug Relationship" VerticalOptions="End" />
+            <Border Style="{StaticResource SmallPaddingBorder}"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="6" StrokeShape="RoundRectangle 10" Stroke="DarkSlateGray" BackgroundColor="#c8d1db">
+                <Grid Style="{StaticResource SmallSpacing}" ColumnDefinitions="3*,5*,5*,13*" RowDefinitions="*,*">
+                    <RadioButton x:Name="DrugNotRelated_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="0" Content="Not related" />
+                    <RadioButton x:Name="DrugRelated_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1" Grid.Row="1" Content="Related" />
+
+                    <Grid Grid.Column="2" Grid.Row="1" ColumnDefinitions="2*,6*"  Style="{StaticResource LargeSpacing}">
+                        <Label Grid.Column="0" Style="{StaticResource MicroTextLabel}" Text="Treatment" VerticalOptions="Center"  />
+                        <Border Grid.Column="1" VerticalOptions="Center" StrokeShape="RoundRectangle 10" StrokeThickness="0" >
+                            <Picker x:Name="DrugTreatment_comboBox" Style="{StaticResource MicroPicker}">
+                                <Picker.Items>
+                                    <x:String>A</x:String>
+                                    <x:String>B</x:String>
+                                    <x:String>C</x:String>
+
+                                </Picker.Items>
+                            </Picker>
+                        </Border>
+                    </Grid>
+
+                </Grid>
+            </Border>
+        </Grid>
+        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" FontAttributes="Bold" Text="Remarks" VerticalOptions="End" />
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="2" ColumnDefinitions="7*, *" RowDefinitions="*, *">
+            <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" StrokeShape="RoundRectangle 10">
+                <Editor x:Name="Remarks_textBox" Style="{StaticResource MicroEditor}" BackgroundColor="White" />
+            </Border>
+            <Button Style="{StaticResource ElasticMiddleButton}" x:Name="Button_Save" Grid.Row="1" Grid.Column="1" BackgroundColor="#5a81ab" Text="Save" FontAttributes="Bold" Clicked="Button_Save_Clicked" />
+        </Grid>
+    </Grid>
+</ContentPage>

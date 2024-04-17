@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.SymptomaticView"
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand">
+
+    <Border Style="{StaticResource SmallPaddingBorder}" StrokeShape="RoundRectangle 10" 
+            Stroke="LightGray" BackgroundColor="#c8d1db">
+
+        <Grid Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0"   Text="Symptomatic Treatment" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+            <Border Grid.Column="1"  Grid.Row="0"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" SympTreatment_comboBox" Style="{StaticResource MicroPicker}">
+                    <Picker.Items>
+                        
+                        <x:String>4-aminopyridine</x:String>
+                        <x:String>ACTH</x:String>
+                        <x:String>Amantadine</x:String>
+                        <x:String>Amitryptiline</x:String>
+                        <x:String>Ampyra</x:String>
+                        <x:String>Baclofen</x:String>
+                        <x:String>Benzodiazepine</x:String>
+                        <x:String>Bethanechol</x:String>
+                        <x:String>Botulinum</x:String>
+                        <x:String>Carbamezepine</x:String>
+                        <x:String>Clonazepam</x:String>
+                        <x:String>Clozapine</x:String>
+                        <x:String>Cortisone acete</x:String>
+                        <x:String>Covid Vaccine - AstraZeneca</x:String>
+                        <x:String>Covid Vaccine - BioNTech/Pfizer</x:String>
+                        <x:String>Covid Vaccine - Gamaleya/SputnikV</x:String>
+                        <x:String>Covid Vaccine - Janssen-Cilag/JohnsonJohnson</x:String>
+                        <x:String>Covid Vaccine - Moderna</x:String>
+                        <x:String>Covid Vaccine - Novovax</x:String>
+                        <x:String>Covid Vaccine - SinoVac</x:String>
+                        <x:String>Dantrolene</x:String>
+                        <x:String>Desmopressin</x:String>
+                        <x:String>Dexamethasone</x:String>
+                        <x:String>Diazepam</x:String>
+                        <x:String>Hydrocortisone</x:String>
+                        <x:String>Methylprednisonone</x:String>
+                        <x:String>Ondansetron</x:String>
+                        <x:String>Oxybutynin</x:String>
+                        <x:String>Papaverine</x:String>
+                        <x:String>Pemoline</x:String>
+                        <x:String>Plasmapheresis</x:String>
+                        <x:String>Prednisolone</x:String>
+                        <x:String>Prednisone</x:String>
+                        <x:String>Primidone</x:String>
+                        <x:String>Propanolol</x:String>
+                        <x:String>Prostaglandine E</x:String>
+                        <x:String>Sativex</x:String>
+                        <x:String>Sildenafil</x:String>
+                        <x:String>Tizanidine</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+
+
+
+            <Label Grid.Column="0" Grid.Row="1"   Text="Posology" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+            <Border Grid.Column="1"  Grid.Row="1"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" SympPosology_comboBox" Style="{StaticResource MicroPicker}">
+                    <Picker.Items>
+
+                        <x:String>Single Dose</x:String>
+                        <x:String>Hour</x:String>
+                        <x:String>2 Hours</x:String>
+                        <x:String>Day</x:String>
+                        <x:String>Week</x:String>
+                        <x:String>Month</x:String>
+                        <x:String>3 months</x:String>
+                        <x:String>6 months</x:String>
+                        <x:String>Other</x:String>
+
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+
+
+            <Border Grid.Column="1"  Grid.Row="2"   BackgroundColor="White"  Stroke="Gray"  
+                        StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                <Entry x:Name=" OtherSymptomaticPosologytextBox" Style="{StaticResource MicroEntry}" />
+            </Border>
+
+
+            <Label Grid.Column="0" Grid.Row="3"   Text="Starting on" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+            <Border Grid.Column="1"  Grid.Row="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                <DatePicker x:Name=" SymptomaticStartDate_textBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+
+            <Label Grid.Column="0" Grid.Row="4"   Text="Ending on" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+            <Border Grid.Column="1"  Grid.Row="4" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                <DatePicker x:Name=" SymptomaticEndDate_textBox" Style="{StaticResource MaxTodayDate}" />
+            </Border>
+
+
+            <Label Grid.Column="0" Grid.Row="5"   Text="Reason for Discontinuation" HorizontalOptions="End" VerticalOptions="Center" 
+                      Style="{StaticResource MicroTextLabel }"/>
+            <Border Grid.Column="1"  Grid.Row="5"  StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0"  >
+                <Picker BackgroundColor="#5a81ab"  TextColor="White" x:Name=" SymptomaticReasonfordis_comboBox" Style="{StaticResource MicroPicker}">
+                    <Picker.Items>
+                        
+                        <x:String>Adverse Event</x:String>
+                        <x:String>Allergic reaction</x:String>
+                        <x:String>Lack of efficacy</x:String>
+                        <x:String>Lack of tolerance</x:String>
+                        <x:String>Non adherence</x:String>
+                        <x:String>Patient choice/convenience</x:String>
+                        <x:String>Persistence of relapses</x:String>
+                        <x:String>Persisting MRI activity</x:String>
+                        <x:String>Pregnancy confirmed</x:String>
+                        <x:String>Pregnancy planned</x:String>
+                        <x:String>Progression of disease</x:String>
+                        <x:String>Progression of EDSS</x:String>
+                        <x:String>Scheluded Stop</x:String>
+                        <x:String>Other</x:String>
+                        
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+
+
+            
+            <Grid Grid.Column="1" Grid.Row="6" ColumnDefinitions="8*,8*,*" RowDefinitions="*,8*,*" Style="{StaticResource SmallSpacing}">
+                <Button MinimumHeightRequest="0" Padding="0" Grid.Column="1" Grid.Row="1" BackgroundColor="#5a81ab" Text="Add New"
+                        HorizontalOptions="Fill" Style="{StaticResource MicroButton}"  x:Name="Button_AddNewSymptomaticView"  Clicked="Button_AddNewSymptomaticView_Clicked"  />
+            </Grid>
+
+        </Grid>
+    </Border>
+</ContentView>

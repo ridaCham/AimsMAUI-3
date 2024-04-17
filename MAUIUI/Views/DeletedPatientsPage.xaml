@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.DeletedPatientsPage"
+             BackgroundColor="AliceBlue"
+             Style="{StaticResource LargePaddingPage}">
+
+    <Grid Style="{StaticResource LargeSpacing}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border   Grid.Row="1" Grid.RowSpan="1" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+        </Border>
+
+
+        <Grid Grid.Row="3" Style="{StaticResource LargeSpacing}" ColumnDefinitions="11*,*,*" >
+            <Button Grid.Column="1" BackgroundColor="#5a81ab" Text="Close"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}"
+                     x:Name="Button_CloseDeletedPatients" Clicked="Button_CloseDeletedPatients_Clicked" />
+            <Button Grid.Column="2" BackgroundColor="#5a81ab" Text="Retry"  HorizontalOptions="Fill" VerticalOptions="Center" Style="{StaticResource MicroButton}"
+                      x:Name="Button_RetryDeletedPatients" Clicked="Button_RetryDeletedPatients_Clicked" />
+        </Grid>
+
+    </Grid>
+    
+</ContentPage>

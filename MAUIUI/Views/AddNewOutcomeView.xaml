@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.AddNewOutcomeView"
+             VerticalOptions="FillAndExpand" >
+
+    <Border  Style="{StaticResource SmallPaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="OldLace">
+
+        <Grid Style="{StaticResource LargeSpacing}" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Border Grid.Row="0" Style="{StaticResource SmallPaddingBorder}" StrokeThickness="0">
+
+                <Grid Style="{StaticResource SmallSpacing}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Grid.Column="0" Grid.Row="0" Text="Pregnancy End Date" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border Grid.Column="1" Grid.Row="0" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                        <DatePicker x:Name=" AddOutcomePregnancyEndDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+
+                    
+                    <Label Grid.Column="0" Grid.Row="1" Text="Weight (Grams)" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border Grid.Column="1" Grid.Row="1" BackgroundColor="White"  Stroke="Gray" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" >
+                        <Entry x:Name="Weight_textbox" Style="{StaticResource MicroEntry}" />
+                    </Border>
+
+                    
+                    <Label Grid.Column="0"  Grid.Row="2"  Text="Sex" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border Grid.Column="1" Grid.Row="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                        <Picker x:Name="Sex_combobox" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                            <Picker.Items>
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+
+                    <Label Grid.Column="2" Grid.Row="0" Text="Breastfeeding" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Grid Grid.Column="3"  Grid.Row="0" Style="{StaticResource LargeSpacing}" HorizontalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton x:Name="yes_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="0"  Content="Yes"/>
+                        <RadioButton x:Name="no_radioButton" Style="{StaticResource MicroRadioButton}" Grid.Column="1"  Content="No"/>
+                    </Grid>
+
+                    
+                    <Label Grid.Column="2"  Grid.Row="1"    Text="Breastfeeding Start Date" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border  Grid.Column="3"  Grid.Row="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                        <DatePicker x:Name="AddOutcomeBreastStartDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+                    <Label Grid.Column="2"  Grid.Row="2"    Text="Exclusive Breastfeeding End Date" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border  Grid.Column="3"  Grid.Row="2" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                        <DatePicker x:Name="AddOutcomeExclusiveDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+                    <Label Grid.Column="2"  Grid.Row="3"    Text="All Breastfeeding End Date" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border  Grid.Column="3"  Grid.Row="3" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                        <DatePicker x:Name="AddOutcomeAllBreastDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                    </Border>
+                </Grid>
+            </Border>
+
+
+            <Border Grid.Row="1" Style="{StaticResource SmallPaddingBorder}" StrokeThickness="0"  >
+                <Grid Style="{StaticResource SmallSpacing}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Grid.Column="0"  Grid.Row="0"    Text="Obstetric/Maternal Complications" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border Grid.Column="1" Grid.Row="0"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0"  >
+                        <Picker x:Name="ObstetricMaternal_cmb" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                            <Picker.Items>
+                                <x:String>None</x:String>
+                                <x:String>Unknown</x:String>
+                                <x:String>Aptepartum haemorrhage</x:String>
+                                <x:String>Cervical incompetence</x:String>
+                                <x:String>Coriaamnionitis</x:String>
+                                <x:String>Gestationa diabetes</x:String>
+                                <x:String>Intrauterine growth restriction / small</x:String>
+                                <x:String>Low birth weight</x:String>
+                                <x:String>Large for gestational age</x:String>
+                                <x:String>Oligahydramnios</x:String>
+                                <x:String>Polyhydramnios</x:String>
+                                <x:String>Positional deformity</x:String>
+                                <x:String>Pre-eclampsia / Eclampsia</x:String>
+                                <x:String>Pregnancy-induced hypertension</x:String>
+                                <x:String>Premature membrance rupture</x:String>
+                                <x:String>Placental abruption</x:String>
+                                <x:String>Placenta previa</x:String>
+                                <x:String>Preterm labour</x:String>
+                                <x:String>Rh incompatibility</x:String>
+                                <x:String>Thromboembolism</x:String>
+                                <x:String>Toxoplasmasis</x:String>
+                                <x:String>Cytomegalovirus</x:String>
+                                <x:String>Herpes</x:String>
+                                <x:String>Measles</x:String>
+                                <x:String>Parvovirus B19</x:String>
+                                <x:String>Rubella</x:String>
+                                <x:String>Chlamydia</x:String>
+                                <x:String>Group B Strep</x:String>
+                                <x:String>Listeriosis</x:String>
+                                <x:String>Syphilis</x:String>
+                                <x:String>Other</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+
+
+                    <Label Grid.Column="0"  Grid.Row="1"    Text="Outcome" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border Grid.Column="1" Grid.Row="1"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0"  >
+                        <Picker x:Name="Outcome_cmb" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                            <Picker.Items>
+                                <x:String>Ongoing</x:String>
+                                <x:String>Term delivery healthy (greater than or equal to 37 weeks)</x:String>
+                                <x:String>Pre-term delivery healthy (less than 37 weeks)</x:String>
+                                <x:String>Term delivery with congenital abnormality (greater than or equal to 37 weeks)</x:String>
+                                <x:String>Pre-term delivery with congenital abnormality (less than 37 weeks)</x:String>
+                                <x:String>Miscarriage (less than 20 weeks)</x:String>
+                                <x:String>Miscarriage (greater than or equal to 20 weeks)</x:String>
+                                <x:String>Ectopic pregnancy</x:String>
+                                <x:String>Elective termination</x:String>
+                                <x:String>Neonatal death (older than 20 weeks)</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+
+
+                    <Label Grid.Column="0"  Grid.Row="2"  Text="Congenital Abnormality" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border Grid.Column="1" Grid.Row="2"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                        <Picker x:Name="Congenital_cmb" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                            <Picker.Items>
+                                <x:String>Unknown</x:String>
+                                <x:String>Amniotic bands</x:String>
+                                <x:String>Anal atresia / stenosis</x:String>
+                                <x:String>Anencephaly</x:String>
+                                <x:String>Cerebral Palsy</x:String>
+                                <x:String>Chromosomal defect - other</x:String>
+                                <x:String>Cleft lip without cleft palate</x:String>
+                                <x:String>Cleft palate only</x:String>
+                                <x:String>Clubfoot</x:String>
+                                <x:String>Coarctation of the aorta</x:String>
+                                <x:String>Craniosynostosis</x:String>
+                                <x:String>Cystic kidney disease</x:String>
+                                <x:String>Diaphragmatic hernia</x:String>
+                                <x:String>Down's Syndrome</x:String>
+                                <x:String>Encephalocele</x:String>
+                                <x:String>Endocardial cushion defect</x:String>
+                                <x:String>Extra or horseshoe kidney</x:String>
+                                <x:String>Gastroschisis</x:String>
+                                <x:String>Hypospadias</x:String>
+                                <x:String>Inguinal hernia</x:String>
+                                <x:String>Limb reduction defects</x:String>
+                                <x:String>Metabolic disorders</x:String>
+                                <x:String>Neural tube defects</x:String>
+                                <x:String>Omphalocele</x:String>
+                                <x:String>Polydactyly</x:String>
+                                <x:String>Pyloric stenosis</x:String>
+                                <x:String>Renal agensis _dysgensis</x:String>
+                                <x:String>Renal collecting system anomalies</x:String>
+                                <x:String>Small interstinal atresia/stenosis</x:String>
+                                <x:String>Spina Bifida</x:String>
+                                <x:String>Tracheo-esophageal fistula</x:String>
+                                <x:String>Undescended testicle</x:String>
+                                <x:String>Ventricular septal defect</x:String>
+                                <x:String>Other</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+
+
+                    <Label Grid.Column="0"  Grid.Row="3"  Text="Reason for Termination/Miscarriage" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border Grid.Column="1" Grid.Row="3"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center"  StrokeThickness="0" >
+                        <Picker x:Name="ReasonforTermination_cmb" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                            <Picker.Items>
+                                <x:String>Unknown</x:String>
+                                <x:String>Maternal Medical</x:String>
+                                <x:String>Non-medical DMT Exposure</x:String>
+                                <x:String>Cardiac Malformation</x:String>
+                                <x:String>Down's Syndrome</x:String>
+                                <x:String>Other chromosomal abnormality</x:String>
+                                <x:String>Gastroschisis</x:String>
+                                <x:String>Limb shortening defect</x:String>
+                                <x:String>Neural tube defect</x:String>
+                                <x:String>Unviable foetus</x:String>
+                                <x:String>Other</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+
+
+                    <Label  Grid.Column="2"  Grid.Row="0"    Text="Delivery Method" HorizontalOptions="End" VerticalOptions="Center" Style="{StaticResource MicroTextLabel }"/>
+                    <Border  Grid.Column="3"  Grid.Row="0"   StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0"  >
+                        <Picker x:Name="DeliveryMethod_cmb" BackgroundColor="#5a81ab"  TextColor="White" Style="{StaticResource MicroPicker}">
+                            <Picker.Items>
+                                <x:String>Vaginal Delivery</x:String>
+                                <x:String>Vaginal Delivery Assisted</x:String>
+                                <x:String>Elective Caesarian</x:String>
+                                <x:String>Emergency Ceasarian</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Border>
+
+
+                    <Grid Grid.Column="3" Grid.Row="3" Style="{StaticResource LargeSpacing}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button  Grid.Column="0" BackgroundColor="#5a81ab" Text="Save" x:Name="Button_SaveAddNewOutcome" Clicked="Button_SaveAddNewOutcome_Clicked" Style="{StaticResource MicroButton}" HorizontalOptions="Fill" VerticalOptions="Center" />
+                        <Button  Grid.Column="1" BackgroundColor="#5a81ab" Text="Cancel" x:Name="Button_CancelAddNewOutcome" Clicked="Button_CancelAddNewOutcome_Clicked" Style="{StaticResource MicroButton}" HorizontalOptions="Fill" VerticalOptions="Center" />
+                    </Grid>
+
+
+                </Grid>
+
+            </Border>
+        </Grid>
+        
+    </Border>
+    
+</ContentView>

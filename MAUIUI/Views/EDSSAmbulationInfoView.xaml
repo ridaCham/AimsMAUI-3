@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.EDSSAmbulationInfoView"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="FillAndExpand">
+    <Grid RowDefinitions="*, 7*">
+        <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Text="Ambulation Information" FontAttributes="Bold" HorizontalOptions="Start" />
+        <StackLayout Style="{StaticResource MiddleMarginLeftStackLayout}" Grid.Row="1" >
+            <Grid Style="{StaticResource SmallColumnSpacing}" RowDefinitions="*, *, *, *, *, *, *" ColumnDefinitions="*, 20*, *, 20*" VerticalOptions="FillAndExpand">
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="0" Text="0" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="fully ambulatory" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="0" Text="1" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="about 500 meters without aid or rest" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="0" Text="2" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="about 300 meters without aid or rest" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="0" Text="3" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="about 200 meters without aid or rest" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="0" Text="4" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="about 100 meters without aid or rest" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="5" Grid.Column="0" Text="5" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="5" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="about 100 meters with uniteral assistance" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="6" Grid.Column="0" Text="6" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="6" Grid.Column="1" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="about 20 meter with bilateral assistance" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="2" Text="7" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="0" Grid.Column="3" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="essentially restricted to wheelchair(wheels self)" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="2" Text="8" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Grid.Column="3" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="restricted to wheelchair (may need help in transfer)" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="2" Text="9" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="2" Grid.Column="3" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="essentially restricted to bed or chair" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="2" Text="10" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="3" Grid.Column="3" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="restricted to bed much of the day" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="2" Text="11" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="4" Grid.Column="3" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="bed patient, can communicate and eat" />
+
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="5" Grid.Column="2" Text="12" />
+                <Label Style="{StaticResource MicroTextLabel}" Grid.Row="5" Grid.Column="3" LineBreakMode="WordWrap" HorizontalOptions="FillAndExpand" Text="helpness bed patient, unable to communicate, eat or swallow" />
+
+            </Grid>
+        </StackLayout>
+
+    </Grid>
+</ContentView>

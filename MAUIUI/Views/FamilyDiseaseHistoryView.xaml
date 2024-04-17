@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.FamilyDiseaseHistoryView"
+             HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
+
+    <Border Style="{StaticResource MiddlePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+
+        <Grid Style="{StaticResource MiddleSpacing}" HorizontalOptions="Fill" VerticalOptions="Fill">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="0" ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="0" Text="Name" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="1" Text="Surname" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="0" Grid.Row="2" Text="Relationship" VerticalOptions="Center" HorizontalOptions="End"/>
+
+            <Border Grid.Column="1" Grid.Row="0" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center">
+                    <Entry x:Name=" Name_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White"/>
+            </Border>
+            <Border Grid.Column="1" Grid.Row="1" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center">
+                    <Entry x:Name=" Surname_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White"/>
+            </Border>
+                <Border Grid.Column="1" Grid.Row="2" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0" >
+                    <Picker x:Name=" Relationship_comboBox" Style="{StaticResource MicroPicker}"  BackgroundColor="#5a81ab" TextColor="White">
+                    <Picker.Items>
+                        <x:String>Father</x:String>
+                        <x:String>Mother</x:String>
+                        <x:String>Brother</x:String>
+                        <x:String>Sister</x:String>
+                        <x:String>Son</x:String>
+                        <x:String>Daughter</x:String>
+                        <x:String>Monozygotic Twin</x:String>
+                        <x:String>Dizygotic Twin</x:String>
+                        <x:String>Cousin</x:String>
+                        <x:String>Other</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+            
+ 
+            
+                <Border Grid.Column="1" Grid.Row="3" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center">
+                    <Entry x:Name=" OtherRelationship_textBox" Style="{StaticResource MicroEntry}" BackgroundColor="White"/>
+            </Border>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="0" Text="Birth Date" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="1" Text="Disease" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="2" Grid.Row="2" Text="Other" VerticalOptions="Center" HorizontalOptions="End"/>
+
+                <Border Grid.Column="3" Grid.Row="0"  StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start">
+                    <DatePicker x:Name=" AddFamilyBirthDate_textBox" Style="{StaticResource MaxTodayDate}" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="1" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center" StrokeThickness="0" >
+                    <Picker x:Name=" Disease_comboBox" Style="{StaticResource MicroPicker}" BackgroundColor="#5a81ab" TextColor="White">
+                    <Picker.Items>
+                        <x:String>Hypertension</x:String>
+                        <x:String>Diabetes</x:String>
+                        <x:String>FMF</x:String>
+                        <x:String>Behcet</x:String>
+                        <x:String>MS</x:String>
+                        <x:String>MG</x:String>
+                        <x:String>Liver Disease</x:String>
+                        <x:String>Lems</x:String>
+                        <x:String>Cirrhosis</x:String>
+                        <x:String>Kidney Disorder</x:String>
+                        <x:String>Kidney Failure</x:String>
+                        <x:String>Dementia</x:String>
+                        <x:String>Parkinson's</x:String>
+                        <x:String>Cerebrovascular Disease</x:String>
+                        <x:String>Psoriasis</x:String>
+                        <x:String>Coah</x:String>
+                        <x:String>Collagen Tissue Disease</x:String>
+                        <x:String>Sjogren</x:String>
+                        <x:String>Lupus</x:String>
+                        <x:String>Hypothyroidism</x:String>
+                        <x:String>Hyperthyroidism</x:String>
+                        <x:String>Hashimoto</x:String>
+                        <x:String>Peptic Ulcer</x:String>
+                        <x:String>Celiac Disease</x:String>
+                        <x:String>IBS</x:String>
+                        <x:String>Chron</x:String>
+                        <x:String>Ulcerative Colitis</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+            <Border Grid.Column="3" Grid.Row="2" StrokeThickness="0" StrokeShape="RoundRectangle 10,10,10,10" VerticalOptions="Center">
+                    <Picker Style="{StaticResource MicroPicker}" x:Name="comboBox1" BackgroundColor="#5a81ab" TextColor="White">
+                        <Picker.Items>
+                            <x:String> </x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Border>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4" Grid.Row="0" Text="Start Date" VerticalOptions="Center" HorizontalOptions="End"/>
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Column="4" Grid.Row="1" Text="End Date" VerticalOptions="Center" HorizontalOptions="End"/>
+
+            
+ 
+            
+                <Border Grid.Column="5" Grid.Row="0" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                    <DatePicker x:Name=" AddFamilyStartDate_textBox" Style="{StaticResource MaxTodayDate}" />
+             </Border>
+                <Border Grid.Column="5" Grid.Row="1" StrokeThickness="1" StrokeShape="RoundRectangle 10" VerticalOptions="Center" HorizontalOptions="Start" >
+                    <DatePicker x:Name=" AddFamilyEndDate_textBox" Style="{StaticResource MaxTodayDate}" />
+             </Border>
+
+        </Grid>
+
+            <Label Style="{StaticResource MicroTextLabel}" Grid.Row="1" Text="Remarks"  VerticalOptions="EndAndExpand" FontAttributes="Bold"/>
+            <Grid Style="{StaticResource MiddleSpacing}" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" StrokeShape="RoundRectangle 10,10,10,10">
+                    <Editor  x:Name="textBox1" Style="{StaticResource MicroEditor}" BackgroundColor="White"/>
+                </Border>
+                <Button Style="{StaticResource MicroButton}" x:Name="button_AddNew" Grid.Column="1" BackgroundColor="#5a81ab" Text="Add New Family&#10;Disease History" FontAttributes="Bold" Padding="5" Clicked="button_AddNew_Clicked"/>
+        </Grid>
+            
+    </Grid>
+    </Border>
+</ContentView>

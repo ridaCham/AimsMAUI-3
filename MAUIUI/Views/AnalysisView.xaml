@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIUI.Views.AnalysisView"        
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand"
+         Style="{StaticResource LargePaddingPage}">
+
+    <Border Style="{StaticResource LargePaddingBorder}" StrokeShape="RoundRectangle 10" Stroke="LightGray" BackgroundColor="#c8d1db">
+        <Grid Style="{StaticResource SmallSpacing}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+                 <Label Grid.Row="1"  Style="{StaticResource XLTextLabel}" Text="Artificial Intelligence Assisted Analysis Coming Soon..."  
+                        HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+ 
+        </Grid>
+    </Border>
+    
+</ContentView>
